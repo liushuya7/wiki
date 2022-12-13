@@ -10,6 +10,21 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/gazebo-simulation/",
+            "url": "https://liushuya7.github.io/wiki/gazebo-simulation/",
+            "title": "Gazebo Simulation",
+            "summary": "Gazebo Garden ros_gz, Integration between ROS and Gazebo simulation gz_ros2_control Only works with gazebo fortress, not with garden yet Tutorials Install Ubuntu Source Install(Garden) Spawn&hellip;",
+            "content_html": "<ul>\n<li><a href=\"https://gazebosim.org/docs/garden/install_ubuntu_src\">Gazebo Garden</a></li>\n<li><a href=\"https://github.com/gazebosim/ros_gz/tree/ros2\">ros_gz</a>, Integration between ROS and Gazebo simulation</li>\n<li><a href=\"https://github.com/ros-controls/gz_ros2_control\">gz_ros2_control</a><ul>\n<li>Only works with gazebo fortress, not with garden yet</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"tutorials\">Tutorials</h2>\n<h3 id=\"install\">Install</h3>\n<ul>\n<li><a href=\"https://gazebosim.org/docs/garden/install_ubuntu_src\">Ubuntu Source Install</a>(Garden)</li>\n</ul>\n<h3 id=\"spawn-urdf\"><a href=\"https://gazebosim.org/docs/fortress/spawn_urdf\">Spawn Urdf</a></h3>\n<p>Start by launching an empty world in Gazebo Sim:</p>\n<pre><code class=\"language-text-x-sh\">ign sim empty.sdf\n</code></pre>\n<p>The following command spawns the URDF file <code>rrbot.urdf</code> into the Gazebo Sim world as a model named <code>urdf_model</code>:</p>\n<pre><code class=\"language-text-x-sh\">ign service -s /world/empty/create --reqtype gz.msgs.EntityFactory --reptype gz.msgs.Boolean --timeout 1000 --req &#39;sdf_filename: &quot;/home/josh/ros2_gazebo_ws/src/gazebo_ros_demos/rrbot_description/urdf/rrbot.urdf&quot;, name: &quot;urdf_model&quot;&#39;\n</code></pre>\n<h3 id=\"the-gui--manipulating-models\"><a href=\"https://gazebosim.org/docs/fortress/gui\">The Gui</a> &amp; <a href=\"https://gazebosim.org/docs/fortress/manipulating_models\">Manipulating Models</a></h3>\n<p>Start by launching a sample world:</p>\n<pre><code class=\"language-text-x-sh\">ign sim shapes.sdf\n</code></pre>\n<h3 id=\"topic\">Topic</h3>\n<p>Publish a message to gazebo using command line:</p>\n<pre><code class=\"language-text-x-sh\">gz topic -t /model/conveyor/link/section_0/track_cmd_vel --msgtype gz.msgs.Double -p data:10\n</code></pre>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "ROS2"
+            ],
+            "date_published": "2022-12-13T01:08:47-05:00",
+            "date_modified": "2022-12-13T01:08:47-05:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/cpp/",
             "url": "https://liushuya7.github.io/wiki/cpp/",
             "title": "C++",

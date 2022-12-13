@@ -3,12 +3,61 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2022-12-13T00:55:16-05:00</updated>
+    <updated>2022-12-13T01:08:47-05:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
     <id>https://liushuya7.github.io/wiki</id>
 
+    <entry>
+        <title>Gazebo Simulation</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/gazebo-simulation/"/>
+        <id>https://liushuya7.github.io/wiki/gazebo-simulation/</id>
+            <category term="ROS2"/>
+
+        <updated>2022-12-13T01:08:47-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Gazebo Garden ros_gz, Integration between ROS and Gazebo simulation gz_ros2_control Only works with gazebo fortress, not with garden yet Tutorials Install Ubuntu Source Install(Garden) Spawn&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="https://gazebosim.org/docs/garden/install_ubuntu_src">Gazebo Garden</a></li>
+<li><a href="https://github.com/gazebosim/ros_gz/tree/ros2">ros_gz</a>, Integration between ROS and Gazebo simulation</li>
+<li><a href="https://github.com/ros-controls/gz_ros2_control">gz_ros2_control</a><ul>
+<li>Only works with gazebo fortress, not with garden yet</li>
+</ul>
+</li>
+</ul>
+<h2 id="tutorials">Tutorials</h2>
+<h3 id="install">Install</h3>
+<ul>
+<li><a href="https://gazebosim.org/docs/garden/install_ubuntu_src">Ubuntu Source Install</a>(Garden)</li>
+</ul>
+<h3 id="spawn-urdf"><a href="https://gazebosim.org/docs/fortress/spawn_urdf">Spawn Urdf</a></h3>
+<p>Start by launching an empty world in Gazebo Sim:</p>
+<pre><code class="language-text-x-sh">ign sim empty.sdf
+</code></pre>
+<p>The following command spawns the URDF file <code>rrbot.urdf</code> into the Gazebo Sim world as a model named <code>urdf_model</code>:</p>
+<pre><code class="language-text-x-sh">ign service -s /world/empty/create --reqtype gz.msgs.EntityFactory --reptype gz.msgs.Boolean --timeout 1000 --req &#39;sdf_filename: &quot;/home/josh/ros2_gazebo_ws/src/gazebo_ros_demos/rrbot_description/urdf/rrbot.urdf&quot;, name: &quot;urdf_model&quot;&#39;
+</code></pre>
+<h3 id="the-gui--manipulating-models"><a href="https://gazebosim.org/docs/fortress/gui">The Gui</a> &amp; <a href="https://gazebosim.org/docs/fortress/manipulating_models">Manipulating Models</a></h3>
+<p>Start by launching a sample world:</p>
+<pre><code class="language-text-x-sh">ign sim shapes.sdf
+</code></pre>
+<h3 id="topic">Topic</h3>
+<p>Publish a message to gazebo using command line:</p>
+<pre><code class="language-text-x-sh">gz topic -t /model/conveyor/link/section_0/track_cmd_vel --msgtype gz.msgs.Double -p data:10
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>C++</title>
         <author>
