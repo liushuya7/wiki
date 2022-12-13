@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>Joshua Personal Notes</title>
-    <link href="https://github.com/liushuya7/wiki/feed.xml" rel="self" />
-    <link href="https://github.com/liushuya7/wiki" />
+    <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
+    <link href="https://liushuya7.github.io/wiki" />
     <updated>2022-12-13T00:55:16-05:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
-    <id>https://github.com/liushuya7/wiki</id>
+    <id>https://liushuya7.github.io/wiki</id>
 
     <entry>
         <title>C++</title>
         <author>
             <name>Joshua Liu</name>
         </author>
-        <link href="https://github.com/liushuya7/wiki/cpp/"/>
-        <id>https://github.com/liushuya7/wiki/cpp/</id>
+        <link href="https://liushuya7.github.io/wiki/cpp/"/>
+        <id>https://liushuya7.github.io/wiki/cpp/</id>
             <category term="C++"/>
 
         <updated>2022-12-13T00:55:16-05:00</updated>
@@ -46,8 +46,8 @@
         <author>
             <name>Joshua Liu</name>
         </author>
-        <link href="https://github.com/liushuya7/wiki/create-ros-quick-source/"/>
-        <id>https://github.com/liushuya7/wiki/create-ros-quick-source/</id>
+        <link href="https://liushuya7.github.io/wiki/create-ros-quick-source/"/>
+        <id>https://liushuya7.github.io/wiki/create-ros-quick-source/</id>
             <category term="ROS2"/>
 
         <updated>2022-12-13T00:51:19-05:00</updated>
@@ -120,8 +120,8 @@ alias ambf=~/ambf/bin/lin-x86_64/ambf_simulator
         <author>
             <name>Joshua Liu</name>
         </author>
-        <link href="https://github.com/liushuya7/wiki/programming/"/>
-        <id>https://github.com/liushuya7/wiki/programming/</id>
+        <link href="https://liushuya7.github.io/wiki/programming/"/>
+        <id>https://liushuya7.github.io/wiki/programming/</id>
             <category term="Cheat Sheet"/>
 
         <updated>2022-12-13T00:08:07-05:00</updated>
@@ -160,8 +160,8 @@ alias ambf=~/ambf/bin/lin-x86_64/ambf_simulator
         <author>
             <name>Joshua Liu</name>
         </author>
-        <link href="https://github.com/liushuya7/wiki/ros2/"/>
-        <id>https://github.com/liushuya7/wiki/ros2/</id>
+        <link href="https://liushuya7.github.io/wiki/ros2/"/>
+        <id>https://liushuya7.github.io/wiki/ros2/</id>
             <category term="ROS2"/>
 
         <updated>2022-12-12T23:42:47-05:00</updated>
