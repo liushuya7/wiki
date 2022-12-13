@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="en-us"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C++ Code Snippet - Joshua Personal Notes</title><meta name="description" content="Network Acquire Localhost IP Address #include &lt;arpa/inet.h&gt; #include &lt;sys/ioctl.h&gt; #include &lt;sys/types.h&gt; #include &lt;linux/if.h&gt; #include &lt;net/if_arp.h&gt; #include &lt;unistd.h&gt; #include &lt;linux/sockios.h&gt; #include &lt;linux/ethtool.h&gt; #include &lt;cstring&gt; #include &lt;cassert&gt;&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://liushuya7.github.io/wiki/c-code-snippet/"><link rel="alternate" type="application/atom+xml" href="https://liushuya7.github.io/wiki/feed.xml"><link rel="alternate" type="application/json" href="https://liushuya7.github.io/wiki/feed.json"><link rel="stylesheet" href="https://liushuya7.github.io/wiki/assets/css/style.css?v=d903b7fd56f7524f2eeec376546f4ce3"><link rel="stylesheet" href="https://liushuya7.github.io/wiki/assets/css/prism-dark.css?v=4cc85e12ca94c0614c9359a37eb69a0c"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://liushuya7.github.io/wiki/c-code-snippet/"},"headline":"C++ Code Snippet","datePublished":"2022-12-13T13:34","dateModified":"2022-12-13T13:42","description":"Network Acquire Localhost IP Address #include &lt;arpa/inet.h&gt; #include &lt;sys/ioctl.h&gt; #include &lt;sys/types.h&gt; #include &lt;linux/if.h&gt; #include &lt;net/if_arp.h&gt; #include &lt;unistd.h&gt; #include &lt;linux/sockios.h&gt; #include &lt;linux/ethtool.h&gt; #include &lt;cstring&gt; #include &lt;cassert&gt;&hellip;","author":{"@type":"Person","name":"Joshua Liu","url":"https://liushuya7.github.io/wiki/authors/joshua-liu/"},"publisher":{"@type":"Organization","name":"Joshua Liu"}}</script><link rel="stylesheet" href="https://liushuya7.github.io/wiki/media/plugins/docSearch/docsearch.min.css"><style>:root{--docsearch-primary-color:#4285F4;}.DocSearch-Container{z-index:2000!important}.DocSearch-Cancel{width:auto!important;background:var(--primary-color)!important;border:0;border-radius:2px!important;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.05),0 1px 5px 0 rgba(0,0,0,0.12)!important;box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.05),0 1px 5px 0 rgba(0,0,0,0.12)!important;color:var(--white)!important;cursor:pointer!important;font-size:.8239746086rem!important;font-weight:var(--font-weight-bold)!important;letter-spacing:.03em!important;padding:.6666666667rem 1.3333333333rem!important}#docsearch{width:100%}.DocSearch-Button{background:transparent!important;border:none!important;box-shadow:none!important;height:43px!important;margin-left:0!important;width:100%!important;transform:none!important}</style></head><body><header class="top"><div class="top__logo"><a class="logo" href="https://liushuya7.github.io/wiki/">Joshua Personal Notes</a></div><div class="top__search search"><div class="search__overlay js-search-overlay"><div class="search__overlay-inner"><div id="docsearch"></div><button class="search__close js-search-close" aria-label="Close">Close</button></div></div></div><div class="top__links"><a href="https://github.com/liushuya7/" class="top__links-url" aria-label="Github" title="Github" target="_blank" rel="noopener"><svg height="24" width="24"><use xlink:href="https://liushuya7.github.io/wiki/assets/svg/svg-map.svg#github"></use></svg></a></div><button class="navbar__toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button></header><main class="main"><div class="main__left"><div class="main__left-inner"><div class="main__left-content"><article class="post"><header><h1 class="post__title">C++ Code Snippet</h1></header><div class="post__entry"><h2 id="network">Network</h2><h3 id="acquire-localhost-ip-address">Acquire Localhost IP Address</h3><pre><code class="language-cpp">#include &lt;arpa/inet.h&gt;
+#include &lt;sys/ioctl.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;linux/if.h&gt;
+#include &lt;net/if_arp.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;linux/sockios.h&gt;
+#include &lt;linux/ethtool.h&gt;
+#include &lt;cstring&gt;
+#include &lt;cassert&gt;
+#include &lt;cstdio&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+std::string ipAddressToString(uint32_t ipAddress)
+{
+    char buffer[INET_ADDRSTRLEN] = {0};
+    uint32_t addr = htonl(ipAddress);
+    return std::string(inet_ntop(AF_INET, &amp;addr, buffer, sizeof(buffer)));
+}
+
+int main(int argc, char *argv[]) {
+
+    int fd = socket(AF_INET, SOCK_DGRAM, 0); 
+    assert(fd &gt; 0); 
+
+    struct ifconf ifc;
+    struct ifreq *pifr;
+
+    ifc.ifc_len = sizeof(struct ifreq) * 10; 
+    ifc.ifc_buf = (char*) malloc(ifc.ifc_len);
+
+    int err = ioctl(fd, SIOCGIFCONF, &amp;ifc);
+    assert(err &gt;= 0); 
+
+    int ifc_num = ifc.ifc_len / sizeof(struct ifreq);
+    printf(&quot;Interfaces: %d\r\n&quot;, ifc_num);
+
+    assert(ifc.ifc_buf != NULL);
+    pifr = ifc.ifc_req;
+    
+    // Iterate trought all ifreq and save interface type, ip and netmask
+    for (int i = 0;  i &lt; ifc_num; ++i)
+    {       
+        err = ioctl(fd, SIOCGIFADDR, &amp;pifr[i]);
+        assert(err == 0); 
+        uint32_t ipAddress = ntohl(reinterpret_cast&lt;struct sockaddr_in*&gt;(&amp;(pifr[i].ifr_addr))-&gt;sin_addr.s_addr);
+
+        err = ioctl(fd, SIOCGIFNETMASK, &amp;pifr[i]);
+        assert(err == 0); 
+        uint32_t netmaskAddress = ntohl(reinterpret_cast&lt;struct sockaddr_in*&gt;(&amp;(pifr[i].ifr_netmask))-&gt;sin_addr.s_addr);
+
+        err = ioctl(fd, SIOCGIFBRDADDR, &amp;pifr[i]);
+        assert(err == 0); 
+        uint32_t broadcastAddress = ntohl(reinterpret_cast&lt;struct sockaddr_in*&gt;(&amp;(pifr[i].ifr_broadaddr))-&gt;sin_addr.s_addr);
+
+        printf(&quot;Network Interface: %s, IP=%s, Netmask=%s, Broadcast=%s\r\n&quot;, 
+               pifr[i].ifr_name, 
+               ipAddressToString(ipAddress).c_str(), 
+               ipAddressToString(netmaskAddress).c_str(), 
+               ipAddressToString(broadcastAddress).c_str());
+    }   
+}
+</code></pre><h2 id="uncategorized">Uncategorized</h2><h3 id="22cpp二进制形式打开文件"><strong>22.cpp二进制形式打开文件</strong></h3><pre><code class="language-cpp">int begin, end;
+
+  std::ifstream file(input_bmp_name, std::ios::in | std::ios::binary);
+  if (!file) {
+    LOG(FATAL) &lt;&lt; &quot;input file &quot; &lt;&lt; input_bmp_name &lt;&lt; &quot; not found&quot;;
+    exit(-1);
+  }
+
+  begin = file.tellg();
+  file.seekg(0, std::ios::end);
+  end = file.tellg();
+  size_t len = end - begin;
+
+  if (s-&gt;verbose) LOG(INFO) &lt;&lt; &quot;len: &quot; &lt;&lt; len;
+
+  std::vector&lt;uint8_t&gt; img_bytes(len);
+  file.seekg(0, std::ios::beg);
+  file.read(reinterpret_cast&lt;char*&gt;(img_bytes.data()), len);
+</code></pre><h3 id="21split函数的实现"><strong>21.split函数的实现</strong></h3><pre><code class="language-cpp">std::vector&lt;std::string&gt; split(const std::string &amp;str, const std::string &amp;sep)
+{
+    std::string::size_type pos;
+    std::vector&lt;std::string&gt; result;
+
+    std::string newstr =  str + sep;
+    size_t size=newstr.size();
+
+    for(size_t i=0; i&lt;size; ++i)
+    {
+        pos=newstr.find(sep,i);
+        if(pos&lt;size)
+        {
+            std::string s = newstr.substr(i,pos-i);
+            result.push_back(s);
+            i=pos+sep.size()-1;
+        }
+    }
+    return result;
+}
+</code></pre><h3 id="20判断是否有宏定义"><strong>20.判断是否有宏定义</strong></h3><pre><code class="language-cpp">#ifdef PLATFORM_QNX  
+  int platform = 1;
+#elif defined PLATFORM_ANDROID
+  int platform = 2;
+#else
+  int platform = 3;
+#endif
+</code></pre><h3 id="19不支持模版别名的处理办法"><strong>19.不支持模版别名的处理办法</strong></h3><p>__cpp_user_defined_literals测试，从gcc4.7版本开始支持模板别名，但是qnx的libc++的__config却检测到gcc就认为没有模板别名的特性</p><p>所以这里有个bug，是libc++库对gcc编译的配置选项出现了问题</p><p>参考标准库中libc++库中memory头文件中的一段代码</p><pre><code class="language-cpp">#ifndef _LIBCPP_HAS_NO_TEMPLATE_ALIASES
+    template &lt;class _Tp&gt; using rebind_alloc =
+                  typename __allocator_traits_rebind&lt;allocator_type, _Tp&gt;::type;
+    template &lt;class _Tp&gt; using rebind_traits = allocator_traits&lt;rebind_alloc&lt;_Tp&gt;&gt;;
+#else  // _LIBCPP_HAS_NO_TEMPLATE_ALIASES
+    template &lt;class _Tp&gt; struct rebind_alloc
+        {typedef typename __allocator_traits_rebind&lt;allocator_type, _Tp&gt;::type other;};
+    template &lt;class _Tp&gt; struct rebind_traits
+        {typedef allocator_traits&lt;typename rebind_alloc&lt;_Tp&gt;::other&gt; other;};
+#endif  // _LIBCPP_HAS_NO_TEMPLATE_ALIASES
+</code></pre><h3 id="18libstdclibc"><strong>18.libstdc++/libc++</strong></h3><p>gcc配套的 <code>libstdc++</code> <code>llvm/clang++</code> 配套的 <code>libc++</code></p><p><code>libstdc++</code>包含两个库: <code>libstdc++.so</code>(接口层) 和 <code>libsupc++.so</code>(实现层) <code>libc++</code>包含两个库: <code>libc++.so</code>(接口层) <code>libc++abi.so</code>(实现层)</p><p><code>libstdc++</code>的头文件位置 <code>/usr/include/c++/5.4/</code> 其中<code>5.4</code>位gcc编译器的版本号 <code>libc++</code>头文件的位置 <code>/usr/include/c++/v1/</code></p><p>配置编译选项:【注意】这个是配置选择头文件的 <code>-stdlib=libc++ -stdlib=libstdc++</code></p><p>通过cmake配置</p><pre><code class="language-cmake">set(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++ -lc++abi&quot;)
+</code></pre><h3 id="17虚析构的作用"><strong>17.虚析构的作用</strong></h3><p>1.通过父类指针释放所指向的子类。</p><pre><code class="language-cpp">class Animal {
+  vitual ~Animal() {
+    std::cout &lt;&lt; &quot;delete animal..&quot; &lt;&lt; std::endl;
+  }
+}
+
+class Dog : public Animal {
+  ~Dog() {
+    std::cout &lt;&lt; &quot;delete dog...&quot; &lt;&lt; std::endl;
+  };
+};
+
+Animal* animal = new Dog();
+
+delete animal;
+</code></pre><p>如上执行会输出</p><pre><code class="language-text-plain">delete dog...
+delete animal..
+</code></pre><p>如果去掉了vitual修饰~Animal()，则会只输出如下</p><pre><code class="language-text-plain">delete animal..
+</code></pre><p>因为父类的构造函数和析构函数不能被子类继承，但是会形成多态，</p><p>所以当父类定义成虚析构函数的时候，会先动态调用子类的析构函数，</p><p>然后由于delete的机制，会接着调用父类的析构函数</p><h3 id="16待查。。。"><strong>16.待查。。。</strong></h3><pre><code class="language-cpp">std::atomic_bool                             shutdownFlag_;
+while (!shutdownFlag_.load(std::memory_order_acquire)) {
+
+}
+</code></pre><h3 id="15同名的头文件"><strong>15.同名的头文件</strong></h3><p>如果搜索路径中包含两个同名的头文件，这时候只会包含第一个搜索到的头文件。示例如下</p><pre><code class="language-text-plain">目录结构
+
+cpptest
+|
+|---build
+|
+|---include_1
+|   |
+|   |---same_name.hpp
+|
+|---include_2
+|   |
+|   |---same_name.hpp
+|
+|---main.cpp
+|
+|---CMakeLists.txt
+</code></pre><p><code>include_1/same_name.hpp</code> 中内容如下</p><pre><code class="language-cpp">struct cat{
+  int age;
+};
+</code></pre><p><code>include_2/same_name.hpp</code> 中内容如下</p><pre><code class="language-cpp">struct dog{
+  int age;
+};
+</code></pre><p><code>CMakeLists.txt</code>内容如下</p><pre><code class="language-cmake">project(demo)
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(
+  ${PROJECT_NAME}
+  main.cpp)
+
+target_include_directories(
+  ${PROJECT_NAME}
+  PUBLIC
+  include_2
+  include_1
+)
+</code></pre><p><code>main.cpp</code>内容如下</p><pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+#include &quot;same_name.hpp&quot;
+
+int main(int argc, char* argv[]) {
+  cat c;
+  c.age = 1;
+  dog d;
+  d.age = 2;
+  cout &lt;&lt; d.age &lt;&lt; endl;
+}
+</code></pre><p>这时候编译会报错如下</p><pre><code class="language-bash">/Users/liushichao/Exercise/cpp/test_cpp/main.cpp:6:3: error: unknown type name &#39;cat&#39;
+</code></pre><p>调整<code>CMakeLists.txt</code>内容如下</p><pre><code class="language-cmake">project(demo)
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(
+  ${PROJECT_NAME}
+  main.cpp)
+
+target_include_directories(
+  ${PROJECT_NAME}
+  PUBLIC
+  include_1
+  include_2
+)
+</code></pre><p>这时候编译会报错如下</p><pre><code class="language-bash">/Users/liushichao/Exercise/cpp/test_cpp/main.cpp:8:3: error: unknown type name &#39;dog&#39;
+</code></pre><p>调整<code>CMakeLists.txt</code>内容如下</p><pre><code class="language-cmake">project(demo)
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(
+  ${PROJECT_NAME}
+  main.cpp)
+
+target_include_directories(
+  ${PROJECT_NAME}
+  PUBLIC
+)
+</code></pre><p><code>main.cpp</code>内容如下</p><pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+#include &quot;include_1/same_name.hpp&quot;
+#include &quot;include_2/same_name.hpp&quot;
+
+int main(int argc, char* argv[]) {
+  cat c;
+  c.age = 1;
+  dog d;
+  d.age = 2;
+  cout &lt;&lt; d.age &lt;&lt; endl;
+
+}
+</code></pre><p>这样就可以运行成功了。</p><h3 id="14可变参数数模板"><strong>14.可变参数数模板</strong></h3><p>1.递归展开参数包</p><pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+std::string operator&quot;&quot;_s (const char* orign) {
+
+  return  orign;
+}
+
+template &lt;typename T&gt;
+T sum(T head) {
+  return head;
+}
+
+template &lt;typename T, typename... Types&gt; 
+T sum(T head, Types... args) {
+  cout &lt;&lt; sizeof...(args) &lt;&lt; endl;
+  return head + sum&lt;T&gt;(args...);
+}
+
+int main(int argc, char* argv[]) {
+  cout &lt;&lt; sum(1, 2, 3, 4, 5) &lt;&lt; endl;
+}
+</code></pre><h3 id="13c操作符--operators"><strong>13.c++操作符 / operators</strong></h3><p>c++ 11 引入了新的操作夫，用户定义字面量操作符，<a href="https://en.cppreference.com/w/cpp/language/user_literal">https://en.cppreference.com/w/cpp/language/user_literal</a></p><p>C++ divides the operators into the following groups:</p><ul><li>Arithmetic operators</li><li>Assignment operators</li><li>Comparison operators</li><li>Logical operators</li><li>Bitwise operators</li></ul><h3 id="12cpp文件中编写模板的定义"><strong>12.cpp文件中编写模板的定义</strong></h3><p>参考：</p><p><a href="https://stackoverflow.com/a/115735">https://stackoverflow.com/a/115735</a></p><p><a href="https://www.codeproject.com/Articles/48575/How-to-Define-a-Template-Class-in-a-h-File-and-Imp">https://www.codeproject.com/Articles/48575/How-to-Define-a-Template-Class-in-a-h-File-and-Imp</a></p><pre><code class="language-cpp">//mstack.hpp
+template&lt;typename T&gt;
+class mstack{
+ void push(const T&amp; e);
+};
+</code></pre><pre><code class="language-cpp">//mstack.cpp
+template&lt;typename T&gt;
+void mstack&lt;T&gt;::push(const T&amp; e) {
+ data_.push_back(e);
+}
+
+//important!!!
+// this func is no need to be call.
+void testxxx() {
+ mstack&lt;int&gt; ms;
+ ms.push(1);
+}
+</code></pre><pre><code class="language-cpp">//client.cpp
+
+void main() {
+ mstack&lt;int&gt; m_c_s;
+ m_c_s.push(2334);
+}
+</code></pre><h3 id="11类中的const成员函数"><strong>11.类中的const成员函数</strong></h3><p>参考： c++ primer 5 中文版 p231</p><p>成员函数的参数列表后面紧跟的const关键字是修饰隐式的this指针的。是顶层指针（参考下边的10顶层const的介绍），表明this是指向常量对象的，const成员函数中的 this 指向的值不能修改。const 的对象上不能调用非const成员函数，所以定义成const的成员函数调用起来更灵活。</p><h3 id="10顶层const与底层const"><strong>10.顶层const与底层const</strong></h3><p>参考：c++ primer 5 中文版 p57</p><p>这个是针对指针的，因为指针本身也是对象，所以const修饰指针的变量的时候可能产生歧义，一个是指针变量是常量不可变，另一种情况是指针指向的是常量，这样指针变量本身是可以修改的。</p><p>为了区分这两种情况，引入了顶层const和底层const两种类型，</p><pre><code class="language-text-plain"> p  &lt;--- p是指向i的指针，如果p是const的话，就叫顶层const，顶层const的写法   int* const p = i; ,const 直接修饰的p，
+ 
+ |
+ v
+
+ i  &lt;--- 如果i 是const的话，就是底层const， 底层const的写法 ： const int * p = i; ,const 直接修饰的是int，代表指向的是常量的int类型
+
+</code></pre><h3 id="9stdunordered_map-查找指定key是否存在"><strong>9.std::unordered_map 查找指定key是否存在</strong></h3><p>使用<code>count(key)</code>方法，如果key存在，返回1，如果不存在，返回0</p><h3 id="8stdmap有序"><strong>8.std::map有序</strong></h3><p>std::map是有序的，但是不是插入的顺序，而是按照key的值进行排序的，默认是从小到大排序，可以通过模版参数的第三个参数指定排序类型</p><h3 id="7c计时"><strong>7.c++计时</strong></h3><pre><code class="language-cpp">1.包含头文件
+#include &lt;chrono&gt;
+
+2.计时开始位置添加
+std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt; time_begin = std::chrono::high_resolution_clock::now();
+
+3.计时结束位置添加
+long long eclipse_time = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::high_resolution_clock::now() - time_begin).count();
+          
+4.eclipse_time即为统计的时间，单位是ms
+</code></pre><h3 id="6各种类型的最大最小值宏定义"><strong>6.各种类型的最大最小值宏定义</strong></h3><p>包含头文件</p><pre><code class="language-cpp">#include &lt;float.h&gt;  //double float 需要用到这个
+#include &lt;limits.h&gt; //int longlong long 需要用这个
+</code></pre><p>下边是具体的最大最小值的宏定义</p><pre><code class="language-cpp">int   n1　=　INT_MIN;
+int   n2　=　INT_MAX;
+float　f1　=　FLT_MIN;
+float　f2　=　FLT_MAX;
+double　d1　=　DBL_MIN;
+double　d2　=　DBL_MAX;
+long ln1 =  LONG_MAX;
+long ln2 =  LONG_MIN;
+long long lln1 = LONG_LONG_MAX;
+long long lln1 = LONG_LONG_MIN;
+</code></pre><h3 id="5condition_variable"><strong>5.condition_variable</strong></h3><p>wait_for可以指定等待时间，用来实现定时器效果</p><p>下边的代码，可以通过condition.signal()来唤醒阻塞的线程，其他时候会到一秒钟自动唤醒，但是这种可能会有假唤醒的时候，如果要避免假唤醒，可以再传递一个函数，返回bool类型。</p><pre><code class="language-cpp">std::unique_lock&lt;std::mutex&gt; sleep_lock(mutex_);
+condition.wait_for(sleep_lock, std::chrono::milliseconds(1000));
+</code></pre><h3 id="4运算符优先级"><strong>4.运算符优先级</strong></h3><pre><code class="language-text-plain">
+*乘 /除
+
++加 -减
+
+&gt;大于 &lt;小于
+
+==等于 !=不等于
+
+&amp;&amp;与 
+
+||或
+</code></pre><h3 id="3stdunique_lock-与-stdlock_guard的区别"><strong>3.std::unique_lock 与 std::lock_guard的区别</strong></h3><p>unique_lock可以随时释放锁，调用unlock()</p><p>lock_guard需要等到生命周期结束后，才能自动释放锁。</p><pre><code class="language-cpp">用法示例：
+    {
+        std::unique_lock&lt;std::mutex&gt; lock_get_lane_data(mutex_lan_date_msg_);
+        //lock_get_lane_data.unlock();
+    }
+</code></pre><h3 id="将double转换成string时保留15位小数"><strong>将double转换成string时保留15位小数</strong></h3><pre><code class="language-cpp">#include &lt;iomanip&gt;
+#include &lt;sstream&gt;
+
+double ceshi = std::stod(&quot;3.123456789&quot;);
+stringstream ss;
+ss &lt;&lt; std::setprecision(15) &lt;&lt; ceshi;
+std::string ceshi_str = ss.str();
+cout &lt;&lt; ceshi_str &lt;&lt;endl;
+</code></pre><p>java中</p><pre><code class="language-text-plain">其中String s=String.format(&quot;%.2f&quot;,d)表示小数点后任意两位小数，其中2为表示两位小数，若需要三位小数，把2改为3即可，其他同理。
+</code></pre><p>c++ primer 5th p600</p><h3 id="使用ms后缀"><strong>使用ms后缀</strong></h3><pre><code class="language-cpp">#include &lt;chrono&gt;
+using namespace std::chrono_literals;
+</code></pre><h3 id="使用sstream输出-unsigned-char存储的数字"><strong>使用sstream输出 unsigned char存储的数字</strong></h3><p>为了节省存储空间，经常会用usigned char来存储一些数值范围比较小的数字，当用ostringstream转换成string时会出现问题，举例如下</p><pre><code class="language-cpp">unsinged char a = 10;
+std::ostringstream oss;
+oss &lt;&lt; a;
+cout &lt;&lt; oss.str(); //输出换行
+</code></pre><p>这里标准输出打印的并不是“10”，而是会换行，因为a的类型是char，所以会把a的值作为ascii码的值，转换成string，要想输出“10”，需要强转a成int类型</p><pre><code class="language-cpp">unsinged char a = 10;
+std::ostringstream oss;
+oss &lt;&lt; (int)a;
+cout &lt;&lt; oss.str(); //输出10
+</code></pre><h2 id="opencv">OpenCV</h2><h3 id="3本地cmake加入opencv库"><strong>3.本地cmake加入opencv库</strong></h3><pre><code class="language-cmake">find_package(OpenCV REQUIRED)  #注意大小写
+target_include_directories(
+  ${PROJECT_NAME}
+  PUBLIC
+  ${OpenCV_INCLUDE_DIRS}
+)
+
+target_link_libraries(
+  ${PROJECT_NAME}
+  ${OpenCV_LIBS}
+)
+</code></pre><h3 id="2编译安卓ndk库"><strong>2.编译安卓ndk库</strong></h3><p>从github下载源码，进入到源码跟目录，创建build文件夹，进入build文件夹，执行下边的编译指令</p><pre><code class="language-sh">export ANDROID_NDK=/Users/liushichao/Library/Android/sdk/ndk/21.0.6113669
+export ANDROID_ABI=armeabi-v7a
+export ANDROID_NATIVE_API_LEVEL=android-28
+export ANDROID_TOOLCHAIN_NAME=arm-linux-androideabi-clang
+
+cmake			       \
+  -DANDROID_NDK=${ANDROID_NDK} \
+  -DANDROID_ABI=${ANDROID_ABI} \
+  -DANDROID_STL=c++_shared  \
+  -DANDROID_NATIVE_API_LEVEL=${ANDROID_NATIVE_API_LEVEL} \
+  -DBUILD_SHARED_LIBS=1 \
+  -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
+  -DANDROID_TOOLCHAIN_NAME=${ANDROID_TOOLCHAIN_NAME} \
+  -D BUILD_opencv_java=ON \
+  -D BUILD_ANDROID_PROJECTS=ON \
+        -D WITH_CUDA=OFF \
+        -D WITH_MATLAB=OFF \
+        -D BUILD_ANDROID_EXAMPLES=OFF \
+        -D BUILD_DOCS=OFF \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D BUILD_PERF_TESTS=OFF \
+        -D BUILD_TESTS=OFF \
+        -DCMAKE_INSTALL_PREFIX=&quot;/Users/liushichao/source/opencv/install_ndk&quot; \
+  ..
+
+make -j8
+make install
+</code></pre><h3 id="1注意cvmat的宽高参数"><strong>1.注意cv::Mat()的宽高参数</strong></h3><p>前边是高，后边是宽，不要弄反了</p><pre><code class="language-cpp">Mat (int rows, int cols, int type);
+</code></pre></div><footer><div class="post__footer-top"><div class="post__meta"><time datetime="2022-12-13T13:34">12/13/2022 </time><span>Updated on: <time datetime="2022-12-13T13:42">12/13/2022</time></span></div></div><div class="post__footer-bottom"><ul class="post__tag"><li><a href="https://liushuya7.github.io/wiki/tags/c/">C++</a></li></ul></div></footer></article></div><aside class="main__left-aside"><div class="main__left-aside__inner"><h3>On this page</h3><nav class="aside-toc" id="aside-toc"></nav></div></aside></div></div><div class="main__right"><div class="main__right-inner"><nav class="navbar"><ul class="navbar__menu"><li class="active-parent has-submenu"><a href="https://liushuya7.github.io/wiki/programming/" target="_self" aria-haspopup="true">Programming</a><ul class="navbar__submenu level-2" aria-hidden="true"><li class="has-submenu"><a href="https://liushuya7.github.io/wiki/ros2/" target="_self" aria-haspopup="true">ROS2</a><ul class="navbar__submenu level-3" aria-hidden="true"><li><a href="https://liushuya7.github.io/wiki/create-ros-quick-source/" target="_self">Setup Quick Source</a></li><li><a href="https://liushuya7.github.io/wiki/migrating-from-ros1/" target="_self">Migrating from ROS1</a></li><li><a href="https://liushuya7.github.io/wiki/motion-planning/" target="_self">Motion Planning</a></li><li><a href="https://liushuya7.github.io/wiki/gazebo-simulation/" target="_self">Gazebo Simulation</a></li></ul></li><li class="active-parent has-submenu"><a href="https://liushuya7.github.io/wiki/cpp/" target="_self" aria-haspopup="true">C++</a><ul class="navbar__submenu level-3" aria-hidden="true"><li><a href="https://liushuya7.github.io/wiki/cmake/" target="_self">CMake</a></li><li class="active"><a href="https://liushuya7.github.io/wiki/c-code-snippet/" target="_self">Code Snippet</a></li><li><a href="https://liushuya7.github.io/wiki/c-learning-note/" target="_self">My Note</a></li></ul></li><li class="has-submenu"><a href="https://liushuya7.github.io/wiki/python/" target="_self" aria-haspopup="true">Python</a><ul class="navbar__submenu level-3" aria-hidden="true"><li><a href="https://liushuya7.github.io/wiki/pyvistatrimesh/" target="_self">Pyvista/Trimesh</a></li></ul></li><li><a href="https://liushuya7.github.io/wiki/rtos/" target="_self">RTOS</a></li></ul></li></ul></nav><div class="footer main__right-footer"><ul class="footer__nav"><li><a href="https://liushuya7.github.io/wiki/tags/ros2/" class="invert">ROS2</a></li><li><a href="https://liushuya7.github.io/wiki/tags/c/" class="invert">C++</a></li><li><a href="https://liushuya7.github.io/wiki/tags/cheat-sheet/" class="invert">Cheat Sheet</a></li></ul><div class="footer__copy">liushuya7@gmail.com</div></div></div></div></main><footer class="footer"><div class="footer__wrap"><div class="footer__inner"><ul class="footer__nav"><li><a href="https://liushuya7.github.io/wiki/tags/ros2/" class="invert">ROS2</a></li><li><a href="https://liushuya7.github.io/wiki/tags/c/" class="invert">C++</a></li><li><a href="https://liushuya7.github.io/wiki/tags/cheat-sheet/" class="invert">Cheat Sheet</a></li></ul><div class="footer__copy">liushuya7@gmail.com</div></div></div></footer><div class="post__progress" id="js-post__progress" aria-hidden="true"></div><script>window.publiiThemeMenuConfig = {    
+        mobileMenuMode: 'sidebar',        
+        submenuWidth: 300,        
+        mobileMenuExpandableSubmenus: true,
+        isHoverMenu: false,
+        ariaButtonAttribute: 'aria-expanded',
+   };</script><script src="https://liushuya7.github.io/wiki/assets/js/html-contents.min.js?v=169077c370ab8ca62b029845f80f7fd5" defer="defer"></script><script>document.addEventListener("DOMContentLoaded", function(event) {
+            htmlContents('#aside-toc', {
+                area: '.post__entry',
+                top: 2,
+                bottom: 3,
+                listType: 'o',
+                filter: function(arr) {
+                    return !arr.matches('.noOutline')
+                },
+                addIds: true,
+                addLinks: true
+            });
+
+            setTimeout(function() {
+                handleActiveClass('#aside-toc');
+            }, 0);
+        })</script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/scripts.min.js?v=2633843d0ec7bc1192485f15a75eb96d"></script><script>var images = document.querySelectorAll('img[loading]');
+
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/prism.js?v=3f40a85448916137440d70109f6ef21e"></script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/prism-line-numbers.min.js?v=13275d3ac10d7028cf6a6f5da276f68c"></script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/clipboard.min.js?v=ad98572d415d2f2452845a6068a913c0"></script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/prism-copy-to-clipboard.min.js?v=57b50bd6f44169b9bab177133c984653"></script><script src="https://liushuya7.github.io/wiki/media/plugins/docSearch/docsearch.min.js"></script><script type="text/javascript">docsearch({
+				container: '#docsearch',
+				appId: '',
+				indexName: '',
+				apiKey: '',
+				debug: false
+			});</script></body></html>

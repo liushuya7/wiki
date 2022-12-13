@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="en-us"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C++ Learning Note - Joshua Personal Notes</title><meta name="description" content="List #include &lt;list&gt; In C++ lists are ordered sequences of variables of the same type. To initialize them we have to specify which type are&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://liushuya7.github.io/wiki/c-learning-note/"><link rel="alternate" type="application/atom+xml" href="https://liushuya7.github.io/wiki/feed.xml"><link rel="alternate" type="application/json" href="https://liushuya7.github.io/wiki/feed.json"><link rel="stylesheet" href="https://liushuya7.github.io/wiki/assets/css/style.css?v=d903b7fd56f7524f2eeec376546f4ce3"><link rel="stylesheet" href="https://liushuya7.github.io/wiki/assets/css/prism-dark.css?v=4cc85e12ca94c0614c9359a37eb69a0c"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://liushuya7.github.io/wiki/c-learning-note/"},"headline":"C++ Learning Note","datePublished":"2022-12-13T13:45","dateModified":"2022-12-13T13:45","description":"List #include &lt;list&gt; In C++ lists are ordered sequences of variables of the same type. To initialize them we have to specify which type are&hellip;","author":{"@type":"Person","name":"Joshua Liu","url":"https://liushuya7.github.io/wiki/authors/joshua-liu/"},"publisher":{"@type":"Organization","name":"Joshua Liu"}}</script><link rel="stylesheet" href="https://liushuya7.github.io/wiki/media/plugins/docSearch/docsearch.min.css"><style>:root{--docsearch-primary-color:#4285F4;}.DocSearch-Container{z-index:2000!important}.DocSearch-Cancel{width:auto!important;background:var(--primary-color)!important;border:0;border-radius:2px!important;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.05),0 1px 5px 0 rgba(0,0,0,0.12)!important;box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.05),0 1px 5px 0 rgba(0,0,0,0.12)!important;color:var(--white)!important;cursor:pointer!important;font-size:.8239746086rem!important;font-weight:var(--font-weight-bold)!important;letter-spacing:.03em!important;padding:.6666666667rem 1.3333333333rem!important}#docsearch{width:100%}.DocSearch-Button{background:transparent!important;border:none!important;box-shadow:none!important;height:43px!important;margin-left:0!important;width:100%!important;transform:none!important}</style></head><body><header class="top"><div class="top__logo"><a class="logo" href="https://liushuya7.github.io/wiki/">Joshua Personal Notes</a></div><div class="top__search search"><div class="search__overlay js-search-overlay"><div class="search__overlay-inner"><div id="docsearch"></div><button class="search__close js-search-close" aria-label="Close">Close</button></div></div></div><div class="top__links"><a href="https://github.com/liushuya7/" class="top__links-url" aria-label="Github" title="Github" target="_blank" rel="noopener"><svg height="24" width="24"><use xlink:href="https://liushuya7.github.io/wiki/assets/svg/svg-map.svg#github"></use></svg></a></div><button class="navbar__toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button></header><main class="main"><div class="main__left"><div class="main__left-inner"><div class="main__left-content"><article class="post"><header><h1 class="post__title">C++ Learning Note</h1></header><div class="post__entry"><h2 id="list">List</h2><pre><code class="language-cpp">#include &lt;list&gt;
+</code></pre><p>In C++ lists are ordered sequences of variables of the same type. To initialize them we have to specify which type are the variables inside it. For example, for a list of integer values:</p><pre><code class="language-cpp">list&lt;int&gt; numbers_list({1,10,100,1000});
+</code></pre><p>And a list of string values:</p><pre><code class="language-cpp">list&lt;string&gt; vocals_list( {&quot;a&quot;,&quot;e&quot;,&quot;i&quot;,&quot;o&quot;,&quot;u&quot;} );
+</code></pre><p>The inconvenience with lists in C++ is that they are not as easy to print as in other languages. In this case we need to loop over all the items in a list to print them one by one. For now, here’s an example of printing a list:</p><pre><code class="language-cpp">for (int val : numbers_list)             // Loop
+    cout &lt;&lt; val &lt;&lt; &quot;  &quot;;                 // Print function
+
+for (string val : vocals_list)           // Loop
+    cout &lt;&lt; val &lt;&lt; &quot;  &quot;;                 // Print function
+</code></pre><p>Lists are very useful, as they occupy a memory space that can be modified. They have builtin functions to, for example, add a new item in the beginning of the list, or at the end of it:</p><pre><code class="language-cpp">numbers_list.push_front(0);             //insert in the beginning
+numbers_list.push_back(3000);           //insert in the end
+</code></pre><p>The resulting list would be <code>0,1,10,100,1000,3000</code></p><p>Finally, we can also concatenate a list at the end of another, enlarging the first one and not deleting the second one, with the builtin function <code>insert()</code>:</p><pre><code class="language-cpp">list&lt;int&gt; new_list({5,50,500});
+
+numbers_list.insert(numbers_list.end(),new_list.begin(),new_list.end());
+</code></pre><p>Then the <code>numbers_list</code> will be modified as <code>0,1,10,100,1000,3000,5,50,500</code></p><h2 id="dictionaries"><strong>Dictionaries</strong></h2><pre><code class="language-cpp">#include &lt;map&gt;
+</code></pre><p>A dictionary in C++ is called a <strong>map</strong>, and it is a container of values that are indexed by a key. This means that it stores two kinds of information: keys and values.</p><p>For example, if we want to store the names of a TV series characters and also in how many episodes they appear, we don’t need a list with the names and a list with the number of episodes, we just need a dictionary where the keys are the names and the values are the number of episodes: <code>{ &quot;Dolores&quot;: 30, &quot;Maeve&quot;: 27, &quot;Theresa&quot;:6, &quot;Clementine&quot;:11 }  { &quot;Dolores&quot;: 30, &quot;Maeve&quot;: 27, &quot;Theresa&quot;:6, &quot;Clementine&quot;:11 }</code> </p><p>To initialize it we need to call map, and specify the data types of the keys and values:</p><pre><code class="language-cpp">map&lt;string,int&gt; girls_dictionary;
+</code></pre><p>Here we are creating a dictionary called <code>girls_dictionary</code>, where the keys are strings and the values are integers.</p><p>To insert data into this dictionary we can call each key and assign it a value, one by one:</p><pre><code class="language-cpp">girls_dictionary[&quot;Dolores&quot;] = 30;
+girls_dictionary[&quot;Maeve&quot;] = 27;
+girls_dictionary[&quot;Theresa&quot;] = 6;
+girls_dictionary[&quot;Clementine&quot;] = 11;
+
+for (auto item : girls_dictionary)
+    cout &lt;&lt; item.first &lt;&lt; &quot; appears in &quot; &lt;&lt; item.second &lt;&lt; &quot; episodes\n&quot;;
+</code></pre><p>Finally, we can print the items in the dictionary with a loop. When we print it this is not a list, the dictionary itself organizes the keys alphabetically.</p><pre><code class="language-cpp">map&lt;double, float&gt; x_t_dictionary;
+x_t_dictionary[t_0] = x_0;
+x_t_dictionary[t_1] = x_1;
+
+// The functions ROS_INFO() and ROS_INFO_STREAM() essentially have the same purpose as &#39;cout&#39;
+for (auto item : x_t_dictionary) {
+  ROS_INFO_STREAM(&quot;Time &quot; &lt;&lt; item.first &lt;&lt; &quot;, position &quot; &lt;&lt; item.second
+                          &lt;&lt; &quot; \n&quot;);
+  }
+</code></pre><h2 id="io-functions">I/O functions</h2><h3 id="print">Print</h3><ul><li>printf</li><li>cout</li></ul><h3 id="input">Input</h3><ul><li>cin</li><li>getline(cin, name)</li></ul><h2 id="arrays">Arrays</h2><pre><code class="language-cpp">int myarray[6];
+int myarray[6] = {4,8,15,16,23,42};
+int myarray[] = {4,8,15,16,23,42};
+</code></pre><p>We can also print all the elements of an array with a for loop:</p><pre><code class="language-cpp">for (auto items : myarray) {
+    cout &lt;&lt; items &lt;&lt; endl;
+}
+</code></pre><h2 id="pointers">Pointers</h2><pre><code class="language-cpp">int myvariable = 42;
+</code></pre><p>We have already seen how to obtain the address of a variable using <code>&amp;</code>. The type of variable that can store this address of another variable is called a <strong>pointer</strong>. Pointers can be declared with the operator <code>*</code> , specifying the type of variable they will be pointing to:</p><pre><code class="language-cpp">int * mypointer;
+</code></pre><p>If we want this pointer to store the address of our previous variable <code>myvariable</code>, we just need to give it the value of its address:</p><pre><code class="language-cpp">mypointer = &amp;myvariable;
+cout &lt;&lt; mypointer &lt;&lt; endl;
+</code></pre><p>This expression will print the previous address of <code>myvariable</code> we’ve seen in the first section:</p><pre><code class="language-text-plain">&gt; 177687
+</code></pre><p>Now that the relationship between <code>myvariable</code> and <code>mypointer</code> is established, we can access the original value of <code>myvariable</code> just using its pointer:</p><pre><code class="language-cpp">cout &lt;&lt; *mypointer &lt;&lt; endl;
+</code></pre><p>This will print the value stored in the memory with the address 177687:</p><pre><code class="language-text-plain">&gt; 42
+</code></pre><p>We call this operation <strong>dereferencing</strong>, using the symbol <code>*</code>, and it is always followed by a name of a variable. Do not confuse the asterisk of declaring a pointer, which follows a data type, with this dereferencing operator!</p><ul><li>Why this is useful?<ul><li>We can first declare a variable, then assign a pointer to its address, and just manipulate this pointer to make changes.</li><li>Also, we cannot change the type of <code>myvariable</code> during a program, but a pointer can be assigned to another variable later in the same program.</li></ul></li></ul><h4 id="constants">Constants</h4><p>Pointers may also be used only to access values to read them, not to modify them. These will be pointers pointed to <strong>constant variables</strong>, which need to be specified when declaring the pointer.</p><p>For example, for an integer variable:</p><pre><code class="language-cpp">int variable = 10;
+</code></pre><p>when declaring the pointer we need to specify that it points to a constant integer:</p><pre><code class="language-cpp">const int* pointer = &amp;variable;
+</code></pre><p>We can read the value of the variable it is pointing to by <strong>dereferencing</strong>:</p><pre><code class="language-cpp">cout &lt;&lt; &quot;Value of variable: &quot; &lt;&lt; *pointer &lt;&lt; endl;
+</code></pre><p>But we cannot change the value of the variable:</p><pre><code class="language-cpp">*pointer = 20; // INCORRECT!!!!
+</code></pre><p>We can also create <strong>constant pointers</strong>, independently of them pointing to a constant variable or not. This kind of pointers need to specify the constant character right before the pointer’s name:</p><pre><code class="language-cpp">int* const pointer;
+</code></pre><p>To make this even more trickier, here are all the possibilities we can have using constants:</p><pre><code class="language-cpp">int* pointer;                   // non-constant pointer to non-constant integer
+const int* pointer;             // non-constant pointer to constant integer
+int* const pointer;             // constant pointer to non-constant integer
+const int* const pointer;       // constant pointer to constant integer
+</code></pre><p>The final thing we need to learn is that in C++ functions CANNOT return arrays. It is just not possible. What they CAN do is return a pointer to an array. See how useful they are? Awesome.</p><p>In this exercise first we are going to show you a small piece of code of the <strong>RosbotClass</strong> we’ve been using all along:</p><pre><code class="language-cpp">float *RosbotClass::get_laser_full() {
+  float *laser_range_pointer = laser_range.data();
+  return laser_range_pointer;
+}
+</code></pre><p>This function called <strong>get_laser_full()</strong> is a function that returns a pointer (see the operator asterisk before the name of the class <code>**RosbotClass**</code>). What it does is take the values of a ROS vector called <strong>laser_range</strong> and assign them a pointer, then return this pointer.</p></div><footer><div class="post__footer-top"><div class="post__meta"><time datetime="2022-12-13T13:45">12/13/2022 </time><span>Updated on: <time datetime="2022-12-13T13:45">12/13/2022</time></span></div></div><div class="post__footer-bottom"><ul class="post__tag"><li><a href="https://liushuya7.github.io/wiki/tags/c/">C++</a></li></ul></div></footer></article></div><aside class="main__left-aside"><div class="main__left-aside__inner"><h3>On this page</h3><nav class="aside-toc" id="aside-toc"></nav></div></aside></div></div><div class="main__right"><div class="main__right-inner"><nav class="navbar"><ul class="navbar__menu"><li class="active-parent has-submenu"><a href="https://liushuya7.github.io/wiki/programming/" target="_self" aria-haspopup="true">Programming</a><ul class="navbar__submenu level-2" aria-hidden="true"><li class="has-submenu"><a href="https://liushuya7.github.io/wiki/ros2/" target="_self" aria-haspopup="true">ROS2</a><ul class="navbar__submenu level-3" aria-hidden="true"><li><a href="https://liushuya7.github.io/wiki/create-ros-quick-source/" target="_self">Setup Quick Source</a></li><li><a href="https://liushuya7.github.io/wiki/migrating-from-ros1/" target="_self">Migrating from ROS1</a></li><li><a href="https://liushuya7.github.io/wiki/motion-planning/" target="_self">Motion Planning</a></li><li><a href="https://liushuya7.github.io/wiki/gazebo-simulation/" target="_self">Gazebo Simulation</a></li></ul></li><li class="active-parent has-submenu"><a href="https://liushuya7.github.io/wiki/cpp/" target="_self" aria-haspopup="true">C++</a><ul class="navbar__submenu level-3" aria-hidden="true"><li><a href="https://liushuya7.github.io/wiki/cmake/" target="_self">CMake</a></li><li><a href="https://liushuya7.github.io/wiki/c-code-snippet/" target="_self">Code Snippet</a></li><li class="active"><a href="https://liushuya7.github.io/wiki/c-learning-note/" target="_self">My Note</a></li></ul></li><li class="has-submenu"><a href="https://liushuya7.github.io/wiki/python/" target="_self" aria-haspopup="true">Python</a><ul class="navbar__submenu level-3" aria-hidden="true"><li><a href="https://liushuya7.github.io/wiki/pyvistatrimesh/" target="_self">Pyvista/Trimesh</a></li></ul></li><li><a href="https://liushuya7.github.io/wiki/rtos/" target="_self">RTOS</a></li></ul></li></ul></nav><div class="footer main__right-footer"><ul class="footer__nav"><li><a href="https://liushuya7.github.io/wiki/tags/ros2/" class="invert">ROS2</a></li><li><a href="https://liushuya7.github.io/wiki/tags/c/" class="invert">C++</a></li><li><a href="https://liushuya7.github.io/wiki/tags/cheat-sheet/" class="invert">Cheat Sheet</a></li></ul><div class="footer__copy">liushuya7@gmail.com</div></div></div></div></main><footer class="footer"><div class="footer__wrap"><div class="footer__inner"><ul class="footer__nav"><li><a href="https://liushuya7.github.io/wiki/tags/ros2/" class="invert">ROS2</a></li><li><a href="https://liushuya7.github.io/wiki/tags/c/" class="invert">C++</a></li><li><a href="https://liushuya7.github.io/wiki/tags/cheat-sheet/" class="invert">Cheat Sheet</a></li></ul><div class="footer__copy">liushuya7@gmail.com</div></div></div></footer><div class="post__progress" id="js-post__progress" aria-hidden="true"></div><script>window.publiiThemeMenuConfig = {    
+        mobileMenuMode: 'sidebar',        
+        submenuWidth: 300,        
+        mobileMenuExpandableSubmenus: true,
+        isHoverMenu: false,
+        ariaButtonAttribute: 'aria-expanded',
+   };</script><script src="https://liushuya7.github.io/wiki/assets/js/html-contents.min.js?v=169077c370ab8ca62b029845f80f7fd5" defer="defer"></script><script>document.addEventListener("DOMContentLoaded", function(event) {
+            htmlContents('#aside-toc', {
+                area: '.post__entry',
+                top: 2,
+                bottom: 3,
+                listType: 'o',
+                filter: function(arr) {
+                    return !arr.matches('.noOutline')
+                },
+                addIds: true,
+                addLinks: true
+            });
+
+            setTimeout(function() {
+                handleActiveClass('#aside-toc');
+            }, 0);
+        })</script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/scripts.min.js?v=2633843d0ec7bc1192485f15a75eb96d"></script><script>var images = document.querySelectorAll('img[loading]');
+
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/prism.js?v=3f40a85448916137440d70109f6ef21e"></script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/prism-line-numbers.min.js?v=13275d3ac10d7028cf6a6f5da276f68c"></script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/clipboard.min.js?v=ad98572d415d2f2452845a6068a913c0"></script><script defer="defer" src="https://liushuya7.github.io/wiki/assets/js/prism-copy-to-clipboard.min.js?v=57b50bd6f44169b9bab177133c984653"></script><script src="https://liushuya7.github.io/wiki/media/plugins/docSearch/docsearch.min.js"></script><script type="text/javascript">docsearch({
+				container: '#docsearch',
+				appId: '',
+				indexName: '',
+				apiKey: '',
+				debug: false
+			});</script></body></html>
