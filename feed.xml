@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Joshua Personal Notes</title>
+    <link href="https://github.com/liushuya7/wiki.git/feed.xml" rel="self" />
+    <link href="https://github.com/liushuya7/wiki.git" />
+    <updated>2022-12-13T00:55:16-05:00</updated>
+    <author>
+        <name>Joshua Liu</name>
+    </author>
+    <id>https://github.com/liushuya7/wiki.git</id>
+
+    <entry>
+        <title>C++</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://github.com/liushuya7/wiki.git/cpp/"/>
+        <id>https://github.com/liushuya7/wiki.git/cpp/</id>
+            <category term="C++"/>
+
+        <updated>2022-12-13T00:55:16-05:00</updated>
+            <summary>
+                <![CDATA[
+                    C++ Core Guidelines C++ Programming (GeeksforGeeks) Google C++ Style Guide ROS2 C++ Code Style Modern C++ Programming (Slides) Tips for Optimizing C/C++ Code A cheatsheet&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="http://isocpp.github.io/CppCoreGuidelines/">C++ Core Guidelines</a></li>
+<li><a href="https://www.geeksforgeeks.org/c-plus-plus/">C++ Programming (GeeksforGeeks)</a></li>
+<li><a href="https://google.github.io/styleguide/cppguide.html">Google C++ Style Guide</a><ul>
+<li><a href="https://docs.ros.org/en/humble/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html">ROS2 C++ Code Style</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/federico-busato/Modern-CPP-Programming">Modern C++ Programming</a> (Slides)</li>
+<li><a href="https://people.cs.clemson.edu/~dhouse/courses/405/papers/optimize.pdf">Tips for Optimizing C/C++ Code</a></li>
+<li><a href="https://github.com/AnthonyCalandra/modern-cpp-features">A cheatsheet of modern C++ language and library features.</a>(C++ 20)</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Create ROS Quick Source</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://github.com/liushuya7/wiki.git/create-ros-quick-source/"/>
+        <id>https://github.com/liushuya7/wiki.git/create-ros-quick-source/</id>
+            <category term="ROS2"/>
+
+        <updated>2022-12-13T00:51:19-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Create .ros2rc or .ros1rc under your HOME folder for quick sourcing instead of source /opt/ros/.../setup.bash. Now you can just do: source ~/.ros2rc .ros2rc #!/bin/sh #&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Create <a href="#ros2rc">.ros2rc</a> or <a href="#ros1rc">.ros1rc</a> under your <code>HOME</code> folder for quick sourcing instead of  <code>source /opt/ros/.../setup.bash</code>. Now you can just do:</p>
+<pre><code class="language-sh">source ~/.ros2rc
+</code></pre>
+<h2 id="ros2rc">.ros2rc</h2>
+<pre><code class="language-bash">#!/bin/sh
+# ROS2 stuff
+export ROS_DISTRO=humble
+# Set your Domain ID if you are in a network with multiple computers,
+# but do not turn this on if you want to use VScode to debug.
+export ROS_DOMAIN_ID=7
+source /opt/ros/$ROS_DISTRO/setup.bash
+
+# Setup colcon_cd
+source /usr/share/colcon_cd/function/colcon_cd.sh
+export _colcon_cd_root=/opt/ros/$ROS_DISTRO
+
+# Colcon Auto-completion
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+
+# For quick debug use --symlink-install
+alias ros2build=&quot;colcon build --symlink-install;source install/setup.bash&quot;
+</code></pre>
+<ul>
+<li>See:<ul>
+<li>How to <a href="https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html#setup-colcon-cd">Setup <code>colcon_cd</code></a></li>
+</ul>
+</li>
+</ul>
+<p>If you are using Gazebo Simulator, add the following:</p>
+<pre><code class="language-bash"># Set Gazebo Version (If Installed), and source the setup
+export GZ_VERSION=&quot;garden&quot;
+source /home/$USER/gazebo/install/setup.bash
+</code></pre>
+<p>If you have <a href="https://stoglrobotics.github.io/ros_team_workspace">RosTeamWS</a>, a framework for boosting team collaboration for robots using ROS, add the following:</p>
+<pre><code class="language-bash"># RosTeamWS setup
+source &lt;PATH TO ros_team_workspace&gt;/setup.bash
+
+# Add auto-sourcing
+if [ -f ~/.ros_team_ws_rc ]; then
+    . ~/.ros_team_ws_rc
+fi
+</code></pre>
+<h2 id="ros1rc">.ros1rc</h2>
+<p>The following example is for sourcing ROS1:</p>
+<pre><code class="language-bash">#!/bin/sh
+export ROS_DISTRO=noetic
+source /opt/ros/$ROS_DISTRO/setup.bash
+</code></pre>
+<p>Add the following if you are using AMBF Simulator.</p>
+<pre><code class="language-bash"># AMBF
+source ~/ambf/build/devel/setup.bash
+alias ambf=~/ambf/bin/lin-x86_64/ambf_simulator
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Programming</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://github.com/liushuya7/wiki.git/programming/"/>
+        <id>https://github.com/liushuya7/wiki.git/programming/</id>
+            <category term="Cheat Sheet"/>
+
+        <updated>2022-12-13T00:08:07-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Vim cheat sheet|Cheat Sheet (2) The Ultimate vimrc (Vim configuration) How to write a good README Add Table of Content Add Directory Structure Licensing and&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html"><strong>Vim</strong> <strong>cheat sheet</strong></a>|<a href="https://vim.rtorr.com/">Cheat Sheet (2)</a><ul>
+<li><a href="https://github.com/amix/vimrc">The Ultimate vimrc</a> (Vim configuration)</li>
+</ul>
+</li>
+<li><a href="https://github.com/banesullivan/README">How to write a good <strong>README</strong></a><ul>
+<li><strong>Add</strong> <a href="https://marketplace.visualstudio.com/items?itemName=joffreykern.markdown-toc"><strong>Table of Content</strong></a></li>
+<li><strong>Add</strong> <a href="https://github.com/AndrejOrsula/ign_moveit2_examples#directory-structure"><strong>Directory Structure</strong></a></li>
+<li><strong>Licensing and copyright</strong> (At the end)</li>
+</ul>
+</li>
+<li><a href="https://github.com/chubin/cheat.sh"><strong>cheat.sh</strong></a><strong>, the only cheat sheet you need!</strong></li>
+<li><a href="https://www.sourcetrail.com/"><strong>Sourcetrail</strong></a><strong>, open-source source code explorer</strong></li>
+<li><a href="https://www.sphinx-doc.org/en/master/"><strong>Sphinx</strong></a>, Python Documentation Generator</li>
+<li>Docker<ul>
+<li><a href="https://blog.boltops.com/2018/04/19/docker-introduction-tutorial/">Docker Intro Tutorial: Common Commands Crash Course</a></li>
+</ul>
+</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>ROS2</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://github.com/liushuya7/wiki.git/ros2/"/>
+        <id>https://github.com/liushuya7/wiki.git/ros2/</id>
+            <category term="ROS2"/>
+
+        <updated>2022-12-12T23:42:47-05:00</updated>
+            <summary>
+                <![CDATA[
+                    ROS Stuff ROS Discourse ROS to ROS2 Porting Guide The Robotics Back-End (ROS2 Tutorials) ROS2 YAML For Parameters In this tutorial you will see how&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="ros-stuff">ROS Stuff</h2>
+<ul>
+<li><a href="https://discourse.ros.org/">ROS Discourse</a></li>
+<li><a href="https://github.com/PickNikRobotics/ROStoROS2/blob/master/README.rst">ROS to ROS2 Porting Guide</a></li>
+<li><a href="https://roboticsbackend.com/category/ros2/">The Robotics Back-End</a> (ROS2 Tutorials)<ul>
+<li><a href="https://roboticsbackend.com/ros2-yaml-params/">ROS2 YAML For <strong>Parameters</strong></a><ul>
+<li>In this tutorial you will see how to use YAML to handle your ROS2 parameters.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://robostack.github.io/index.html">RobotStack</a>, a bundling of the ROS for Linux, Mac and Windows using the Conda package manager.</li>
+<li><a href="https://www.guyuehome.com/category/blog/ros2">ROS2机器人知识分享社区</a></li>
+<li><strong>transformations</strong><ul>
+<li><a href="https://pypi.org/project/transforms3d/">transforms3d</a></li>
+<li><a href="https://github.com/DLu/tf_transformations#migration"><code>transforms3d</code> migration guide</a></li>
+<li>Recommend <code>scipy.spatial.transform.Rotation</code></li>
+</ul>
+</li>
+<li><a href="https://rosmed.github.io/">ROS for Medical Robotics | ROS for Medical Robotics Research</a><ul>
+<li>SlicerROS2 Plugin</li>
+</ul>
+</li>
+</ul>
+<h3 id="ros2_control">ROS2_Control</h3>
+<ul>
+<li><a href="https://control.ros.org/"><strong>ros2_control</strong> documentation</a>, a framework for (real-time) control of robots using ROS2<ul>
+<li><a href="https://sir.upc.edu/projects/rostutorials/10-gazebo_control_tutorial/index.html">ROS1 ros_control Tutorial</a></li>
+<li><a href="http://control.ros.org/api/namespacehardware__interface.html">Hardware interface API</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/StoglRobotics/ros_team_workspace">Ros Team Workspace</a> (<a href="https://stoglrobotics.github.io/ros_team_workspace/master/index.html">RosTeamWS</a>), a framework for boosting collaboration in teams when developing software for robots using ROS</li>
+<li>Tutorials<ul>
+<li><a href="https://jeffzzq.medium.com/designing-a-ros2-robot-7c31a62c535a">Designing a ROS2 Robot</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="moveit-2">MoveIt 2</h3>
+<ul>
+<li><a href="https://moveit.picknik.ai/humble/index.html">MoveIt 2 Documentation</a></li>
+<li><a href="https://github.com/ros-planning/moveit2_tutorials">MoveIt 2 Tutorials Source Code</a></li>
+<li>Hybrid Planning<ul>
+<li><a href="https://moveit.picknik.ai/galactic/doc/concepts/hybrid_planning/hybrid_planning.html">Hybrid Planning | MoveIt2</a></li>
+<li><a href="https://picknik.ai/hybrid-planning/fraunhofer/moveit/2022/02/03/Hybrid-planning-Welding-with-the-UR10e.html">Hybrid Planning - UR10e</a></li>
+<li><a href="https://github.com/MingshanHe/Compliant-Control-and-Application">Compliant Control and Application - UR</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="hardware">Hardware</h3>
+<ul>
+<li><a href="http://www.ofera.eu/index.php/micro-ros">micro-ROS</a></li>
+</ul>
+<h3 id="simulation">Simulation</h3>
+<ul>
+<li><a href="https://github.com/gazebosim"><strong>Gazebo</strong></a><ul>
+<li><a href="https://ni.www.techfak.uni-bielefeld.de/files/URDF-XACRO.pdf">Introduction to Robot Modeling in ROS Understanding URDF and XACRO</a></li>
+<li><a href="https://github.com/osrf/subt/wiki/Model-Migration-Guide">URDF to SDF Model Conversion Guide</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/Unity-Technologies/Unity-Robotics-Hub"><strong>Unity Robotics Hub</strong></a></li>
+</ul>
+<h3 id="other">Other</h3>
+<ul>
+<li><a href="http://wiki.ros.org/smach">SMACH</a>, a powerful and scalable Python-based library for hierarchical state machines.</li>
+<li><a href="https://github.com/ros/solidworks_urdf_exporter">SolidWorks to URDF Exporter</a></li>
+<li><a href="https://github.com/gramaziokohler/ros_docker">ros_docker</a>, Docker images for ROS master, bridge and nodes</li>
+</ul>
+<hr>
+<h2 id="ros-note">ROS Note</h2>
+<h3 id="rosdep"><code>rosdep</code></h3>
+<h4 id="resolving-workspace-package-dependencies"><a href="https://docs.ros.org/en/galactic/Tutorials/Workspace/Creating-A-Workspace.html#resolve-dependencies">Resolving workspace package dependencies</a></h4>
+<p>Go to the top directory of your <strong>colcon/catkin</strong> workspace where the source code of the ROS packages you’d like to use are. Then run:</p>
+<pre><code class="language-text-plain">rosdep install --from-paths src --ignore-src -r -y --rosdistro humble
+</code></pre>
+<p>This command magically installs all the packages that the packages in your catkin workspace depend upon but are missing on your computer. You can also <code>--skip-keys “pkg_name”</code></p>
+<h4 id="pure-python-packages">Pure Python Packages</h4>
+<p>In the <code>package.xml</code> add:</p>
+<pre><code class="language-text-plain">&lt;exec_depend&gt;python3-package_name-pip&lt;/exec_depend&gt;
+</code></pre>
+<h3 id="ros2-serviceparam"><code>ros2 service/param</code></h3>
+<p><a href="https://docs.ros.org/en/galactic/Tutorials/Services/Understanding-ROS2-Services.html#ros2-service-list-t">To see the types of all the active services</a>:</p>
+<pre><code class="language-text-plain">ros2 service list -t
+</code></pre>
+<p><a href="https://docs.ros.org/en/galactic/Tutorials/Parameters/Understanding-ROS2-Parameters.html#load-parameter-file-on-node-startup">Load parameter file on node startup</a>:</p>
+<pre><code class="language-text-plain">ros2 run &lt;package_name&gt; &lt;executable_name&gt; --ros-args --params-file &lt;file_name&gt;
+</code></pre>
+<h2 id="other-tools">Other Tools</h2>
+<h3 id="image_tools">image_tools</h3>
+<p>To stream camera view, use:</p>
+<pre><code class="language-text-x-sh">ros2 run image_tools showimage image:=/camera/color/image_raw
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
+</feed>
