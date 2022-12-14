@@ -10,6 +10,34 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/biblical-hebrew/",
+            "url": "https://liushuya7.github.io/wiki/biblical-hebrew/",
+            "title": "Biblical Hebrew",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "Biblical Hebrew"
+            ],
+            "date_published": "2022-12-13T20:37:03-05:00",
+            "date_modified": "2022-12-13T20:37:08-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/genesis-1-in-hebrew/",
+            "url": "https://liushuya7.github.io/wiki/genesis-1-in-hebrew/",
+            "title": "Genesis 1 in Hebrew",
+            "summary": "Ch 1 v1-2 v3-5 v6-8 v9-10 v11-13",
+            "content_html": "<h2 id=\"ch-1\">Ch 1</h2>\n<h3 id=\"v1-2\">v1-2</h3>\n<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkx8dfmHWYH3b9rXLBE2EeSQ1H0dDy-WMrB&amp;clipt=EIhUGOW2Ag\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>\n\n<h3 id=\"v3-5\">v3-5</h3>\n<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkxo5ftw6fR_bvjSFwk-apCU0cpJyk_Lk7j&amp;clipt=ELLLAhjS_wQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>\n\n<h3 id=\"v6-8\">v6-8</h3>\n<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkx2r36Cpbtb50fRk3vTDjCoiTy0e__hE5r&amp;clipt=ENCIBRiw8gc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>\n\n<h3 id=\"v9-10\">v9-10</h3>\n<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/D1ge6-3R_8s?clip=UgkxwC5R_uErhDlMEWmrnnJeRbj9GpgZH7hZ&amp;clipt=EOuECBjt9gk\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>\n\n<h3 id=\"v11-13\">v11-13</h3>\n<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkxh0VPlujjILpTpYViOVLe5P860sSEo7Mt&amp;clipt=ELyKChiMvg0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "Biblical Hebrew"
+            ],
+            "date_published": "2022-12-13T20:36:39-05:00",
+            "date_modified": "2022-12-13T20:36:39-05:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/pyvistatrimesh/",
             "url": "https://liushuya7.github.io/wiki/pyvistatrimesh/",
             "title": "PyVista/Trimesh",
@@ -129,36 +157,6 @@
             ],
             "date_published": "2022-12-13T12:49:23-05:00",
             "date_modified": "2022-12-13T12:59:54-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/ros2-debuging/",
-            "url": "https://liushuya7.github.io/wiki/ros2-debuging/",
-            "title": "ROS2 Debuging",
-            "summary": "VSCode Microsoft VScode Extension for ROS Debugging ROS C++ nodes VSCode ROS2 Workspace Template VScode debug ROS cpp 程序设置 断点调试",
-            "content_html": "<h2 id=\"vscode\">VSCode</h2>\n<ul>\n<li><a href=\"https://marketplace.visualstudio.com/items?itemName=ms-iot.vscode-ros\">Microsoft VScode Extension for ROS</a></li>\n<li><a href=\"https://github.com/ms-iot/vscode-ros/blob/master/doc/debug-support.md\">Debugging ROS C++ nodes</a></li>\n<li><a href=\"https://github.com/athackst/vscode_ros2_workspace\">VSCode ROS2 Workspace Template</a></li>\n<li><a href=\"https://blog.csdn.net/abc_orange/article/details/102665792\">VScode debug ROS cpp 程序设置 断点调试</a></li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "ROS2"
-            ],
-            "date_published": "2022-12-13T12:48:21-05:00",
-            "date_modified": "2022-12-13T12:59:46-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/gazebo-simulation/",
-            "url": "https://liushuya7.github.io/wiki/gazebo-simulation/",
-            "title": "Gazebo Simulation",
-            "summary": "Gazebo Garden ros_gz, Integration between ROS and Gazebo simulation gz_ros2_control Only works with gazebo fortress, not with garden yet Tutorials Install Ubuntu Source Install(Garden) Spawn&hellip;",
-            "content_html": "<ul>\n<li><a href=\"https://gazebosim.org/docs/garden/install_ubuntu_src\">Gazebo Garden</a></li>\n<li><a href=\"https://github.com/gazebosim/ros_gz/tree/ros2\">ros_gz</a>, Integration between ROS and Gazebo simulation</li>\n<li><a href=\"https://github.com/ros-controls/gz_ros2_control\">gz_ros2_control</a><ul>\n<li>Only works with gazebo fortress, not with garden yet</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"tutorials\">Tutorials</h2>\n<h3 id=\"install\">Install</h3>\n<ul>\n<li><a href=\"https://gazebosim.org/docs/garden/install_ubuntu_src\">Ubuntu Source Install</a>(Garden)</li>\n</ul>\n<h3 id=\"spawn-urdf\"><a href=\"https://gazebosim.org/docs/fortress/spawn_urdf\">Spawn Urdf</a></h3>\n<p>Start by launching an empty world in Gazebo Sim:</p>\n<pre><code class=\"language-text-x-sh\">ign sim empty.sdf\n</code></pre>\n<p>The following command spawns the URDF file <code>rrbot.urdf</code> into the Gazebo Sim world as a model named <code>urdf_model</code>:</p>\n<pre><code class=\"language-text-x-sh\">ign service -s /world/empty/create --reqtype gz.msgs.EntityFactory --reptype gz.msgs.Boolean --timeout 1000 --req &#39;sdf_filename: &quot;/home/josh/ros2_gazebo_ws/src/gazebo_ros_demos/rrbot_description/urdf/rrbot.urdf&quot;, name: &quot;urdf_model&quot;&#39;\n</code></pre>\n<h3 id=\"the-gui--manipulating-models\"><a href=\"https://gazebosim.org/docs/fortress/gui\">The Gui</a> &amp; <a href=\"https://gazebosim.org/docs/fortress/manipulating_models\">Manipulating Models</a></h3>\n<p>Start by launching a sample world:</p>\n<pre><code class=\"language-text-x-sh\">ign sim shapes.sdf\n</code></pre>\n<h3 id=\"topic\">Topic</h3>\n<p>Publish a message to gazebo using command line:</p>\n<pre><code class=\"language-text-x-sh\">gz topic -t /model/conveyor/link/section_0/track_cmd_vel --msgtype gz.msgs.Double -p data:10\n</code></pre>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "ROS2"
-            ],
-            "date_published": "2022-12-13T01:08:47-05:00",
-            "date_modified": "2022-12-13T01:08:47-05:00"
         }
     ]
 }
