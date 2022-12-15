@@ -3,7 +3,7 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2022-12-15T00:18:08-05:00</updated>
+    <updated>2022-12-15T00:30:31-05:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
@@ -286,10 +286,10 @@ $ ls | grep smth
         <id>https://liushuya7.github.io/wiki/genesis-1-in-hebrew/</id>
             <category term="Biblical Hebrew"/>
 
-        <updated>2022-12-15T00:17:32-05:00</updated>
+        <updated>2022-12-15T00:30:31-05:00</updated>
             <summary>
                 <![CDATA[
-                    Ch 1 v1-2 v3-5 v6-8 v9-10 v11-13 Download PDF [Click Here](#INTERNAL_LINK#/file/media/files/Genesis 1 in Hebrew.pdf) to download the PDF.
+                    Ch 1 v1-2 v3-5 v6-8 v9-10 v11-13 Download Click Here to download the PDF.
                 ]]>
             </summary>
         <content type="html">
@@ -310,8 +310,8 @@ $ ls | grep smth
 <h3 id="v11-13">v11-13</h3>
 <div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkxh0VPlujjILpTpYViOVLe5P860sSEo7Mt&amp;clipt=ELyKChiMvg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-<h2 id="download-pdf">Download PDF</h2>
-<p>[Click Here](#INTERNAL_LINK#/file/media/files/Genesis 1 in Hebrew.pdf) to download the PDF.</p>
+<h2 id="download">Download</h2>
+<p><a href="https://liushuya7.github.io/wiki/media/files/Genesis_1_in_Hebrew.pdf">Click Here</a> to download the PDF.</p>
 
             ]]>
         </content>
