@@ -3,7 +3,7 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2022-12-14T20:57:06-05:00</updated>
+    <updated>2022-12-15T00:18:08-05:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
@@ -16,8 +16,9 @@
         </author>
         <link href="https://liushuya7.github.io/wiki/git/"/>
         <id>https://liushuya7.github.io/wiki/git/</id>
+            <category term="Git"/>
 
-        <updated>2022-12-14T20:57:06-05:00</updated>
+        <updated>2022-12-15T00:17:47-05:00</updated>
             <summary>
                 <![CDATA[
                     Useful Links Git Branches Tips Github CLI, brings GitHub to your terminal Move files from one repository to another, preserving git history vcstool – working&hellip;
@@ -63,8 +64,9 @@ git push -u origin &lt;new branch&gt;
         </author>
         <link href="https://liushuya7.github.io/wiki/wen-jian-quan-xian-dai-ma-jie-shi/"/>
         <id>https://liushuya7.github.io/wiki/wen-jian-quan-xian-dai-ma-jie-shi/</id>
+            <category term="Linux"/>
 
-        <updated>2022-12-14T20:52:43-05:00</updated>
+        <updated>2022-12-15T00:18:00-05:00</updated>
             <summary>
                 <![CDATA[
                     执行 ls -l 出现下列提示： liushichao@computername main_proj % ls -l total 0 -rw-r--r-- 1 liushichao staff 0 11 26 18:25 CMakelists.txt drwxr-xr-x 2 liushichao staff 64&hellip;
@@ -110,8 +112,9 @@ x 可执行权限
         </author>
         <link href="https://liushuya7.github.io/wiki/bash-scripting/"/>
         <id>https://liushuya7.github.io/wiki/bash-scripting/</id>
+            <category term="Linux"/>
 
-        <updated>2022-12-14T20:47:05-05:00</updated>
+        <updated>2022-12-15T00:18:08-05:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
@@ -130,7 +133,7 @@ x 可执行权限
         <id>https://liushuya7.github.io/wiki/linux/</id>
             <category term="Linux"/>
 
-        <updated>2022-12-14T20:51:27-05:00</updated>
+        <updated>2022-12-15T00:09:21-05:00</updated>
             <summary>
                 <![CDATA[
                     Useful Links Linux Guide How To Set Up SSH Keys How to Install The Latest Mesa Graphics Driver in Ubuntu 20.04 / 21.04 Make Linux/Unix&hellip;
@@ -283,10 +286,10 @@ $ ls | grep smth
         <id>https://liushuya7.github.io/wiki/genesis-1-in-hebrew/</id>
             <category term="Biblical Hebrew"/>
 
-        <updated>2022-12-13T20:36:39-05:00</updated>
+        <updated>2022-12-15T00:17:32-05:00</updated>
             <summary>
                 <![CDATA[
-                    Ch 1 v1-2 v3-5 v6-8 v9-10 v11-13
+                    Ch 1 v1-2 v3-5 v6-8 v9-10 v11-13 Download PDF [Click Here](#INTERNAL_LINK#/file/media/files/Genesis 1 in Hebrew.pdf) to download the PDF.
                 ]]>
             </summary>
         <content type="html">
@@ -306,6 +309,9 @@ $ ls | grep smth
 
 <h3 id="v11-13">v11-13</h3>
 <div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkxh0VPlujjILpTpYViOVLe5P860sSEo7Mt&amp;clipt=ELyKChiMvg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<h2 id="download-pdf">Download PDF</h2>
+<p>[Click Here](#INTERNAL_LINK#/file/media/files/Genesis 1 in Hebrew.pdf) to download the PDF.</p>
 
             ]]>
         </content>
