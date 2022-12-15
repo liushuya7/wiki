@@ -10,6 +10,69 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/software/",
+            "url": "https://liushuya7.github.io/wiki/software/",
+            "title": "Software",
+            "summary": "Productive Tools Trilium Notes TreeSheets Screenshots &amp; Video Editing ScreenToGif OpenShot Video Editor Shotcut Video Editor Kdenlive Image Editor Gimp Inkscape CAD Solidworks LibreCAD Mesh&hellip;",
+            "content_html": "<h2 id=\"productive-tools\">Productive Tools</h2>\n<ul>\n<li><a href=\"https://github.com/zadam/trilium\">Trilium Notes</a></li>\n<li><a href=\"https://strlen.com/treesheets/\">TreeSheets</a></li>\n</ul>\n<h2 id=\"screenshots--video-editing\">Screenshots &amp; Video Editing</h2>\n<ul>\n<li><a href=\"https://www.screentogif.com/\">ScreenToGif</a></li>\n<li><a href=\"https://www.openshot.org/\">OpenShot Video Editor</a></li>\n<li><a href=\"https://www.shotcut.org/\">Shotcut Video Editor</a></li>\n<li><a href=\"https://kdenlive.org/en/\">Kdenlive</a></li>\n</ul>\n<h2 id=\"image-editor\">Image Editor</h2>\n<ul>\n<li>Gimp</li>\n<li>Inkscape</li>\n</ul>\n<h2 id=\"cad\">CAD</h2>\n<ul>\n<li>Solidworks</li>\n<li><del>LibreCAD</del></li>\n</ul>\n<h2 id=\"mesh-processing\">Mesh Processing</h2>\n<ul>\n<li>Meshlab</li>\n<li>Meshmixer</li>\n</ul>\n<h2 id=\"pcb-design\">PCB Design</h2>\n<ul>\n<li><a href=\"https://www.kicad.org/\">KiCad</a></li>\n<li>Altium Designer</li>\n</ul>\n<h2 id=\"video-recording--live-streaming\">Video Recording &amp; Live Streaming</h2>\n<ul>\n<li><a href=\"https://obsproject.com/\">OBS Studio</a></li>\n<li><a href=\"https://streamlabs.com/\">Streamlabs</a></li>\n</ul>\n<h2 id=\"remote-access\">Remote Access</h2>\n<ul>\n<li>AnyDesk</li>\n<li>Parsec</li>\n<li>NoMachine</li>\n</ul>\n<h2 id=\"virtual-machine\">Virtual Machine</h2>\n<ul>\n<li>VMware<ul>\n<li><a href=\"https://gist.github.com/williamgh2019/cc2ad94cc18cb930a0aab42ed8d39e6f\">VMware Workstation Pro 16 full license keys</a></li>\n</ul>\n</li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "Software"
+            ],
+            "date_published": "2022-12-15T15:55:45-05:00",
+            "date_modified": "2022-12-15T15:55:45-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/modeling-engineered-systems-northwestern-robotics/",
+            "url": "https://liushuya7.github.io/wiki/modeling-engineered-systems-northwestern-robotics/",
+            "title": "Modeling Engineered Systems - Northwestern Robotics",
+            "summary": "Lectures Youtube playlist import numpy as np import matplotlib.pyplot as plt &quot;&quot;&quot; This program simulates a spring-damper system with the following ODE x&#39; + k/b*x&hellip;",
+            "content_html": "<h2 id=\"lectures\">Lectures</h2>\n<!---  Add the following script to support Latex --->\n<script\n  src=\"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"\n  type=\"text/javascript\">\n</script>\n\n<p><a href=\"https://www.youtube.com/playlist?list=PLggLP4f-rq03WvTf9hxuMzDWJl4hHHy8f\">Youtube playlist</a></p>\n<ul>\n<li>Lecture 1: Everything Is The Same</li>\n<li>Lecture 2: Modeling Components</li>\n<li>Lecture 3: Newton’s Laws</li>\n<li>Lecture 4: Euler Integration</li>\n<li>Lecture 5: Exponential Solutions</li>\n<li>Lecture 6: Superposition</li>\n<li>Lecture 7: Newton’s Laws with Mass</li>\n<li>Lecture 8: Newton’s Laws with Several Masses</li>\n<li>Lecture 9: Imaginary Numbers &amp; Euler’s Formula<ul>\n<li>\\(e^{j \\omega t}=\\cos(\\omega t) + j \\sin(\\omega t)\\)</li>\n</ul>\n</li>\n<li>Lecture 10: Imaginary Numbers Continued</li>\n<li>Lecture 11: Vector and Matrix Representation</li>\n<li>Lecture 12: Vector Solutions to ODEs</li>\n</ul>\n<hr>\n<ul>\n<li>Lecture 18: Modeling Electrical Components</li>\n<li>Lecture 19: Kirchhoff’s Laws</li>\n<li>Lecture 20: Kirchhoff’s Laws with Inductors</li>\n<li>Lecture 21: Vector and Matrix Representation in Kirchhoff’s Laws</li>\n<li>Lecture 22: Mechanical/Electrical Analogies</li>\n<li>Lecture 23: Interpreting Mathematical Expressions as Physical Systems</li>\n<li>Lecture 24: Everything Is The Same - Almost</li>\n</ul>\n<h2 id=\"code\">Code</h2>\n<h3 id=\"simulate-spring-damper-system-using-euler-integration\">Simulate Spring-damper System using Euler Integration</h3>\n<pre><code class=\"language-py\">import numpy as np\nimport matplotlib.pyplot as plt\n\n&quot;&quot;&quot;\nThis program simulates a spring-damper system with the following ODE\nx&#39; + k/b*x = 0\n&quot;&quot;&quot;\n\n# define all govering system parameters:\nt0 = 0.0\ntf = 10.0\ndt = 0.1\nk = 1.0 # N/m\nb = 1.0 # Ns/m\nx0 = 0.5 # m\n\n# create arrays for x and time:\ntvec = np.arange(t0, tf+dt, dt)\nxvec = np.zeros(len(tvec))\nxvec[0] = x0\n\n# run the euler integration\nfor i in range(len(xvec)-1):\n    xvec[i+1] = xvec[i] + -k/b*dt*xvec[i]\n    \n# plot the results\nplt.plot(tvec, xvec, lw=2)\nplt.xlabel(&#39;time [sec]&#39;)\nplt.ylabel(&#39;x [m]&#39;)\nplt.grid(True)\nplt.show()\nplt.close()\nplt.clf()\nplt.cla()\n</code></pre>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "Modeling",
+                   "Course/Book"
+            ],
+            "date_published": "2022-12-15T15:44:37-05:00",
+            "date_modified": "2022-12-15T15:47:43-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/learning-c/",
+            "url": "https://liushuya7.github.io/wiki/learning-c/",
+            "title": "Learning C++",
+            "summary": "Hacking C++ https://hackingcpp.com/index.html Website: https://www.cppindetail.com/ Book (on Amazon): https://www.amazon.com/17-Detail-Exciting-Features-Standard/dp/1798834065 Code: https://www.cppindetail.com/data/cpp17indetail.zip Book: https://learning.oreilly.com/library/view/modern-cmake-for/9781801070058/ Code: https://github.com/PacktPublishing/Modern-CMake-for-Cpp Youtube Channel: https://www.youtube.com/playlist?list=PLO6785UZapFVtesm7HROV2bwrzFaVwVH8",
+            "content_html": "<h2 id=\"hacking-c\">Hacking C++</h2>\n<p><a href=\"https://hackingcpp.com/index.html\">https://hackingcpp.com/index.html</a></p>\n<h2 id=\"book-c-17-in-detail\">[Book] C++ 17 in Detail</h2>\n<p>Website: <a href=\"https://www.cppindetail.com/\">https://www.cppindetail.com/</a></p>\n<p>Book (on Amazon): <a href=\"https://www.amazon.com/17-Detail-Exciting-Features-Standard/dp/1798834065\">https://www.amazon.com/17-Detail-Exciting-Features-Standard/dp/1798834065</a> </p>\n<p>Code: <a href=\"https://www.cppindetail.com/data/cpp17indetail.zip\">https://www.cppindetail.com/data/cpp17indetail.zip</a></p>\n<h2 id=\"book-modern-cmake-for-c\">[Book] Modern CMake for C++</h2>\n<p>Book: <a href=\"https://learning.oreilly.com/library/view/modern-cmake-for/9781801070058/\">https://learning.oreilly.com/library/view/modern-cmake-for/9781801070058/</a></p>\n<p>Code: <a href=\"https://github.com/PacktPublishing/Modern-CMake-for-Cpp\">https://github.com/PacktPublishing/Modern-CMake-for-Cpp</a></p>\n<p>Youtube Channel: <a href=\"https://www.youtube.com/playlist?list=PLO6785UZapFVtesm7HROV2bwrzFaVwVH8\">https://www.youtube.com/playlist?list=PLO6785UZapFVtesm7HROV2bwrzFaVwVH8</a></p>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "Course/Book",
+                   "CMake",
+                   "C++"
+            ],
+            "date_published": "2022-12-15T15:30:22-05:00",
+            "date_modified": "2022-12-15T15:30:22-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/courses-and-books/",
+            "url": "https://liushuya7.github.io/wiki/courses-and-books/",
+            "title": "Courses &amp; Books",
+            "summary": "runestone.academy Books A First Course in Linear Algebra Problem Solving with Algorithms and Data Structures using C++ Learn Computer Graphics using WebGL JavaScript for Python&hellip;",
+            "content_html": "<h2 id=\"runestoneacademy-books\"><a href=\"https://runestone.academy/runestone/books/index\">runestone.academy</a> Books</h2>\n<ul>\n<li><a href=\"https://runestone.academy/runestone/books/published/fcla/front-matter.html\">A First Course in Linear Algebra</a></li>\n<li><a href=\"https://runestone.academy/runestone/books/published/cppds/index.html\">Problem Solving with Algorithms and Data Structures using C++</a></li>\n<li><a href=\"https://runestone.academy/runestone/books/published/learnwebgl2/index.html\">Learn Computer Graphics using WebGL</a></li>\n<li><a href=\"https://runestone.academy/runestone/books/published/JS4Python/index.html\">JavaScript for Python Programmers¶</a></li>\n</ul>\n<h2 id=\"computer-science\">Computer Science</h2>\n<ul>\n<li><a href=\"https://ciis.lcsr.jhu.edu/doku.php?id=courses:445:short:home\">Computer Integrated Surgery</a> (JHU-CIS I)</li>\n<li><a href=\"https://mphy0026.readthedocs.io/en/latest/index.html\">Computer Assisted Surgery and Therapy</a><ul>\n<li><a href=\"https://github.com/UCL/scikit-surgery\">https://github.com/UCL/scikit-surgery</a></li>\n</ul>\n</li>\n<li><a href=\"https://courses.cs.washington.edu/courses/cse577/11au/notes.html\">CSE/EE 577 Medical Image Analysis</a> (Washington University)</li>\n<li><a href=\"https://www.youtube.com/channel/UCm5mt-A4w61lknZ9lCsZtBw\">Control &amp; Mathmatics</a>, <a href=\"http://databookuw.com/page-16/page-18/\">Prof. Steve Brunton</a><ul>\n<li><a href=\"http://databookuw.com/\">&lt;&lt;Data Driven Science &amp; Engineering&gt;&gt;</a></li>\n</ul>\n</li>\n<li><a href=\"https://szeliski.org/Book/\">Computer Vision: Algorithms and Applications, 2nd ed</a></li>\n<li><a href=\"https://www.jianshu.com/p/4d2899d43016\"><strong>传统计算机视觉学习笔记</strong></a></li>\n<li><a href=\"https://www.jianshu.com/p/3b24a497715b\"><strong>传统3D视觉学习笔记</strong></a></li>\n<li><a href=\"https://prosperocoder.com/\">Coding and CG Tutorials</a>, by Prospero Coder</li>\n</ul>\n<h2 id=\"robotics\">Robotics</h2>\n<ul>\n<li><a href=\"https://github.com/mikeroyal/Robotics-guide\">Robotics Guide</a></li>\n<li><a href=\"https://project-awesome.org/Kiloreux/awesome-robotics\">Awesome Robotics</a></li>\n<li><a href=\"https://github.com/krishauser/RoboticSystemsBook\">RoboticSystemsBook</a></li>\n</ul>\n<h2 id=\"arvr\">AR/VR</h2>\n<ul>\n<li><a href=\"https://github.com/mikeroyal/AR-VR-Guide\">AR/VR Guide</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/List_of_augmented_reality_software\">List of augmented reality software</a> (Wikipedia)</li>\n<li><a href=\"https://sites.google.com/view/brown-vr-sw-review-2018\">VR Software Wiki</a></li>\n<li><a href=\"https://www.worldviz.com\">WorldViz - Virtual Reality for Training and Research</a><ul>\n<li><a href=\"https://forum.worldviz.com\">WorldViz User Forum</a></li>\n</ul>\n</li>\n<li><a href=\"https://github.com/qian256/HoloLensCamCalib\">HoloLens Camera Calibration</a>, by Long Qian</li>\n<li><a href=\"https://github.com/qian256/HoloLensARToolKit\">HoloLens with ARToolKit v0.3</a>, by Long Qian</li>\n<li><a href=\"https://github.com/IntelligentRoboticsLabs/ARViz\">ARViz</a>, an RViz implementation for AR runs on Microsoft Hololens</li>\n<li><a href=\"https://github.com/theseankelly/hololens-ros2\">ROS2 for HoloLens</a>, a UWP component library to interact with ROS2</li>\n<li><a href=\"https://github.com/mafda/augmented_reality_101\">Augmented Reality 101</a></li>\n</ul>\n<h2 id=\"algorithms\">Algorithms</h2>\n<h3 id=\"mit-6006-introduction-to-algorithms\"><a href=\"https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/index.htm\">MIT 6.006 Introduction to Algorithms</a></h3>\n<ul>\n<li><a href=\"https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY\">YouTube Playlist</a><ol>\n<li>Algorithms and Computation</li>\n<li>Data Structures and Dynamic Arrays</li>\n<li>Sets and Sorting</li>\n<li>Hashing</li>\n<li>Linear Sorting</li>\n<li>Binary Trees, Part 1</li>\n<li>Binary Trees, Part 2: AVL</li>\n<li>Binary Heaps</li>\n<li>Breadth-First Search</li>\n<li>Depth-First Search</li>\n<li>Weighted Shortest Paths</li>\n<li>Bellman-Ford</li>\n<li>Dijkstra</li>\n<li>APSP and Johnson</li>\n<li>Dynamic Programming, Part 1: SRTBOT, Fib, DAGs, Bowling</li>\n<li>Dynamic Programming, Part 2: LCS, LIS, Coins</li>\n<li>Dynamic Programming, Part 3: APSP, Parens, Piano</li>\n<li>Dynamic Programming, Part 4: Rods, Subset Sum, Pseudopolynomial</li>\n<li>Complexity</li>\n<li>Course Review</li>\n<li>Algorithms — Next Steps</li>\n</ol>\n</li>\n<li><a href=\"https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/lecture-notes/\">Lecture Notes</a></li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "Course/Book"
+            ],
+            "date_published": "2022-12-15T15:18:21-05:00",
+            "date_modified": "2022-12-15T15:18:21-05:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/machine-learning/",
             "url": "https://liushuya7.github.io/wiki/machine-learning/",
             "title": "Machine Learning",
@@ -28,8 +91,8 @@
             "id": "https://liushuya7.github.io/wiki/data-analysis/",
             "url": "https://liushuya7.github.io/wiki/data-analysis/",
             "title": "Data Analysis",
-            "summary": "Knowledge Base Concordance Correlation Coefficient * See What is the Concordance Correlation Coefficient? Least Squares Sphere Fit 3D Data Point Set Registration Methods — Discussion&hellip;",
-            "content_html": "<h2 id=\"knowledge-base\">Knowledge Base</h2>\n<ul>\n<li><strong>Concordance Correlation Coefficient</strong>\n*   See <a href=\"https://www.statisticshowto.com/concordance-correlation-coefficient/\">What is the Concordance Correlation Coefficient?</a></li>\n<li><a href=\"https://jekel.me/2015/Least-Squares-Sphere-Fit/\">Least Squares Sphere Fit</a></li>\n</ul>\n<h2 id=\"3d-data\">3D Data</h2>\n<p><a href=\"https://medium.com/swlh/point-set-registration-methods-discussion-and-implementation-58efa98d0b68\">Point Set Registration Methods — Discussion and Implementation</a></p>\n<h2 id=\"plotting\">Plotting</h2>\n<ul>\n<li><a href=\"https://jekel.me/2020/Better-error-bars-with-tolerance-intervals/\">Better error bars with tolerance intervals</a></li>\n</ul>\n<h3 id=\"tools\">Tools</h3>\n<ul>\n<li><a href=\"https://plotjuggler.io/\">PlotJuggler</a> – Fast, intuitive and extensible time series visualization tool with ROS2 integration.</li>\n</ul>\n",
+            "summary": "Knowledge Base Concordance Correlation Coefficient See What is the Concordance Correlation Coefficient? Least Squares Sphere Fit 3D Data Point Set Registration Methods — Discussion and&hellip;",
+            "content_html": "<h2 id=\"knowledge-base\">Knowledge Base</h2>\n<ul>\n<li><strong>Concordance Correlation Coefficient</strong><ul>\n<li>See <a href=\"https://www.statisticshowto.com/concordance-correlation-coefficient/\">What is the Concordance Correlation Coefficient?</a></li>\n</ul>\n</li>\n<li><a href=\"https://jekel.me/2015/Least-Squares-Sphere-Fit/\">Least Squares Sphere Fit</a></li>\n</ul>\n<h2 id=\"3d-data\">3D Data</h2>\n<p><a href=\"https://medium.com/swlh/point-set-registration-methods-discussion-and-implementation-58efa98d0b68\">Point Set Registration Methods — Discussion and Implementation</a></p>\n<h2 id=\"plotting\">Plotting</h2>\n<ul>\n<li><a href=\"https://jekel.me/2020/Better-error-bars-with-tolerance-intervals/\">Better error bars with tolerance intervals</a></li>\n</ul>\n<h3 id=\"tools\">Tools</h3>\n<ul>\n<li><a href=\"https://plotjuggler.io/\">PlotJuggler</a> – Fast, intuitive and extensible time series visualization tool with ROS2 integration.</li>\n</ul>\n",
             "author": {
                 "name": "Joshua Liu"
             },
@@ -37,7 +100,7 @@
                    "Data"
             ],
             "date_published": "2022-12-15T13:50:26-05:00",
-            "date_modified": "2022-12-15T14:00:24-05:00"
+            "date_modified": "2022-12-15T14:12:16-05:00"
         },
         {
             "id": "https://liushuya7.github.io/wiki/3d-reconstruction/",
@@ -98,67 +161,6 @@
             ],
             "date_published": "2022-12-15T12:58:47-05:00",
             "date_modified": "2022-12-15T12:58:55-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/vtk/",
-            "url": "https://liushuya7.github.io/wiki/vtk/",
-            "title": "VTK",
-            "summary": "VTK Book VTK.js is a JavaScript library available for scientific visualization in your browser. Issue: vtkOpenGLRenderWindow OpenGL version When you run vtk, you may encounter&hellip;",
-            "content_html": "<ul>\n<li><a href=\"https://kitware.github.io/vtk-examples/site/VTKBook/\">VTK Book</a></li>\n<li><a href=\"https://kitware.github.io/vtk-js/\">VTK.js</a> is a JavaScript library available for scientific visualization in your browser.</li>\n</ul>\n<h2 id=\"issue-vtkopenglrenderwindow-opengl-version\">Issue: vtkOpenGLRenderWindow OpenGL version</h2>\n<p>When you run vtk, you may encounter such error:</p>\n<pre><code class=\"language-bash\">6FFD700\\]vtkOpenGLRenderWindow.c:499\nERR| vtkGenericOpenGLRenderWindow (0x116bf50): Unable to find a valid OpenGL 3.2 or later implementation.\nPlease update your video card driver to the latest version.\nIf you are using Mesa please make sure you have version 11.2 or later and make sure your driver in Mesa supports OpenGL 3.2 such as llvmpipe or openswr.\nIf you are on windows and using Microsoft remote desktop note that it only supports OpenGL 3.2 with nvidia quadro cards.\nYou can use other remoting software such as nomachine to avoid this issue.  \n</code></pre>\n<p>Check your OpenGL version:</p>\n<pre><code class=\"language-bash\">glxinfo | grep &quot;OpenGL version&quot;\n</code></pre>\n<p>You may get:</p>\n<pre><code class=\"language-bash\">OpenGL version string: 3.0 Mesa 21.3.3 - kisak-mesa PPA\n</code></pre>\n<p>Now, if you do: (see solution <a href=\"https://stackoverflow.com/a/49878999/3547352\">https://stackoverflow.com/a/49878999/3547352</a>)</p>\n<pre><code class=\"language-bash\">export MESA_GL_VERSION_OVERRIDE=3.3\n</code></pre>\n<p>You’ll now get:</p>\n<pre><code class=\"language-bash\">OpenGL version string: 3.3 (Compatibility Profile) Mesa 21.3.3 - kisak-mesa PPA\n</code></pre>\n<p>When you run the vtk window, the red error should disappear</p>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "VTK",
-                   "3D Graphics"
-            ],
-            "date_published": "2022-12-15T12:49:51-05:00",
-            "date_modified": "2022-12-15T13:07:23-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/3d-graphics/",
-            "url": "https://liushuya7.github.io/wiki/3d-graphics/",
-            "title": "3D Graphics",
-            "summary": "Graphic Engine &amp; Game Engine open source list Learn OpenGL in Python Learn OpenGL, extensive tutorial resource for learning Modern OpenGL Coin3D Free and open-source&hellip;",
-            "content_html": "<ul>\n<li><a href=\"https://github.com/Gforcex/OpenGraphic\">Graphic Engine &amp; Game Engine open source list</a></li>\n<li><a href=\"https://www.youtube.com/playlist?list=PL1P11yPQAo7opIg8r-4BMfh1Z_dCOfI0y\">Learn OpenGL in Python</a></li>\n<li><ul>\n<li><a href=\"https://learnopengl.com/\">Learn OpenGL</a>, extensive tutorial resource for learning Modern OpenGL</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"coin3d\">Coin3D</h2>\n<p>Free and open-source implementation of the Open Inventor API.\n<a href=\"https://coin3d.github.io/\">https://coin3d.github.io/</a></p>\n<h2 id=\"mevislab\">MeVisLab</h2>\n<p><a href=\"https://www.mevislab.de/\">MeVisLab</a> is a framework for the development of image processing algorithms and visualization and interaction methods, with a focus on medical imaging.</p>\n<h2 id=\"vcglibmeshlab\">Vcglib/Meshlab</h2>\n<p>The <a href=\"http://vcg.isti.cnr.it/vcglib/\"><strong>Visualization and Computer Graphics Library</strong></a> (VCGlib for short) is a open source, portable, C++, templated, no dependency, library for manipulation, processing, cleaning, simplifying triangle meshes.</p>\n<p><a href=\"https://github.com/cnr-isti-vclab/vcglib\">https://github.com/cnr-isti-vclab/vcglib</a></p>\n<ul>\n<li><a href=\"https://github.com/Nitta-K-git/vcglib_samples\">vcglib_samples</a>, sample codes of vcglib and MeshLab function.</li>\n<li>几个经典的数学库之一学习—VCGlib<ul>\n<li><a href=\"https://www.cnblogs.com/icmzn/p/6640752.html\">Lesson 1</a></li>\n<li><a href=\"https://www.cnblogs.com/icmzn/p/6655775.html\">Lesson 2</a></li>\n</ul>\n</li>\n<li><a href=\"http://vcg.isti.cnr.it/nexus/\">Nexus</a>, a collection of tools for streaming visualization of large 3D models in OpenGL (C++ and Javascript)</li>\n</ul>\n<h3 id=\"create-water-tight-surfaces-from-3d-scanning\">Create water tight surfaces from 3D Scanning</h3>\n<p><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://liushuya7.github.io/wiki/media/posts/27/meshlab-surface-reconstruction-screened-poisson.png\" alt=\"Image description\" width=\"1123\" height=\"735\"  sizes=\"(max-width: 768px) 100vw, 768px\" srcset=\"https://liushuya7.github.io/wiki/media/posts/27/responsive/meshlab-surface-reconstruction-screened-poisson-xs.png 300w ,https://liushuya7.github.io/wiki/media/posts/27/responsive/meshlab-surface-reconstruction-screened-poisson-sm.png 480w ,https://liushuya7.github.io/wiki/media/posts/27/responsive/meshlab-surface-reconstruction-screened-poisson-md.png 768w\"></figure></p>\n<p>This filter can be used to merge multiple 3D scanned mesh layers and fill holes.</p>\n<h2 id=\"geometric-mesh-processing\">Geometric Mesh Processing</h2>\n<ul>\n<li>Software: <strong>Materialise Medical</strong><ul>\n<li><a href=\"https://www.youtube.com/watch?v=23WZPl11HvE&amp;ab_channel=MaterialiseMedical\">How to Design a Patient-Specific Cranial Plate</a></li>\n</ul>\n</li>\n<li><a href=\"http://meshlabstuff.blogspot.com/\"><strong>Meshlab</strong> Stuff</a><ul>\n<li><a href=\"https://github.com/cnr-isti-vclab/PyMeshLab\">PyMeshLab</a></li>\n<li><a href=\"https://stackoverflow.com/questions/46089463/comparing-models-somebody-can-give-me-an-exmple\">MeshLab compares two 3D models by calculating the Hausdorff distance</a></li>\n</ul>\n</li>\n<li>Line Drawings from 3D Models, by Pierre Bénard and Aaron Hertzmann<ul>\n<li>Paper/Tutorial: <a href=\"https://arxiv.org/abs/1810.01175\">https://arxiv.org/abs/1810.01175</a></li>\n<li>Github: <a href=\"https://github.com/benardp/contours_viewer\">https://github.com/benardp/contours_viewer</a></li>\n</ul>\n</li>\n<li>2D and 3D Active contours using BSplines<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/Active_contour_model\">Active Contour Model (Wikipedia)</a></li>\n<li>Related code:<ul>\n<li><a href=\"https://github.com/ghif/ActiveContourModel\">https://github.com/ghif/ActiveContourModel</a></li>\n<li><a href=\"https://github.com/Christophe-Foyer/BSpline_Active_Contour\">https://github.com/Christophe-Foyer/BSpline_Active_Contour</a></li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Mesh Segmentation Topic<ul>\n<li><a href=\"https://github.com/QiujieDong/Mesh_Segmentation\">https://github.com/QiujieDong/Mesh_Segmentation</a></li>\n</ul>\n</li>\n<li><a href=\"https://github.com/nmwsharp\">Nicholas Sharp’s</a><ul>\n<li><a href=\"https://github.com/nmwsharp\">Polyscope and geometry-central - 3D Mesh Processing/Visulization</a></li>\n</ul>\n</li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "3D Graphics"
-            ],
-            "date_published": "2022-12-15T10:57:18-05:00",
-            "date_modified": "2022-12-15T12:43:34-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/network-or-data-communication/",
-            "url": "https://liushuya7.github.io/wiki/network-or-data-communication/",
-            "title": "Network | Data Communication",
-            "summary": "Serial Communication Add current user to the “dialout” groups: $ sudo usermod -aG dialout &lt;account name&gt; Python pySerial, serial communication api in Python SSH Cerbot,&hellip;",
-            "content_html": "<h2 id=\"serial-communication\">Serial Communication</h2>\n<p>Add current user to the “dialout” groups:</p>\n<pre><code class=\"language-bash\">$ sudo usermod -aG dialout &lt;account name&gt;\n</code></pre>\n<h3 id=\"python\">Python</h3>\n<ul>\n<li><a href=\"https://pyserial.readthedocs.io/en/latest/index.html\">pySerial</a>, serial communication api in Python</li>\n</ul>\n<h2 id=\"ssh\">SSH</h2>\n<ul>\n<li><a href=\"https://certbot.eff.org/\">Cerbot</a>, switch an existing HTTP site to work in HTTPS</li>\n</ul>\n<h2 id=\"tcp-vs-udp\">TCP vs UDP</h2>\n<p><strong>TCP</strong> is a connection-oriented protocol, whereas <strong>UDP</strong> is a connectionless protocol. A key difference between TCP and UDP is speed, as TCP is comparatively slower than UDP. Overall, UDP is a much faster, simpler, and efficient protocol, however, retransmission of lost data packets is only possible with TCP.</p>\n<h3 id=\"what-is-tcp\">What is TCP?</h3>\n<p><strong>Transmission Control Protocol (TCP)</strong> is connection-oriented, meaning once a connection has been established, data can be transmitted in two directions. TCP has built-in systems to check for errors and to guarantee data will be delivered in the order it was sent, making it the perfect protocol for transferring information like still images, data files, and web pages.</p>\n<p>But while TCP is instinctively reliable, its feedback mechanisms also result in a larger overhead, translating to greater use of the available bandwidth on your network. </p>\n<h3 id=\"what-is-udp\">What is UDP?</h3>\n<p><strong>User Datagram Protocol (UDP)</strong> is a simpler, connectionless Internet protocol wherein error-checking and recovery services are not required. With UDP, there is no overhead for opening a connection, maintaining a connection, or terminating a connection; data is continuously sent to the recipient, whether or not they receive it. </p>\n<p>Although UDP isn’t ideal for sending an email, viewing a webpage, or downloading a file, it is largely preferred for real-time communications like broadcast or multitask network transmission.</p>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Network"
-            ],
-            "date_published": "2022-12-15T10:37:25-05:00",
-            "date_modified": "2022-12-15T10:37:25-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/setup-quick-source-for-qt/",
-            "url": "https://liushuya7.github.io/wiki/setup-quick-source-for-qt/",
-            "title": "Setup Quick Source for Qt",
-            "summary": "You may add the following line to your .bashrc #!/bin/sh # Set the version to match what is installed on your system export QT_VERSION=6.x.x #&hellip;",
-            "content_html": "<p>You may add the following line to your <code>.bashrc</code></p>\n<pre><code class=\"language-bash\">#!/bin/sh\n\n# Set the version to match what is installed on your system\nexport QT_VERSION=6.x.x\n\n# Add Cmake, Ninja, QtCreator, QtDesignStudio to PATH\nexport PATH=/home/$USER/Qt/Tools/CMake/bin:/home/josh/Qt/Tools/Ninja:/home/$USER/Qt/Tools/QtCreator/bin:/home/$USER/Qt/Tools/QtDesignStudio/bin:$PATH\n\n# Add Qt to the PATH enviroment, and LD_LIBRARY_PATH\nexport PATH=/home/$USER/Qt/$QT_VERSION/gcc_64/bin:$PATH\nexport LD_LIBRARY_PATH=/home/$USER/Qt/$QT_VERSION/gcc_64/lib/:$LD_LIBRARY_PATH\n</code></pre>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Qt"
-            ],
-            "date_published": "2022-12-15T10:31:15-05:00",
-            "date_modified": "2022-12-15T10:31:15-05:00"
         }
     ]
 }
