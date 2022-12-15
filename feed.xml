@@ -3,12 +3,264 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2022-12-13T20:37:08-05:00</updated>
+    <updated>2022-12-14T20:57:06-05:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
     <id>https://liushuya7.github.io/wiki</id>
 
+    <entry>
+        <title>Git</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/git/"/>
+        <id>https://liushuya7.github.io/wiki/git/</id>
+
+        <updated>2022-12-14T20:57:06-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Useful Links Git Branches Tips Github CLI, brings GitHub to your terminal Move files from one repository to another, preserving git history vcstool – working&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="useful-links">Useful Links</h2>
+<ul>
+<li><a href="https://www.nobledesktop.com/learn/git/git-branches"><strong>Git</strong> <strong>Branches</strong> Tips</a></li>
+<li><a href="https://cli.github.com/">Github CLI</a>, brings GitHub to your terminal</li>
+<li><a href="https://medium.com/@ayushya/move-directory-from-one-repository-to-another-preserving-git-history-d210fa049d4b">Move files from one repository to another, preserving git history</a></li>
+</ul>
+<h3 id="vcstool--working-with-multiple-repositories"><a href="https://github.com/dirk-thomas/vcstool">vcstool</a> – working with multiple repositories</h3>
+<pre><code class="language-bash">vcs import --input file_name.repos # or URL
+</code></pre>
+<h3 id="createrename-a-branch">Create/Rename a Branch</h3>
+<p>Use <a href="https://stackoverflow.com/a/34100189"><code>git switch --orphan &lt;new branch&gt;</code></a> to create an empty branch with no history.</p>
+<pre><code class="language-bash">git switch --orphan &lt;new branch&gt;
+git commit --allow-empty -m &quot;Initial commit on orphan branch&quot;
+git push -u origin &lt;new branch&gt;
+</code></pre>
+<p>Move/Change current branch name (e.g. to ‘main’)</p>
+<pre><code class="language-bash">git branch -M main
+</code></pre>
+<h3 id="git-pull-over-all-subdirectories"><a href="https://stackoverflow.com/a/38291944/3547352"><code>git pull</code> over all subdirectories</a></h3>
+<pre><code class="language-bash">for d in *; do (cd $d &amp;&amp; git pull --ff-only); done
+</code></pre>
+<h3 id="submodule">Submodule</h3>
+<ul>
+<li><a href="https://github.blog/2016-02-01-working-with-submodules/">Working with submodules</a></li>
+</ul>
+<pre><code class="language-bash">git submodule update --init --recursive
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>文件权限代码解释</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/wen-jian-quan-xian-dai-ma-jie-shi/"/>
+        <id>https://liushuya7.github.io/wiki/wen-jian-quan-xian-dai-ma-jie-shi/</id>
+
+        <updated>2022-12-14T20:52:43-05:00</updated>
+            <summary>
+                <![CDATA[
+                    执行 ls -l 出现下列提示： liushichao@computername main_proj % ls -l total 0 -rw-r--r-- 1 liushichao staff 0 11 26 18:25 CMakelists.txt drwxr-xr-x 2 liushichao staff 64&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>执行 ls -l 出现下列提示：</p>
+<pre><code class="language-bash">liushichao@computername main_proj % ls -l
+total 0
+-rw-r--r--  1 liushichao  staff    0 11 26 18:25 CMakelists.txt
+drwxr-xr-x  2 liushichao  staff   64 11 26 17:25 include
+drwxr-xr-x  5 liushichao  staff  160 11 26 17:49 sgmm-doc
+drwxr-xr-x  2 liushichao  staff   64 11 26 17:25 src
+</code></pre>
+<p>其中 <code>drwxr-xr-x</code> 代表文件权限，具体每个字母的含义</p>
+<p>理解的时候将后边每三个分成一组</p>
+<pre><code class="language-bash">d             rwx            r-x                r-x
+|             |              |                  |
+代表是目录      当前用户权限     当前用户组权限       其他用户权限
+</code></pre>
+<p>d代表是目录，如果是文件的话，这个位置为`-``，如第一行所示</p>
+<pre><code class="language-bash">-rw-r--r--  1 liushichao  staff    0 11 26 18:25 CMakelists.txt
+</code></pre>
+<p>其中 <code>rwx</code> 的含义为</p>
+<pre><code class="language-text-plain">r 读权限
+w 写权限
+x 可执行权限
+</code></pre>
+<p>如果某一个权限是<code>-</code>，代表没有那个权限</p>
+<p>rwx可以用二进制表示，有权限的地方为1，没权限的位置为0</p>
+<p>rwx可以表示为111，转换成十进制为7</p>
+<p>r–可以表示为100，对应十进制4</p>
+<p>--x二进制为001，十进制为1</p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Bash Scripting</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/bash-scripting/"/>
+        <id>https://liushuya7.github.io/wiki/bash-scripting/</id>
+
+        <updated>2022-12-14T20:47:05-05:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <object data="https://liushuya7.github.io/wiki/media/posts/20/Bash Scripting.pdf" type="application/pdf" width="100%" height="800px">
+    <embed src="https://liushuya7.github.io/wiki/media/posts/20/Bash Scripting.pdf"></embed>
+</object>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Linux</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/linux/"/>
+        <id>https://liushuya7.github.io/wiki/linux/</id>
+            <category term="Linux"/>
+
+        <updated>2022-12-14T20:51:27-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Useful Links Linux Guide How To Set Up SSH Keys How to Install The Latest Mesa Graphics Driver in Ubuntu 20.04 / 21.04 Make Linux/Unix&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="useful-links">Useful Links</h2>
+<ul>
+<li><a href="https://github.com/mikeroyal/Linux-Guide">Linux Guide</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-2">How To Set Up SSH Keys</a></li>
+<li><a href="https://ubuntuhandbook.org/index.php/2021/07/install-latest-mesa-ubuntu-20-04-21-04/"><strong>How to Install The Latest Mesa Graphics Driver in Ubuntu 20.04 / 21.04</strong></a></li>
+<li><a href="https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html">Make Linux/Unix Script Portable With #!/usr/bin/env As a Shebang</a></li>
+</ul>
+<h2 id="quick-reference">Quick Reference</h2>
+<ul>
+<li><code>xdg-open</code> - <a href="https://linux.die.net/man/1/xdg-open">opens a file or URL in the user’s preferred application</a></li>
+</ul>
+<h4 id="tar命令"><code>**tar**</code>命令</h4>
+<pre><code class="language-bash"># 压缩
+tar -cfv out.tar source.file
+# 解压
+tar xfv out.tar
+tar xfvz out.tgz --directory unzip_dir
+</code></pre>
+<ul>
+<li><strong>断开ssh</strong><ul>
+<li><code>logout</code> or CTRL+D</li>
+</ul>
+</li>
+<li><strong>拷贝到远程</strong><ul>
+<li><code>scp -r /home/Downloads/source_file root@www.runoob.com:/home/root/others/</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="working-with-files">Working with files</h4>
+<h5 id="using-placeholders-can-be-used-with-cmd-such-as-ls-rm-mv-etc">Using placeholders (can be used with cmd such as <code>ls</code>, <code>rm</code>, <code>mv</code> etc)</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Placeholder</strong></td>
+<td><strong>Meaning</strong></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Any set of characters</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Any single character</td>
+</tr>
+<tr>
+<td><code>[a-f]</code></td>
+<td>Characters in [abcdef]</td>
+</tr>
+<tr>
+<td><code>[^a-c]</code></td>
+<td>Any character <strong>not</strong> in [abc]</td>
+</tr>
+</tbody></table>
+<p>Example:</p>
+<pre><code class="language-bash">1 $ ls
+2 u01.tex v01.pdf v01.tex
+3 u02.tex v02.pdf v02.tex
+4 u03.tex v03.pdf v03.tex
+5
+6 $ ls *. pdf
+7 v01.pdf v02.pdf v03.pdf
+8
+9 $ ls u*
+10 u01.tex u02.tex u03.tex
+11
+12 [/home/student/Examples/placeholders]$ ls ?01*
+13 u01.tex v01.pdf v01.tex
+14
+15 [/home/student/Examples/placeholders]$ ls [uv]01*
+16 u01.tex v01.pdf v01.tex
+17
+18 [/home/student/Examples/placeholders]$ ls u0[^12].tex
+19 u03.tex
+</code></pre>
+<h5 id="searching">Searching</h5>
+<pre><code class="language-bash">$ find &lt;in-folder&gt; -name &lt;filename&gt;
+    Search for file &lt;filename&gt; in folder &lt;in-folder&gt;, allows wildcards
+
+$ locate &lt;filename&gt;
+    Search for file &lt;filename&gt; in the entire system! (just remember to &lt;sudo updatedb&gt; often)
+
+$ grep &lt;what&gt; &lt;where&gt;
+    Search for a string &lt;what&gt; in a file &lt;where&gt;
+</code></pre>
+<h5 id="chaining-commands">Chaining commands</h5>
+<pre><code class="language-bash">$ command1; command2; command3
+    Calls commands one after another
+
+$ command1 &amp;&amp; command2 &amp;&amp; command3
+    Same as above but fails if any of the commands returns an error code
+
+$ command1 | command2 | command3
+    Pipe stdout of command1 to stdin of command2
+ and stdout of command2 to stdin of command3
+    Piping commonly used with grep:
+    
+$ ls | grep smth
+    look for smth in output of ls
+</code></pre>
+<h3 id="useful-links-1">Useful Links</h3>
+<ul>
+<li><a href="https://phoenixnap.com/kb/setup-passwordless-ssh">How to Set Up Passwordless SSH Login</a>(Good Security)</li>
+<li><a href="https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/">How to disable ssh password login on Linux to increase security</a></li>
+</ul>
+<h2 id="embedded-linux">Embedded Linux</h2>
+<p><figure class="post__image"><img loading="lazy" src="https://liushuya7.github.io/wiki/media/posts/19/embedded-linux.png" alt="embedded linux" width="1200" height="348"  sizes="(max-width: 768px) 100vw, 768px" srcset="https://liushuya7.github.io/wiki/media/posts/19/responsive/embedded-linux-xs.png 300w ,https://liushuya7.github.io/wiki/media/posts/19/responsive/embedded-linux-sm.png 480w ,https://liushuya7.github.io/wiki/media/posts/19/responsive/embedded-linux-md.png 768w"></figure></p>
+<h2 id="touch-screen-setup">Touch Screen Setup</h2>
+<p><a href="https://unix.stackexchange.com/questions/473721/calibrating-a-touch-screen-on-dual-monitors-one-touch-one-not">Calibrating a touch-screen on dual monitors</a></p>
+<p>In terminal, type:</p>
+<pre><code class="language-bash">xinput --map-to-output $(xinput list --id-only &quot;Wacom TouchScreen Finger touch&quot;) USB-C-0
+</code></pre>
+<p>For HUION Drawing Tablet</p>
+<pre><code class="language-bash">xinput --map-to-output $(xinput list --id-only &quot;HUION Huion Tablet Pen Pen (0)&quot;) DP-4
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Biblical Hebrew</title>
         <author>
@@ -1171,467 +1423,6 @@ make install
 <p>前边是高，后边是宽，不要弄反了</p>
 <pre><code class="language-cpp">Mat (int rows, int cols, int type);
 </code></pre>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>CMake</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/cmake/"/>
-        <id>https://liushuya7.github.io/wiki/cmake/</id>
-            <category term="CMake"/>
-            <category term="C++"/>
-
-        <updated>2022-12-13T13:23:15-05:00</updated>
-            <summary>
-                <![CDATA[
-                    CMake Reference/Tutorial Step 2: Adding a Library Step 3: Adding Usage Requirements for a Library Step 4: Installing and Testing Step 9: Selecting Static or&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="cmake-referencetutorial"><a href="https://cmake.org/cmake/help/latest/index.html#">CMake Reference/Tutorial</a></h2>
-<ul>
-<li><p><a href="https://cmake.org/cmake/help/latest/guide/tutorial/Adding%20a%20Library.html">Step 2: Adding a Library</a></p>
-</li>
-<li><p><a href="https://cmake.org/cmake/help/latest/guide/tutorial/Adding%20Usage%20Requirements%20for%20a%20Library.html">Step 3: Adding Usage Requirements for a Library</a></p>
-</li>
-<li><p><a href="https://cmake.org/cmake/help/latest/guide/tutorial/Installing%20and%20Testing.html">Step 4: Installing and Testing</a></p>
-<ul>
-<li><a href="https://cmake.org/cmake/help/latest/guide/tutorial/Installing%20and%20Testing.html#install-rules">Install Rules</a></li>
-</ul>
-</li>
-<li><p><a href="https://cmake.org/cmake/help/latest/guide/tutorial/Selecting%20Static%20or%20Shared%20Libraries.html">Step 9: Selecting Static or Shared Libraries</a></p>
-</li>
-<li><p><a href="https://cmake.org/cmake/help/latest/guide/tutorial/Adding%20Generator%20Expressions.html">Step 10: Adding Generator Expressions</a></p>
-</li>
-<li><p><a href="https://cmake.org/cmake/help/latest/guide/tutorial/Adding%20Export%20Configuration.html">Step 11: Adding Export Configuration</a></p>
-</li>
-<li><p><a href="https://cmake.org/cmake/help/latest/guide/tutorial/Packaging%20Debug%20and%20Release.html">Step 12: Packaging Debug and Release</a></p>
-</li>
-<li><p><a href="https://stackoverflow.com/a/68734757">CMake Suggestions on Stackoverflow</a></p>
-</li>
-</ul>
-<h3 id="1-指定第三方库的查找路径"><strong>1. 指定第三方库的查找路径</strong></h3>
-<p>可以使用<code>CMAKE_PREFIX_PATH</code>变量指定第三方库的查找路径（指定的安装路径）</p>
-<pre><code class="language-text-x-sh">cd build
-cmake -DCMAKE_PREFIX_PATH=/Users/josh/my_install_dir ..
-make
-# OR
-cmake --install . --prefix ${PATH_TO_INSTALL}
-</code></pre>
-<h3 id="2-在源文件中检查某个符号是否是函数变量宏定义-checksymbolexists"><strong>2. 在源文件中检查某个符号是否是函数/变量/宏定义</strong> <a href="https://cmake.org/cmake/help/latest/module/CheckSymbolExists.html"><strong>CheckSymbolExists</strong></a></h3>
-<pre><code class="language-text-plain">在c中用
-CheckSymbolExists 
-在cpp中用
-CheckCXXSymbolExists
-</code></pre>
-<h3 id="3-add_subdirectory用法"><strong>3. add_subdirectory用法</strong></h3>
-<p>直接指定要链接的子目录文件夹的相对路径即可，但是还要自己指定头文件</p>
-<pre><code class="language-text-x-cmake">add_subdirectory(
-  lib/sgmnv_tool
-)
-
-target_include_directories(
-  ${PROJECT_NAME}
-  PUBLIC
-  lib/sgmnv_tool/include
-)
-
-target_link_libraries(
-  ${PROJECT_NAME}
-  sgmnv_tool
-)
-</code></pre>
-<h3 id="4-target_link_directories"><strong>4. target_link_directories</strong></h3>
-<p>可以配置库文件的查找目录，跟target_include_directories的效果类似</p>
-<pre><code class="language-text-x-cmake">target_include_directories(
-  ${PROJECT_NAME}
-  PUBLIC
-  src/
-  src/rpc
-  src/protobuf/
-  src/grpcs/
-  ${OpenCV_INCLUDE_DIRS}
-  lib/sgmnv_tool/include
-)
-
-target_link_libraries(
-  ${PROJECT_NAME}
-  protobuf::libprotobuf
-  gRPC::grpc++_reflection
-  gRPC::grpc++
-  ${OpenCV_LIBS}
-  # sgmnv_tool
-)
-</code></pre>
-<h3 id="5-file命令"><strong>5. file命令</strong></h3>
-<p>file命令可以使用通配符表达式方便的获取某一个文件夹下的全部源文件，例如</p>
-<pre><code class="language-text-plain">file(GLOB_RECURSE GRPC_SOURCES_FILE
-  src/protobuf/*.cc
-  src/rpc/*.cc
-)
-
-add_library(
-  ${PROJECT_NAME}
-  SHARED
-  ${GRPC_SOURCES_FILE})
-</code></pre>
-<h3 id="6-make打印过程中的信息"><strong>6. make打印过程中的信息</strong></h3>
-<pre><code class="language-text-plain">make VERBOSE=1
-</code></pre>
-<h3 id="7-generator-expression"><strong>7. generator expression</strong></h3>
-<p>参考链接： <a href="https://cmake.org/cmake/help/latest/manual/cmake-generator-expressions.7.html#string-valued-generator-expressions">https://cmake.org/cmake/help/latest/manual/cmake-generator-expressions.7.html#string-valued-generator-expressions</a></p>
-<p>表达式的样式 <code>$&lt;...&gt;</code></p>
-<p>调试方法</p>
-<p>因为生成表达式是在编译阶段生成的，不是在执行cmake阶段生成的，所以不能用message显示，可以用下边的方法显示</p>
-<pre><code class="language-text-plain">add_custom_target(genexdebug COMMAND ${CMAKE_COMMAND} -E echo &quot;$&lt;...&gt;&quot;)
-或者
-file(GENERATE OUTPUT filename CONTENT &quot;$&lt;...&gt;&quot;)
-</code></pre>
-<h3 id="8-cache"><strong>8. cache</strong></h3>
-<p>作用：缓存变量的值，在整个项目的的编译中都可以读取，一次缓存，多次编译都能读取，这个是存在build目录下CMakeCache.txt文件中的</p>
-<p>通过set命令可以设置缓存，如果不加FORCE选项的话不会覆盖之前的值</p>
-<pre><code class="language-text-plain">  set(my_cache &quot;lala&quot; CACHE STRING &quot;test cmake cache.&quot; FORCE)
-</code></pre>
-<p>通过unset可以删除这个缓存变量</p>
-<pre><code class="language-text-plain">unset(my_cache CACHE)
-</code></pre>
-<h3 id="9-find_package"><strong>9. find_package()</strong></h3>
-<p>作用：查找已经安装的包，首先在<code>${CMAKE_MODULE_PATH}</code>中查找，Findxxx.cmake，然后在<code>&lt;CMAKE_ROOT&gt;/share/cmake-x.y/Modules/</code>中查找Findxxx.cmake，如果这两个文件中都找不到Findxxx.cmake，则查找xxxConfig.cmake 或者xxx-config.cmake。</p>
-<p>设置查找文件夹路径</p>
-<pre><code class="language-text-plain">set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} &quot;${CMAKE_SOURCE_DIR}/cmake/Modules/&quot;)
-</code></pre>
-<p>找到后，会设置以下几个变量</p>
-<pre><code class="language-text-plain">xxx_FOUND
-xxx_INCLUDE_DIRS or _INCLUDES
-xxx_LIBRARIES or _LIBRARIES or _LIBS
-xxx_DEFINITIONS
-</code></pre>
-<h3 id="9-add_definitions"><strong>9. add_definitions</strong></h3>
-<p>作用：在原文件中定义指定的宏，示例如下</p>
-<pre><code class="language-text-plain">OPTION(USE_MACRO
-  &quot;Build the project using macro&quot;
-  OFF)
-
-if(USE_MACRO)
-
- add_definitions(&quot;-DUSE_MACRO&quot;)
-
-endif(USE_MACRO)
-</code></pre>
-<p>使用时</p>
-<pre><code class="language-text-plain">开启：　cmake 　-DUSE_MACRO＝ON ..
-
-关闭：　cmake 　-DUSE_MACRO＝OFF ..
-</code></pre>
-<h3 id="10-target_compile_definitions"><strong>10. target_compile_definitions</strong></h3>
-<p>作用：#define xxxxx zzzz</p>
-<p>用法：</p>
-<pre><code class="language-text-plain">target_compile_definitions(hello PUBLIC MY_DEFINE=&quot;nihao&quot;)
-</code></pre>
-<p>如果在编译的main.cpp中，写入如下代码的话</p>
-<pre><code class="language-text-plain">int main()
-{
-#ifdef MY_DEFINE
-  cout&lt;&lt; MY_DEFINE &lt;&lt; endl;
-#else
-  cout &lt;&lt; &quot;undefine&quot; &lt;&lt; endl;
-#endif
-  return 0;
-}
-</code></pre>
-<p>会输出 <code>nihao</code></p>
-<h3 id="11-指定编译release版本或debug版本"><strong>11. 指定编译release版本或debug版本</strong></h3>
-<p>注意：如果不使用<code>CMAKE_BUILD_TYPE</code>参数，则默认是Debug</p>
-<pre><code class="language-text-plain">-DCMAKE_BUILD_TYPE=Debug
-# OR
--DCMAKE_BUILD_TYPE=Release
-</code></pre>
-<p>指定好<code>CMAKE_BUILD_TYPE</code>后，还要指定<code>CMAKE_CXX_FLAGS_RELEASE</code>或者<code>CMAKE_CXX_FLAGS_DEBUG</code></p>
-<pre><code class="language-text-plain"># 设置Release版本的编译选项
-SET(CMAKE_CXX_FLAGS_RELEASE &quot;$ENV{CXXFLAGS} -O3 -Wall&quot;)
-# 设置Debug版本的编译选项
-SET(CMAKE_CXX_FLAGS_DEBUG &quot;$ENV{CXXFLAGS} -O0 -g -Wall&quot;)
-</code></pre>
-<p>例子：</p>
-<pre><code class="language-text-plain">mkdir Release  
-cd Release  
-cmake -DCMAKE_BUILD_TYPE=Release ..  
-make 
-</code></pre>
-<pre><code class="language-text-plain">mkdir Debug  
-cd Debug  
-cmake -DCMAKE_BUILD_TYPE=Debug ..  
-make  
-</code></pre>
-<h3 id="12-message"><strong>12. MESSAGE</strong></h3>
-<p>有些情况下需要指定消息的错误等级才能显示出来这个消息，用来调试用，例如</p>
-<pre><code class="language-text-plain">  message(FATAL_ERROR
-        &quot;The RMW implementation has been specified as &quot;
-        &quot;&#39;${requested_rmw_implementation}&#39; &quot;
-        &quot;through the environment variable &#39;RMW_IMPLEMENTATION&#39;, &quot;
-        &quot;however this needs to match the RMW implementation &quot;
-        &quot;&#39;${default_rmw_implementation}&#39;, &quot;
-        &quot;which was specified when the &#39;rmw_implementation&#39; package was built.&quot;)
-</code></pre>
-<p>以下是全部的等级 参考链接： <a href="https://cmake.org/cmake/help/latest/command/message.html">https://cmake.org/cmake/help/latest/command/message.html</a></p>
-<pre><code class="language-text-plain">FATAL_ERROR
-CMake Error, stop processing and generation.
-
-SEND_ERROR
-CMake Error, continue processing, but skip generation.
-
-WARNING
-CMake Warning, continue processing.
-
-AUTHOR_WARNING
-CMake Warning (dev), continue processing.
-
-DEPRECATION
-CMake Deprecation Error or Warning if variable CMAKE_ERROR_DEPRECATED or CMAKE_WARN_DEPRECATED is enabled, respectively, else no message.
-
-(none) or NOTICE
-Important message printed to stderr to attract user’s attention.
-
-STATUS
-The main interesting messages that project users might be interested in. Ideally these should be concise, no more than a single line, but still informative.
-
-VERBOSE
-Detailed informational messages intended for project users. These messages should provide additional details that won’t be of interest in most cases, but which may be useful to those building the project when they want deeper insight into what’s happening.
-
-DEBUG
-Detailed informational messages intended for developers working on the project itself as opposed to users who just want to build it. These messages will not typically be of interest to other users building the project and will often be closely related to internal implementation details.
-
-TRACE
-Fine-grained messages with very low-level implementation details. Messages using this log level would normally only be temporary and would expect to be removed before releasing the project, packaging up the files, etc.
-</code></pre>
-<h3 id="13-file命令（神器）"><strong>13. file命令（神器）</strong></h3>
-<p>下边命令能将opencv的全部库文件都添加到link中</p>
-<pre><code class="language-text-plain">file(GLOB_RECURSE dyso &quot;/Users/liushichao/Exercise/build_opencv_4.3.0/lib/*.dylib&quot;)
-target_link_libraries(test_sort
-${dyso}
-)
-MESSAGE(&quot;${dyso}&quot;)
-</code></pre>
-<h3 id="14-if语句"><strong>14. if语句</strong></h3>
-<p>执行<code>cmake -DUSER_DEFINE=dadah ./</code>，返回”err”.</p>
-<pre><code class="language-text-plain">if(NOT &quot;${USER_DEFINE}&quot; STREQUAL &quot;dadah&quot;)
-  MESSAGE(&quot;ok.&quot;)
-else()
-  MESSAGE(&quot;err.&quot;)
-endif()
-</code></pre>
-<h3 id="15-get_filename_component"><strong>15. get_filename_component</strong></h3>
-<p>获取第二个参数的绝对路径，存到第一个参数重，执行完后 <code>ANDROID_NDK_EXPECTED_PATH</code> 中存储的事当前路径的绝对路径</p>
-<pre><code class="language-text-plain">get_filename_component(ANDROID_NDK_EXPECTED_PATH
-    &quot;./&quot; ABSOLUTE)
-</code></pre>
-<h3 id="16-使用环境变量"><strong>16. 使用环境变量</strong></h3>
-<p><code>$ENV{xxx}</code>可以获取环境变量<code>xxx</code></p>
-<pre><code class="language-text-plain">MESSAGE(&quot;$ENV{PATH}&quot;)
-</code></pre>
-<h3 id="17-cmake路径"><strong>17. cmake路径</strong></h3>
-<p>为了统一路径中的分割符windows <code>c:\xx</code> linux <code>/usr/xxx</code>，cmake定义了统一的分割符<code>/</code>的路径表示方式，可以用file命令进行转换</p>
-<pre><code class="language-text-plain">file(TO_CMAKE_PATH &quot;&lt;path&gt;&quot; &lt;variable&gt;)
-file(TO_NATIVE_PATH &quot;&lt;path&gt;&quot; &lt;variable&gt;)
-</code></pre>
-<h3 id="18-指定c标准库版本"><strong>18. 指定c++标准库版本</strong></h3>
-<pre><code class="language-text-plain">cmake_minimum_required(VERSION 3.10)
-
-# set the project name and version
-project(Tutorial VERSION 1.0)
-
-# specify the C++ standard
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
-</code></pre>
-<h3 id="19-include命令"><strong>19. include命令</strong></h3>
-<p>通过定义xxx.cmake，可以重用cmake的代码 可以指定包含的文件的全路径，或者让cmake去搜索，搜索顺序：1. CMAKE_MODULE_PATH变量指定的路径 2. cmake自己的Modules文件夹<code>/usr/local/Cellar/cmake/3.18.1/share/cmake/Modules</code></p>
-<pre><code class="language-text-plain">include(xxx.cmake)
-</code></pre>
-<h3 id="20-find_path"><strong>20. find_path()</strong></h3>
-<p>在<code>/Users/liushichao/workspace</code>下创建<code>1.txt</code>,执行下边代码，返回<code>/Users/josh/workspace</code>。 如果没有找到，返回<code>TXT_PATH-NOTFOUND</code> 这个TXT_PATH如果被设置后，以后不会被更新</p>
-<pre><code class="language-text-plain">find_path(TXT_PATH &quot;1.txt&quot; /Users/josh/workspace/123 /Users/josh/workspace)
-MESSAGE(&quot;${TXT_PATH}&quot;)
-</code></pre>
-<h3 id="21-configure_file"><strong>21. configure_file</strong></h3>
-<p>将输入文件，转换成输出文件，可以自定义变量，改变输出文件中的值 例如在cmakelist文件夹下定义一个foo.h.in文件，或者在其他目录里创建，然后cmakelist.txt文件中指明相对路径 在foo.h.in中可以加入如下定义</p>
-<pre><code class="language-text-plain">//foo.h.in
-
-#cmakedefine XXXX &quot;@XXXX@&quot;
-@bbb@
-</code></pre>
-<p>编辑CMakeLists.txt</p>
-<pre><code class="language-text-plain">//CMakeLists.txt
-
-set(bbb &quot;nihao&quot;)
-set(XXXX &quot;hahah&quot;)
-configure_file(foo.h.in foo.h @ONLY)
-</code></pre>
-<p>会在执行cmake命令的目录里生成foo.h文件，内容如下</p>
-<pre><code class="language-text-plain">//foo.h
-
-#define XXXX &quot;hahah&quot;
-nihao
-</code></pre>
-<p>如果CMakeLists.txt文件中没有写set(bbb “nihao”) 也没写 set(XXXX “hahah”)，则生成的文件如下</p>
-<pre><code class="language-text-plain">//foo.h
-
-/* #undef XXXX */
-</code></pre>
-<h3 id="22-cmake的function"><strong>22. cmake的function</strong></h3>
-<p>定义如下，第一个参数是函数名，第二个参数是传入的参数</p>
-<pre><code class="language-text-plain">function(func_name list)
-  MESSAGE(&quot;${list}&quot;) #abc
-  MESSAGE(&quot;${${list}}&quot;) #a;b;c
-endfunction()
-</code></pre>
-<p>调用方法如下</p>
-<pre><code class="language-text-plain">set(abc a b c)
-func_name(abc)
-</code></pre>
-<p>输出</p>
-<pre><code class="language-text-plain">abc
-a;b;c
-</code></pre>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Motion Planning</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/motion-planning/"/>
-        <id>https://liushuya7.github.io/wiki/motion-planning/</id>
-            <category term="ROS2"/>
-
-        <updated>2022-12-13T13:11:46-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Tesseract Robotics | Optimization Motion Planning Tesseract wiki — Industrial Training documentation Optimal Control for Robotics
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <ul>
-<li><p><a href="https://github.com/tesseract-robotics">Tesseract Robotics | Optimization Motion Planning</a></p>
-</li>
-<li><p><a href="https://ros-industrial-tesseract.readthedocs.io/en/latest/">Tesseract wiki — Industrial Training documentation</a></p>
-</li>
-<li><p><a href="https://towardsdatascience.com/optimal-control-for-robotics-part-1-4cc4ee5fb14d">Optimal Control for Robotics</a></p>
-</li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>RTOS</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/rtos/"/>
-        <id>https://liushuya7.github.io/wiki/rtos/</id>
-            <category term="ROS2"/>
-
-        <updated>2022-12-13T13:08:18-05:00</updated>
-            <summary>
-                <![CDATA[
-                    FreeRTOS RTOS Basics: Getting Started with Microcontrollers Comparison between RTOSes Introduction to RTOS (Youtube Playlist) eProsima: RTPS/DDS Experts, the middleware experts BriscoeTech/Arduino-FreeRTOS-SAMD51: A port of&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="freertos"><a href="https://www.freertos.org/">FreeRTOS</a></h2>
-<ul>
-<li><p><a href="https://www.seeedstudio.com/blog/2021/04/26/rtos-basics-getting-started-with-microcontrollers/">RTOS Basics: Getting Started with Microcontrollers</a></p>
-</li>
-<li><p><a href="https://micro.ros.org/docs/concepts/rtos/comparison/">Comparison between RTOSes</a></p>
-</li>
-<li><p><a href="https://www.youtube.com/playlist?list=PLEBQazB0HUyQ4hAPU1cJED6t3DU0h34bz">Introduction to RTOS (Youtube Playlist)</a></p>
-</li>
-<li><p><a href="https://www.eprosima.com/">eProsima: RTPS/DDS Experts</a>, the middleware experts</p>
-</li>
-<li><p><a href="https://github.com/BriscoeTech/Arduino-FreeRTOS-SAMD51">BriscoeTech/Arduino-FreeRTOS-SAMD51: A port of FreeRTOS that runs on Arduino Samd51 boards</a></p>
-<ul>
-<li><a href="https://www.arduino.cc/reference/en/libraries/freertos_samd51/">FreeRTOS_SAMD51 - Arduino Reference</a></li>
-</ul>
-</li>
-<li><p><a href="https://github.com/Rybec/pyRTOS#pyrtos-api">Rybec/pyRTOS: RTOS written in pure Python, designed for use with CircuitPython</a></p>
-</li>
-<li><p><a href="https://github.com/ROBOTIS-GIT/ros2arduino">ROBOTIS-GIT/ros2arduino: This library helps the Arduino board communicate with the ROS2 using XRCE-DDS.</a></p>
-</li>
-<li><p><a href="https://github.com/micro-ROS/freertos_apps">micro-ROS/freertos_apps: Sample applications for FreeRTOS + micro-ROS</a></p>
-</li>
-<li><p><a href="https://www.freertos.org/2020/09/micro-ros-on-freertos.html">micro-ROS on FreeRTOS</a></p>
-</li>
-<li><p><a href="https://docs.zephyrproject.org/latest/boards/arm/adafruit_trinket_m0/doc/index.html">Adafruit Trinket M0 — Zephyr Project Documentation</a></p>
-</li>
-<li><p><a href="https://github.com/Seeed-Studio?language=arduino">Seeed Studio</a> Github</p>
-</li>
-</ul>
-<h2 id="armmbed">ARMmbed</h2>
-<ul>
-<li><a href="https://github.com/ARMmbed/mbed-os">ARMmbed/mbed-os: Arm Mbed OS is a platform operating system designed for the internet of things</a></li>
-<li><a href="https://github.com/mROS-base/mros2">mROS-base/mros2: agent-less and lightweight communication library compatible with rclcpp for embedded devices</a></li>
-<li><a href="https://github.com/mROS-base/mros2-mbed">mROS-base/mros2-mbed</a></li>
-<li><a href="https://github.com/embedded-software-laboratory">i11, RWTH Aachen</a></li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Migrating from ROS1</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/migrating-from-ros1/"/>
-        <id>https://liushuya7.github.io/wiki/migrating-from-ros1/</id>
-            <category term="ROS2"/>
-
-        <updated>2022-12-13T12:59:54-05:00</updated>
-            <summary>
-                <![CDATA[
-                    How-to: build ros-noetic on Ubuntu 22.04 set(CMAKE_CXX_STANDARD 14) find_package(ament_cmake REQUIRED) find_package(component1 REQUIRED) # ... find_package(componentN REQUIRED) # At the bottom of the file: ament_package() Code&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://wikis.nyu.edu/display/ARPL/How-to%3A+build+ros-noetic+on+Ubuntu+22.04">How-to: build ros-noetic on Ubuntu 22.04</a></p>
-<h3 id="package-manifests">Package manifests</h3>
-<h3 id="cmakeliststxt">CMakeLists.txt</h3>
-<ul>
-<li>Start by enabling C++14</li>
-</ul>
-<pre><code class="language-cmake">set(CMAKE_CXX_STANDARD 14)
-
-find_package(ament_cmake REQUIRED)
-find_package(component1 REQUIRED)
-# ...
-find_package(componentN REQUIRED)
-
-
-# At the bottom of the file:
-ament_package()
-</code></pre>
-<h3 id="code">Code</h3>
-<ul>
-<li><a href="https://docs.ros2.org/galactic/api/geometry_msgs/index-msg.html">geometry_msgs</a>/msg/TransformStamped.msg<ul>
-<li>ROS1 <code>#include &lt;geometry_msgs/TransformStamped.h&gt;</code></li>
-<li>ROS2 <code>#include &lt;geometry_msgs/msg/transform_stamped.hpp&gt;</code><ul>
-<li>When defining customized *.msg, should not use <code>CamelCase</code>, rather, should use <code>camel_case</code>.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 
             ]]>
         </content>
