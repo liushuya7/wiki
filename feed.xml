@@ -3,1431 +3,448 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2022-12-15T00:30:31-05:00</updated>
+    <updated>2022-12-15T14:00:24-05:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
     <id>https://liushuya7.github.io/wiki</id>
 
     <entry>
-        <title>Git</title>
+        <title>Machine Learning</title>
         <author>
             <name>Joshua Liu</name>
         </author>
-        <link href="https://liushuya7.github.io/wiki/git/"/>
-        <id>https://liushuya7.github.io/wiki/git/</id>
-            <category term="Git"/>
+        <link href="https://liushuya7.github.io/wiki/machine-learning/"/>
+        <id>https://liushuya7.github.io/wiki/machine-learning/</id>
+            <category term="Machine Learning"/>
 
-        <updated>2022-12-15T00:17:47-05:00</updated>
+        <updated>2022-12-15T13:57:23-05:00</updated>
             <summary>
                 <![CDATA[
-                    Useful Links Git Branches Tips Github CLI, brings GitHub to your terminal Move files from one repository to another, preserving git history vcstool – working&hellip;
+                    Resources Model Representation All machine learning models are categorized as either supervised or unsupervised. If the model is supervised, it’s then sub-categorized as either a&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2 id="useful-links">Useful Links</h2>
-<ul>
-<li><a href="https://www.nobledesktop.com/learn/git/git-branches"><strong>Git</strong> <strong>Branches</strong> Tips</a></li>
-<li><a href="https://cli.github.com/">Github CLI</a>, brings GitHub to your terminal</li>
-<li><a href="https://medium.com/@ayushya/move-directory-from-one-repository-to-another-preserving-git-history-d210fa049d4b">Move files from one repository to another, preserving git history</a></li>
-</ul>
-<h3 id="vcstool--working-with-multiple-repositories"><a href="https://github.com/dirk-thomas/vcstool">vcstool</a> – working with multiple repositories</h3>
-<pre><code class="language-bash">vcs import --input file_name.repos # or URL
-</code></pre>
-<h3 id="createrename-a-branch">Create/Rename a Branch</h3>
-<p>Use <a href="https://stackoverflow.com/a/34100189"><code>git switch --orphan &lt;new branch&gt;</code></a> to create an empty branch with no history.</p>
-<pre><code class="language-bash">git switch --orphan &lt;new branch&gt;
-git commit --allow-empty -m &quot;Initial commit on orphan branch&quot;
-git push -u origin &lt;new branch&gt;
-</code></pre>
-<p>Move/Change current branch name (e.g. to ‘main’)</p>
-<pre><code class="language-bash">git branch -M main
-</code></pre>
-<h3 id="git-pull-over-all-subdirectories"><a href="https://stackoverflow.com/a/38291944/3547352"><code>git pull</code> over all subdirectories</a></h3>
-<pre><code class="language-bash">for d in *; do (cd $d &amp;&amp; git pull --ff-only); done
-</code></pre>
-<h3 id="submodule">Submodule</h3>
-<ul>
-<li><a href="https://github.blog/2016-02-01-working-with-submodules/">Working with submodules</a></li>
-</ul>
-<pre><code class="language-bash">git submodule update --init --recursive
-</code></pre>
+                <h2 id="resources">Resources</h2>
+<h3 id="model-representation"><a href="https://medium.com/nothingaholic/machine-learning-model-representation-and-hypothesis-f9f1dfa9570f">Model Representation</a></h3>
+<p><figure class="post__image"><img loading="lazy" src="https://miro.medium.com/max/4800/1*LaJ_vrJ9lq3TqEFWK_rdrg.webp" alt="Fundamental Segmentation of Machine Learning Models"  data-is-external-image="true"></figure></p>
+<p>All machine learning models are categorized as either <strong>supervised</strong> or <strong>unsupervised</strong>. If the model is supervised, it’s then sub-categorized as either a <strong>regression</strong> or <strong>classification</strong> model.</p>
+<h3 id="understanding-the-mean-squared-error"><a href="https://medium.com/nothingaholic/understanding-the-mean-squared-error-df41e2c87958">Understanding the <strong>Mean Squared Error</strong></a></h3>
+<h3 id="minimizing-the-cost-function-gradient-descent"><a href="https://towardsdatascience.com/minimizing-the-cost-function-gradient-descent-a5dd6b5350e1">Minimizing the cost function: Gradient descent</a></h3>
 
             ]]>
         </content>
     </entry>
     <entry>
-        <title>文件权限代码解释</title>
+        <title>Data Analysis</title>
         <author>
             <name>Joshua Liu</name>
         </author>
-        <link href="https://liushuya7.github.io/wiki/wen-jian-quan-xian-dai-ma-jie-shi/"/>
-        <id>https://liushuya7.github.io/wiki/wen-jian-quan-xian-dai-ma-jie-shi/</id>
-            <category term="Linux"/>
+        <link href="https://liushuya7.github.io/wiki/data-analysis/"/>
+        <id>https://liushuya7.github.io/wiki/data-analysis/</id>
+            <category term="Data"/>
 
-        <updated>2022-12-15T00:18:00-05:00</updated>
+        <updated>2022-12-15T14:00:24-05:00</updated>
             <summary>
                 <![CDATA[
-                    执行 ls -l 出现下列提示： liushichao@computername main_proj % ls -l total 0 -rw-r--r-- 1 liushichao staff 0 11 26 18:25 CMakelists.txt drwxr-xr-x 2 liushichao staff 64&hellip;
+                    Knowledge Base Concordance Correlation Coefficient * See What is the Concordance Correlation Coefficient? Least Squares Sphere Fit 3D Data Point Set Registration Methods — Discussion&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>执行 ls -l 出现下列提示：</p>
-<pre><code class="language-bash">liushichao@computername main_proj % ls -l
-total 0
--rw-r--r--  1 liushichao  staff    0 11 26 18:25 CMakelists.txt
-drwxr-xr-x  2 liushichao  staff   64 11 26 17:25 include
-drwxr-xr-x  5 liushichao  staff  160 11 26 17:49 sgmm-doc
-drwxr-xr-x  2 liushichao  staff   64 11 26 17:25 src
-</code></pre>
-<p>其中 <code>drwxr-xr-x</code> 代表文件权限，具体每个字母的含义</p>
-<p>理解的时候将后边每三个分成一组</p>
-<pre><code class="language-bash">d             rwx            r-x                r-x
-|             |              |                  |
-代表是目录      当前用户权限     当前用户组权限       其他用户权限
-</code></pre>
-<p>d代表是目录，如果是文件的话，这个位置为`-``，如第一行所示</p>
-<pre><code class="language-bash">-rw-r--r--  1 liushichao  staff    0 11 26 18:25 CMakelists.txt
-</code></pre>
-<p>其中 <code>rwx</code> 的含义为</p>
-<pre><code class="language-text-plain">r 读权限
-w 写权限
-x 可执行权限
-</code></pre>
-<p>如果某一个权限是<code>-</code>，代表没有那个权限</p>
-<p>rwx可以用二进制表示，有权限的地方为1，没权限的位置为0</p>
-<p>rwx可以表示为111，转换成十进制为7</p>
-<p>r–可以表示为100，对应十进制4</p>
-<p>--x二进制为001，十进制为1</p>
+                <h2 id="knowledge-base">Knowledge Base</h2>
+<ul>
+<li><strong>Concordance Correlation Coefficient</strong>
+*   See <a href="https://www.statisticshowto.com/concordance-correlation-coefficient/">What is the Concordance Correlation Coefficient?</a></li>
+<li><a href="https://jekel.me/2015/Least-Squares-Sphere-Fit/">Least Squares Sphere Fit</a></li>
+</ul>
+<h2 id="3d-data">3D Data</h2>
+<p><a href="https://medium.com/swlh/point-set-registration-methods-discussion-and-implementation-58efa98d0b68">Point Set Registration Methods — Discussion and Implementation</a></p>
+<h2 id="plotting">Plotting</h2>
+<ul>
+<li><a href="https://jekel.me/2020/Better-error-bars-with-tolerance-intervals/">Better error bars with tolerance intervals</a></li>
+</ul>
+<h3 id="tools">Tools</h3>
+<ul>
+<li><a href="https://plotjuggler.io/">PlotJuggler</a> – Fast, intuitive and extensible time series visualization tool with ROS2 integration.</li>
+</ul>
 
             ]]>
         </content>
     </entry>
     <entry>
-        <title>Bash Scripting</title>
+        <title>3D Reconstruction</title>
         <author>
             <name>Joshua Liu</name>
         </author>
-        <link href="https://liushuya7.github.io/wiki/bash-scripting/"/>
-        <id>https://liushuya7.github.io/wiki/bash-scripting/</id>
-            <category term="Linux"/>
+        <link href="https://liushuya7.github.io/wiki/3d-reconstruction/"/>
+        <id>https://liushuya7.github.io/wiki/3d-reconstruction/</id>
+            <category term="3D Reconstruction"/>
 
-        <updated>2022-12-15T00:18:08-05:00</updated>
-            <summary></summary>
-        <content type="html">
-            <![CDATA[
-                <object data="https://liushuya7.github.io/wiki/media/posts/20/Bash Scripting.pdf" type="application/pdf" width="100%" height="800px">
-    <embed src="https://liushuya7.github.io/wiki/media/posts/20/Bash Scripting.pdf"></embed>
-</object>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Linux</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/linux/"/>
-        <id>https://liushuya7.github.io/wiki/linux/</id>
-            <category term="Linux"/>
-
-        <updated>2022-12-15T00:09:21-05:00</updated>
+        <updated>2022-12-15T13:43:09-05:00</updated>
             <summary>
                 <![CDATA[
-                    Useful Links Linux Guide How To Set Up SSH Keys How to Install The Latest Mesa Graphics Driver in Ubuntu 20.04 / 21.04 Make Linux/Unix&hellip;
+                    Commercial Software RealityCapture, photogrammetry software R3DS Wrap 3, parametric model fitting COLMAP, a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2 id="useful-links">Useful Links</h2>
+                <h2 id="commercial-software">Commercial Software</h2>
 <ul>
-<li><a href="https://github.com/mikeroyal/Linux-Guide">Linux Guide</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-2">How To Set Up SSH Keys</a></li>
-<li><a href="https://ubuntuhandbook.org/index.php/2021/07/install-latest-mesa-ubuntu-20-04-21-04/"><strong>How to Install The Latest Mesa Graphics Driver in Ubuntu 20.04 / 21.04</strong></a></li>
-<li><a href="https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html">Make Linux/Unix Script Portable With #!/usr/bin/env As a Shebang</a></li>
-</ul>
-<h2 id="quick-reference">Quick Reference</h2>
-<ul>
-<li><code>xdg-open</code> - <a href="https://linux.die.net/man/1/xdg-open">opens a file or URL in the user’s preferred application</a></li>
-</ul>
-<h4 id="tar命令"><code>**tar**</code>命令</h4>
-<pre><code class="language-bash"># 压缩
-tar -cfv out.tar source.file
-# 解压
-tar xfv out.tar
-tar xfvz out.tgz --directory unzip_dir
-</code></pre>
-<ul>
-<li><strong>断开ssh</strong><ul>
-<li><code>logout</code> or CTRL+D</li>
+<li><a href="https://www.capturingreality.com/">RealityCapture</a>, photogrammetry software</li>
+<li><a href="https://www.russian3dscanner.com/">R3DS Wrap 3</a>, parametric model fitting</li>
+<li><a href="https://colmap.github.io/index.html#">COLMAP</a>, a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and command-line interface</li>
+<li><a href="http://www.matthewtancik.com/nerf">NeRF</a> (Neural Radiance Fields), a method that achieves state-of-the-art results for synthesizing novel views of complex scenes<ul>
+<li><a href="https://github.com/yenchenlin/nerf-pytorch">NeRF-pytorch</a></li>
 </ul>
 </li>
-<li><strong>拷贝到远程</strong><ul>
-<li><code>scp -r /home/Downloads/source_file root@www.runoob.com:/home/root/others/</code></li>
+<li><a href="https://github.com/darglein/ADOP">ADOP</a>: Approximate Differentiable One-Pixel Point Rendering</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Deep Learning</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/deep-learning/"/>
+        <id>https://liushuya7.github.io/wiki/deep-learning/</id>
+            <category term="Deep Learning"/>
+
+        <updated>2022-12-15T13:41:03-05:00</updated>
+            <summary>
+                <![CDATA[
+                    MONAI, Medical Open Network for Artificial Intelligence
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="https://monai.io/index.html">MONAI</a>, Medical Open Network for Artificial Intelligence</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Android</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/android/"/>
+        <id>https://liushuya7.github.io/wiki/android/</id>
+            <category term="Android"/>
+
+        <updated>2022-12-15T13:37:44-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Android Development Android Developers Android OpenCV Kotlin Get Started Developing Android apps with Kotlin Kotlin for Python Developers, by Paul Everitt Kotlin for Python Developers,&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="android-development">Android Development</h2>
+<ul>
+<li><a href="https://github.com/android">Android Developers</a></li>
+<li><a href="https://opencv.org/android/">Android OpenCV</a></li>
+<li><a href="https://kotlinlang.org/">Kotlin</a><ul>
+<li><a href="https://developer.android.com/kotlin">Get Started Developing Android apps with Kotlin</a></li>
+<li><a href="https://kotlin-for-python.readthedocs.io/en/latest/">Kotlin for Python Developers</a>, by <a href="https://pauleveritt.wordpress.com/">Paul Everitt</a></li>
 </ul>
 </li>
 </ul>
-<h4 id="working-with-files">Working with files</h4>
-<h5 id="using-placeholders-can-be-used-with-cmd-such-as-ls-rm-mv-etc">Using placeholders (can be used with cmd such as <code>ls</code>, <code>rm</code>, <code>mv</code> etc)</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Placeholder</strong></td>
-<td><strong>Meaning</strong></td>
-</tr>
-<tr>
-<td><code>*</code></td>
-<td>Any set of characters</td>
-</tr>
-<tr>
-<td><code>?</code></td>
-<td>Any single character</td>
-</tr>
-<tr>
-<td><code>[a-f]</code></td>
-<td>Characters in [abcdef]</td>
-</tr>
-<tr>
-<td><code>[^a-c]</code></td>
-<td>Any character <strong>not</strong> in [abc]</td>
-</tr>
-</tbody></table>
-<p>Example:</p>
-<pre><code class="language-bash">1 $ ls
-2 u01.tex v01.pdf v01.tex
-3 u02.tex v02.pdf v02.tex
-4 u03.tex v03.pdf v03.tex
-5
-6 $ ls *. pdf
-7 v01.pdf v02.pdf v03.pdf
-8
-9 $ ls u*
-10 u01.tex u02.tex u03.tex
-11
-12 [/home/student/Examples/placeholders]$ ls ?01*
-13 u01.tex v01.pdf v01.tex
-14
-15 [/home/student/Examples/placeholders]$ ls [uv]01*
-16 u01.tex v01.pdf v01.tex
-17
-18 [/home/student/Examples/placeholders]$ ls u0[^12].tex
-19 u03.tex
-</code></pre>
-<h5 id="searching">Searching</h5>
-<pre><code class="language-bash">$ find &lt;in-folder&gt; -name &lt;filename&gt;
-    Search for file &lt;filename&gt; in folder &lt;in-folder&gt;, allows wildcards
-
-$ locate &lt;filename&gt;
-    Search for file &lt;filename&gt; in the entire system! (just remember to &lt;sudo updatedb&gt; often)
-
-$ grep &lt;what&gt; &lt;where&gt;
-    Search for a string &lt;what&gt; in a file &lt;where&gt;
-</code></pre>
-<h5 id="chaining-commands">Chaining commands</h5>
-<pre><code class="language-bash">$ command1; command2; command3
-    Calls commands one after another
-
-$ command1 &amp;&amp; command2 &amp;&amp; command3
-    Same as above but fails if any of the commands returns an error code
-
-$ command1 | command2 | command3
-    Pipe stdout of command1 to stdin of command2
- and stdout of command2 to stdin of command3
-    Piping commonly used with grep:
-    
-$ ls | grep smth
-    look for smth in output of ls
-</code></pre>
-<h3 id="useful-links-1">Useful Links</h3>
+<p><a href="https://khan.github.io/kotlin-for-python-developers/">Kotlin for Python Developers</a>, by <a href="https://eldhuset.net/">Aasmund Eldhuset</a></p>
+<p><a href="https://chaquo.com/chaquopy/">Chaquopy</a>, Python SDK for Android</p>
+<h2 id="camera-development">Camera Development</h2>
 <ul>
-<li><a href="https://phoenixnap.com/kb/setup-passwordless-ssh">How to Set Up Passwordless SSH Login</a>(Good Security)</li>
-<li><a href="https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/">How to disable ssh password login on Linux to increase security</a></li>
+<li><a href="https://github.com/android/camera-samples">Camera Samples Repository</a></li>
+<li><a href="https://github.com/arindamxd/android-camerax">CameraX APIs written in Kotlin</a></li>
 </ul>
-<h2 id="embedded-linux">Embedded Linux</h2>
-<p><figure class="post__image"><img loading="lazy" src="https://liushuya7.github.io/wiki/media/posts/19/embedded-linux.png" alt="embedded linux" width="1200" height="348"  sizes="(max-width: 768px) 100vw, 768px" srcset="https://liushuya7.github.io/wiki/media/posts/19/responsive/embedded-linux-xs.png 300w ,https://liushuya7.github.io/wiki/media/posts/19/responsive/embedded-linux-sm.png 480w ,https://liushuya7.github.io/wiki/media/posts/19/responsive/embedded-linux-md.png 768w"></figure></p>
-<h2 id="touch-screen-setup">Touch Screen Setup</h2>
-<p><a href="https://unix.stackexchange.com/questions/473721/calibrating-a-touch-screen-on-dual-monitors-one-touch-one-not">Calibrating a touch-screen on dual monitors</a></p>
-<p>In terminal, type:</p>
-<pre><code class="language-bash">xinput --map-to-output $(xinput list --id-only &quot;Wacom TouchScreen Finger touch&quot;) USB-C-0
-</code></pre>
-<p>For HUION Drawing Tablet</p>
-<pre><code class="language-bash">xinput --map-to-output $(xinput list --id-only &quot;HUION Huion Tablet Pen Pen (0)&quot;) DP-4
-</code></pre>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Biblical Hebrew</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/biblical-hebrew/"/>
-        <id>https://liushuya7.github.io/wiki/biblical-hebrew/</id>
-            <category term="Biblical Hebrew"/>
-
-        <updated>2022-12-13T20:37:08-05:00</updated>
-            <summary></summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Genesis 1 in Hebrew</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/genesis-1-in-hebrew/"/>
-        <id>https://liushuya7.github.io/wiki/genesis-1-in-hebrew/</id>
-            <category term="Biblical Hebrew"/>
-
-        <updated>2022-12-15T00:30:31-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Ch 1 v1-2 v3-5 v6-8 v9-10 v11-13 Download Click Here to download the PDF.
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="ch-1">Ch 1</h2>
-<h3 id="v1-2">v1-2</h3>
-<div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkx8dfmHWYH3b9rXLBE2EeSQ1H0dDy-WMrB&amp;clipt=EIhUGOW2Ag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-<h3 id="v3-5">v3-5</h3>
-<div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkxo5ftw6fR_bvjSFwk-apCU0cpJyk_Lk7j&amp;clipt=ELLLAhjS_wQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-<h3 id="v6-8">v6-8</h3>
-<div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkx2r36Cpbtb50fRk3vTDjCoiTy0e__hE5r&amp;clipt=ENCIBRiw8gc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-<h3 id="v9-10">v9-10</h3>
-<div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/D1ge6-3R_8s?clip=UgkxwC5R_uErhDlMEWmrnnJeRbj9GpgZH7hZ&amp;clipt=EOuECBjt9gk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-<h3 id="v11-13">v11-13</h3>
-<div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/D1ge6-3R_8s?clip=Ugkxh0VPlujjILpTpYViOVLe5P860sSEo7Mt&amp;clipt=ELyKChiMvg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-<h2 id="download">Download</h2>
-<p><a href="https://liushuya7.github.io/wiki/media/files/Genesis_1_in_Hebrew.pdf">Click Here</a> to download the PDF.</p>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>PyVista/Trimesh</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/pyvistatrimesh/"/>
-        <id>https://liushuya7.github.io/wiki/pyvistatrimesh/</id>
-            <category term="Python"/>
-
-        <updated>2022-12-13T15:28:56-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Conversion Pyvista to Trimesh Convert Pyvista 1-D face array to Trimesh faces def pyvistaToTrimeshFaces(cells): faces = [] idx = 0 while idx &lt; len(cells): curr_cell_count&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="conversion">Conversion</h2>
-<h3 id="pyvista-to-trimesh">Pyvista to Trimesh</h3>
-<p>Convert Pyvista 1-D face array to Trimesh faces</p>
-<pre><code class="language-py">def pyvistaToTrimeshFaces(cells):
-    faces = []
-    idx = 0
-    while idx &lt; len(cells):
-      curr_cell_count = cells[idx]
-      curr_faces = cells[idx+1:idx+curr_cell_count+1]
-      faces.append(curr_faces)
-      idx += curr_cell_count+1
-    return np.array(faces)
-</code></pre>
-<p>Reference: <a href="https://github.com/AbrarAnwar/cross_section_rl/blob/ffd9f6eb2c53fdceca7be916c030a853cad2b4e0/utils.py#L68">AbrarAnwar/cross_section_rl/utils.py</a></p>
-<h3 id="meshlab-to-pyvista">Meshlab to Pyvista</h3>
-<pre><code class="language-py">import numpy as np
-import pyvista as pv
-
-def meshlab2pv(mmesh):
-    &#39;&#39;&#39;
-    Convert meshlab mesh to PyVista polydata
-    &#39;&#39;&#39;
-    mpoints, mcells = mmesh.vertex_matrix(), mmesh.face_matrix()
-
-    if len(mcells):
-        # convert the faces into PolyData format
-        mfaces = []
-        for cell in mcells:
-            face = np.hstack((len(cell), cell))
-            mfaces.extend(face.tolist())
-        mfaces = np.array(mfaces)
-        polydata = pv.PolyData(mpoints, np.hstack(mfaces))
-    else:
-        polydata = pv.PolyData(mpoints, None)
-
-    return polydata
-
-if __name__ == &#39;__main__&#39;:
-    import pymeshlab as pm
-    
-    ms = pm.MeshSet()
-    ms.load_project(&#39;data/test.mlp&#39;)
-
-    print(ms.print_status())
-
-    meshes = []
-    plotter = pv.Plotter()
-
-    for i in range(ms.number_meshes()):
-        mesh_pv = meshlab2pv(ms.mesh(i))
-        meshes.append(mesh_pv)
-        plotter.add_mesh(mesh_pv)
-
-    plotter.add_mesh_slice_orthogonal(meshes[0])
-
-    plotter.show()
-</code></pre>
-<h2 id="qt-gui">Qt GUI</h2>
-<p>Pyvistaqt Example:</p>
-<pre><code class="language-py">import sys
-
-from PyQt5 import Qt, QtCore
-
-import pyvista as pv
-from pyvistaqt import QtInteractor
-
-# from pyvista import themes
-# pv.set_plot_theme(themes.DarkTheme())
-
-
-class MainWidget(Qt.QWidget):
-
-    def __init__(self, parent=None, show=True):
-        super(MainWidget, self).__init__()
-
-        self.test_button = Qt.QPushButton(&quot;Open&quot;)
-        self.test_button.clicked.connect(self.test_button_event)
-
-        self.frame = Qt.QFrame()
-        self.plotter = QtInteractor(self.frame)
-        vlayout = Qt.QVBoxLayout()
-        vlayout.addWidget(self.plotter.interactor)
-        hlayout = Qt.QHBoxLayout()
-        hlayout.addWidget(self.test_button)
-        vlayout.addLayout(hlayout)
-        self.setLayout(vlayout)
-
-        self.setWindowTitle(&quot;Test Qt Window&quot;)
-        self.setGeometry(550, 200, 800, 600)
-
-        # Enable dragging and dropping onto the GUI
-        self.setAcceptDrops(True)
-
-        self.plotter.show_axes()
-        self.mesh = None
-
-        if show:
-            self.show()
-
-    # The following three methods set up dragging and dropping for the app
-    def dragEnterEvent(self, e):
-        if e.mimeData().hasUrls:
-            e.accept()
-        else:
-            e.ignore()
-
-    def dragMoveEvent(self, e):
-        if e.mimeData().hasUrls:
-            e.accept()
-        else:
-            e.ignore()
-
-    def dropEvent(self, e):
-        &quot;&quot;&quot;
-        Drop files directly onto the widget
-        File locations are stored in fname
-        :param e:
-        :return:
-        &quot;&quot;&quot;
-        if e.mimeData().hasUrls:
-            e.setDropAction(QtCore.Qt.CopyAction)
-            e.accept()
-            # Workaround for OSx dragging and dropping
-            for url in e.mimeData().urls():
-                fname = str(url.toLocalFile())
-            self.fname = fname
-            self.load_mesh()
-        else:
-            e.ignore()
-
-    def test_button_event(self):
-        &quot;&quot;&quot;
-        Open a mesh file
-        &quot;&quot;&quot;
-        self.fname, _ = Qt.QFileDialog.getOpenFileName(self, &#39;Open file&#39;,&#39;&#39;,&quot;(*.ply) ;; (*.stl)&quot;)
-        self.load_mesh()
-
-    def load_mesh(self):
-        self.mesh = pv.read(self.fname)
-        self.plotter.clear()
-        self.plotter.add_mesh(self.mesh, show_edges=True)
-        self.plotter.reset_camera()
-
-    def save_mesh(self):
-        &quot;&quot;&quot;
-        Save mesh
-        &quot;&quot;&quot;
-        self.fname, f_filter = Qt.QFileDialog.getSaveFileName(self, &#39;Save file&#39;, self.fname, &quot;(*.ply) ;; (*.stl)&quot;)
-        pv.save_meshio(self.fname, self.mesh, file_format=f_filter.strip(&#39;(*.)&#39;))
-        # close the window
-        self.close()
-
-
-if __name__ == &#39;__main__&#39;:
-    app = Qt.QApplication(sys.argv)
-    window = MainWidget()
-    sys.exit(app.exec_())
-</code></pre>
-<p><a href="https://gist.github.com/hichamjanati/6668d91848283c31ac18d801552fb582">Optimization visualization with pyvista</a>:</p>
-<pre><code class="language-py">import pyvista as pv
-import numpy as np
-
-make_gif = True
-
-# increase n_points for a higher resolution
-n_points = 100
-xmin, xmax = -1.2, 1.2
-bounds = 1.25 * np.array([xmin, xmax, xmin, xmax, 0., 0.])
-x = np.linspace(xmin, xmax, n_points)
-y = np.linspace(xmin, xmax, n_points)
-x, y = np.meshgrid(x, y)
-coords = np.array(list(zip(x.flatten(), y.flatten())))
-
-g = x ** 4 + y ** 4
-g = g.flatten()
-constraint_mask = g &lt;= 1
-
-
-def func(x, y):
-    return x ** 3 - y ** 3 + 2
-
-
-f = func(x, y)
-f = f.flatten()
-
-domain_coords = np.zeros((n_points ** 2, 3))
-domain_coords[:, :2] = coords
-domain = pv.PolyData(domain_coords)
-domain = domain.delaunay_2d()
-domain_in, _ = domain.remove_points(~constraint_mask)
-domain_out, _ = domain.remove_points(constraint_mask)
-
-minimizer_array = np.array([- 0.5 ** 0.25, 0.5 ** 0.25, 0.])
-value_array = minimizer_array + np.array([0., 0., func(*minimizer_array[:2])])
-minimizer = pv.PolyData(minimizer_array)
-dashed = pv.Spline(np.vstack((minimizer_array, value_array)), n_points=20)
-
-cone_direction = np.array([-1., 1., 0.])
-cone = pv.Cone(minimizer_array, cone_direction, angle=60, height=20)
-cone.points[:, 2] = 0
-cone.points *= 1 / (4 * 20) ** 0.5
-
-surface_data = np.zeros((n_points ** 2, 3))
-surface_data[:, :2] = coords
-surface_data[:, 2] = f
-surface = pv.PolyData(surface_data)
-surface = pv.PolyData(surface)
-surface = surface.delaunay_2d()
-surface_in, _ = surface.remove_points(~constraint_mask)
-surface_out, _ = surface.remove_points(constraint_mask)
-
-constraint_title = pv.Text3D(&quot;Constraint set K&quot;, depth=0.2)
-constraint_title.points -= constraint_title.points.mean(0)[None, :]
-constraint_title.points *= \
-    1.75 / (constraint_title.points.max() - constraint_title.points.min())
-constraint_title.rotate_z(90)
-
-text3d = pv.Text3D(&quot;Minimizer x&quot;, depth=0.2)
-text3d.points -= text3d.points.mean(0)[None, :]
-text3d.points /= text3d.points.max() - text3d.points.min()
-text3d.rotate_z(90)
-text3d.rotate_y(90)
-text3d.points += 1.75 * minimizer_array
-
-tangeant = pv.Text3D(&quot;Tangeant cone at x&quot;, depth=0.2)
-tangeant.points -= tangeant.points.mean(0)[None, :]
-tangeant.points *= 1.75 / (tangeant.points.max() - tangeant.points.min())
-tangeant.rotate_z(90)
-tangeant.rotate_x(180)
-tangeant.rotate_y(90)
-tangeant.points += np.array([-1.5, -1.5, 0])
-
-plotter = pv.Plotter()
-plotter.add_mesh(domain_out, color=&quot;gray&quot;, opacity=0.2)
-plotter.add_mesh(domain_in, color=&quot;black&quot;)
-plotter.add_mesh(surface_in, scalars=f[constraint_mask], cmap=&quot;hot&quot;)
-plotter.add_mesh(surface_out, cmap=&quot;Greys&quot;, opacity=0.2)
-plotter.add_mesh(cone, color=&quot;blue&quot;, opacity=0.3)
-plotter.add_mesh(minimizer, color=&quot;red&quot;, render_points_as_spheres=True,
-                 point_size=15)
-plotter.add_mesh(dashed, color=&quot;red&quot;)
-plotter.add_mesh(text3d, color=&quot;red&quot;)
-plotter.add_mesh(tangeant, color=&quot;black&quot;)
-plotter.add_mesh(constraint_title, color=&quot;white&quot;)
-plotter.background_color = &quot;white&quot;
-plotter.show_bounds(grid=&#39;front&#39;, location=&#39;outer&#39;,
-                    show_zaxis=False, color=&quot;black&quot;,
-                    bounds=bounds)
-
-if make_gif:
-    # when the window shows up, close it by pressing the q-Key NOT the quit
-    # button
-    plotter.show(auto_close=False)
-
-    path = plotter.generate_orbital_path(3., n_points=200,
-                                         shift=1.75 * domain_out.length)
-    plotter.open_movie(&#39;orbit.mp4&#39;)
-    plotter.orbit_on_path(path, write_frames=True)
-    plotter.close()
-else:
-    plotter.show()
-</code></pre>
-<p><a href="https://gist.github.com/dgobbi/bfdb149e38777f25d0891c1b883858e2">Simple QVTKRenderWindowInteractor example in Python</a>:</p>
-<pre><code class="language-py"># coding=utf-8
-
-import sys
-
-from vtkmodules.vtkFiltersSources import vtkConeSource
-from vtkmodules.vtkRenderingCore import vtkActor, vtkPolyDataMapper, vtkRenderer
-# load implementations for rendering and interaction factory classes
-import vtkmodules.vtkRenderingOpenGL2
-import vtkmodules.vtkInteractionStyle
-
-import QVTKRenderWindowInteractor as QVTK
-QVTKRenderWindowInteractor = QVTK.QVTKRenderWindowInteractor
-
-if QVTK.PyQtImpl == &#39;PySide6&#39;:
-    from PySide6.QtCore import Qt
-    from PySide6.QtWidgets import QApplication, QMainWindow
-elif QVTK.PyQtImpl == &#39;PySide2&#39;:
-    from PySide2.QtCore import Qt
-    from PySide2.QtWidgets import QApplication, QMainWindow
-else:
-    from PySide.QtCore import Qt
-    from PySide.QtGui import QApplication, QMainWindow
-
-
-def QVTKRenderWidgetConeExample(argv):
-    &quot;&quot;&quot;A simple example that uses the QVTKRenderWindowInteractor class.&quot;&quot;&quot;
-    # every QT app needs an app
-    app = QApplication([&#39;QVTKRenderWindowInteractor&#39;])
-
-    window = QMainWindow()
-
-    # create the widget
-    widget = QVTKRenderWindowInteractor(window)
-    window.setCentralWidget(widget)
-    # if you don&#39;t want the &#39;q&#39; key to exit comment this.
-    widget.AddObserver(&quot;ExitEvent&quot;, lambda o, e, a=app: a.quit())
-
-    ren = vtkRenderer()
-    widget.GetRenderWindow().AddRenderer(ren)
-
-    cone = vtkConeSource()
-    cone.SetResolution(8)
-
-    coneMapper = vtkPolyDataMapper()
-    coneMapper.SetInputConnection(cone.GetOutputPort())
-
-    coneActor = vtkActor()
-    coneActor.SetMapper(coneMapper)
-
-    ren.AddActor(coneActor)
-
-    # show the widget
-    window.show()
-
-    widget.Initialize()
-    widget.Start()
-
-    # start event processing
-    # Source: https://doc.qt.io/qtforpython/porting_from2.html
-    # &#39;exec_&#39; is deprecated and will be removed in the future.
-    # Use &#39;exec&#39; instead.
-    try:
-        app.exec()
-    except AttributeError:
-        app.exec_()
-
-if __name__ == &quot;__main__&quot;:
-    QVTKRenderWidgetConeExample(sys.argv)
-</code></pre>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Python</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/python/"/>
-        <id>https://liushuya7.github.io/wiki/python/</id>
-            <category term="Python"/>
-
-        <updated>2022-12-13T15:30:48-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Collections PythonRobotics Comprehensive Python Cheatsheet Problem Solving with Python Scipy Lecture Notes Github: https://github.com/scipy-lectures/scipy-lecture-notes PythonTemplate Python Template is a Cookiecutter template for creating a python&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="collections">Collections</h2>
+<p> </p>
+<h2 id="packages">Packages</h2>
 <ul>
-<li><a href="https://github.com/AtsushiSakai/PythonRobotics">PythonRobotics</a></li>
-<li><a href="https://github.com/gto76/python-cheatsheet">Comprehensive Python Cheatsheet</a></li>
-<li><a href="https://problemsolvingwithpython.com/">Problem Solving with Python</a> </li>
-<li><a href="https://scipy-lectures.org/">Scipy Lecture Notes</a><ul>
-<li>Github: <a href="https://github.com/scipy-lectures/scipy-lecture-notes">https://github.com/scipy-lectures/scipy-lecture-notes</a></li>
+<li><a href="https://github.com/owahltinez/camerax-tflite">CameraX + Tensorflow Lite</a></li>
+<li>ROS2<ul>
+<li><a href="https://github.com/winter3030/Ros2_Android_Camera_Stream">Ros2 Android Camera Stream</a></li>
+<li><a href="https://github.com/ros2-java">ros2_java</a>, Java and Android bindings for ROS2<ul>
+<li><a href="https://github.com/jayhou/ros2-android-demos">ros2-android-demos</a></li>
+<li><a href="https://github.com/songshan0321/ros2-android-tutorial">ros2-android-tutorial</a>, based on <a href="https://github.com/esteve/ros2_java.git">ros2_java</a> and <a href="https://github.com/esteve/ros2_android_examples.git">ros2_android_examples</a></li>
 </ul>
 </li>
-<li><a href="https://github.com/UCL/PythonTemplate">PythonTemplate</a><ul>
-<li>Python Template is a Cookiecutter template for creating a python project</li>
-</ul>
-</li>
-<li><a href="https://data36.com/linear-regression-in-python-numpy-polyfit/">Linear Regression in Python using numpy + polyfit (with code base)</a></li>
-</ul>
-<h3 id="libraries">Libraries</h3>
-<ul>
-<li><a href="https://pypi.org/project/cupoch/">cupoch</a> - Robotics with GPU computing</li>
-<li><a href="https://github.com/neka-nat/kinpy">kinpy</a> -Simple kinematics calculation toolkit for robotics</li>
-<li><a href="https://github.com/facebookresearch/pytorch3d">PyTorch3D</a> - provides efficient, reusable components for 3D Computer Vision research with <a href="https://pytorch.org/">PyTorch</a></li>
-</ul>
-<h3 id="tutorials">Tutorials</h3>
-<ul>
-<li><a href="https://notebook.community/">Jupyter Notebooks Gallery</a></li>
-<li><a href="https://notebook.community/finnhacks42/opencv-play/templates/OpenCV%20tutorial">Learn OpenCV Jupyter notebook</a></li>
-</ul>
-<h2 id="quick-notes">Quick Notes</h2>
-<h3 id="pip-install-from-a-git-repository"><code>**pip install**</code> From a Git Repository</h3>
-<pre><code class="language-sh">python -m pip install git+https://github.com/django/django.git@main
-</code></pre>
-<h3 id="pip-install-from-a-local-dir"><code>**pip install**</code> From a local dir</h3>
-<pre><code class="language-sh">pip install -e /path/to/package
-</code></pre>
-<ul>
-<li><code>-e</code> installs the package in a way, that you can edit the package, but it requires that the package source stay in the same place (<code>/path/to/package</code> in this case) forever.</li>
-</ul>
-<h3 id="glob通配符获取文件列表"><code>**glob**</code>通配符获取文件列表</h3>
-<pre><code class="language-sh">glob.glob(&quot;./*.jpg&quot;)
-获取当前目录下的jpg文件列表
-</code></pre>
-<h3 id="__init__py的作用"><strong>__init__.py</strong>的作用</h3>
-<p>参考链接 <a href="https://www.cnblogs.com/lands-ljk/p/5880483.html">https://www.cnblogs.com/lands-ljk/p/5880483.html</a></p>
-<p><strong>__init__</strong>.py 文件的作用是将文件夹变为一个Python模块,Python 中的每个模块的包中，都有__init__.py 文件。</p>
-<p>通常__init__.py 文件为空，但是我们还可以为它增加其他的功能。我们在导入一个包时，实际上是导入了它的__init__.py文件。这样我们可以在__init__.py文件中批量导入我们所需要的模块，而不再需要一个一个的导入。</p>
-<p>当导入模块时，解释器按照sys.path列表中的目录顺序来查找导入文件。</p>
-<pre><code class="language-py">import sys
-print(sys.path)
-</code></pre>
-<h2 id="other-tools">Other Tools</h2>
-<ul>
-<li><a href="https://stackoverflow.com/a/53070679">VScode Configure Python autoComplete extraPaths</a></li>
-<li><a href="https://stackoverflow.com/a/64690321">Use Pylance for autoCompletion</a></li>
-<li><a href="https://github.com/wenmin-wu/jupyter-tabnine">TabNine, Autocompletion for Jupyter Notebook</a></li>
-</ul>
-<h2 id="issues">Issues</h2>
-<h3 id="编译ros提示缺少em模块"><strong>编译ros提示缺少em模块</strong></h3>
-<pre><code class="language-bash">python3 -m pip install empy
-</code></pre>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>C++ Learning Note</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/c-learning-note/"/>
-        <id>https://liushuya7.github.io/wiki/c-learning-note/</id>
-            <category term="C++"/>
-
-        <updated>2022-12-13T13:45:40-05:00</updated>
-            <summary>
-                <![CDATA[
-                    List #include &lt;list&gt; In C++ lists are ordered sequences of variables of the same type. To initialize them we have to specify which type are&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="list">List</h2>
-<pre><code class="language-cpp">#include &lt;list&gt;
-</code></pre>
-<p>In C++ lists are ordered sequences of variables of the same type. To initialize them we have to specify which type are the variables inside it. For example, for a list of integer values:</p>
-<pre><code class="language-cpp">list&lt;int&gt; numbers_list({1,10,100,1000});
-</code></pre>
-<p>And a list of string values:</p>
-<pre><code class="language-cpp">list&lt;string&gt; vocals_list( {&quot;a&quot;,&quot;e&quot;,&quot;i&quot;,&quot;o&quot;,&quot;u&quot;} );
-</code></pre>
-<p>The inconvenience with lists in C++ is that they are not as easy to print as in other languages. In this case we need to loop over all the items in a list to print them one by one. For now, here’s an example of printing a list:</p>
-<pre><code class="language-cpp">for (int val : numbers_list)             // Loop
-    cout &lt;&lt; val &lt;&lt; &quot;  &quot;;                 // Print function
-
-for (string val : vocals_list)           // Loop
-    cout &lt;&lt; val &lt;&lt; &quot;  &quot;;                 // Print function
-</code></pre>
-<p>Lists are very useful, as they occupy a memory space that can be modified. They have builtin functions to, for example, add a new item in the beginning of the list, or at the end of it:</p>
-<pre><code class="language-cpp">numbers_list.push_front(0);             //insert in the beginning
-numbers_list.push_back(3000);           //insert in the end
-</code></pre>
-<p>The resulting list would be <code>0,1,10,100,1000,3000</code></p>
-<p>Finally, we can also concatenate a list at the end of another, enlarging the first one and not deleting the second one, with the builtin function <code>insert()</code>:</p>
-<pre><code class="language-cpp">list&lt;int&gt; new_list({5,50,500});
-
-numbers_list.insert(numbers_list.end(),new_list.begin(),new_list.end());
-</code></pre>
-<p>Then the <code>numbers_list</code> will be modified as <code>0,1,10,100,1000,3000,5,50,500</code></p>
-<h2 id="dictionaries"><strong>Dictionaries</strong></h2>
-<pre><code class="language-cpp">#include &lt;map&gt;
-</code></pre>
-<p>A dictionary in C++ is called a <strong>map</strong>, and it is a container of values that are indexed by a key. This means that it stores two kinds of information: keys and values.</p>
-<p>For example, if we want to store the names of a TV series characters and also in how many episodes they appear, we don’t need a list with the names and a list with the number of episodes, we just need a dictionary where the keys are the names and the values are the number of episodes: <code>{ &quot;Dolores&quot;: 30, &quot;Maeve&quot;: 27, &quot;Theresa&quot;:6, &quot;Clementine&quot;:11 }  { &quot;Dolores&quot;: 30, &quot;Maeve&quot;: 27, &quot;Theresa&quot;:6, &quot;Clementine&quot;:11 }</code> </p>
-<p>To initialize it we need to call map, and specify the data types of the keys and values:</p>
-<pre><code class="language-cpp">map&lt;string,int&gt; girls_dictionary;
-</code></pre>
-<p>Here we are creating a dictionary called <code>girls_dictionary</code>, where the keys are strings and the values are integers.</p>
-<p>To insert data into this dictionary we can call each key and assign it a value, one by one:</p>
-<pre><code class="language-cpp">girls_dictionary[&quot;Dolores&quot;] = 30;
-girls_dictionary[&quot;Maeve&quot;] = 27;
-girls_dictionary[&quot;Theresa&quot;] = 6;
-girls_dictionary[&quot;Clementine&quot;] = 11;
-
-for (auto item : girls_dictionary)
-    cout &lt;&lt; item.first &lt;&lt; &quot; appears in &quot; &lt;&lt; item.second &lt;&lt; &quot; episodes\n&quot;;
-</code></pre>
-<p>Finally, we can print the items in the dictionary with a loop. When we print it this is not a list, the dictionary itself organizes the keys alphabetically.</p>
-<pre><code class="language-cpp">map&lt;double, float&gt; x_t_dictionary;
-x_t_dictionary[t_0] = x_0;
-x_t_dictionary[t_1] = x_1;
-
-// The functions ROS_INFO() and ROS_INFO_STREAM() essentially have the same purpose as &#39;cout&#39;
-for (auto item : x_t_dictionary) {
-  ROS_INFO_STREAM(&quot;Time &quot; &lt;&lt; item.first &lt;&lt; &quot;, position &quot; &lt;&lt; item.second
-                          &lt;&lt; &quot; \n&quot;);
-  }
-</code></pre>
-<h2 id="io-functions">I/O functions</h2>
-<h3 id="print">Print</h3>
-<ul>
-<li>printf</li>
-<li>cout</li>
-</ul>
-<h3 id="input">Input</h3>
-<ul>
-<li>cin</li>
-<li>getline(cin, name)</li>
-</ul>
-<h2 id="arrays">Arrays</h2>
-<pre><code class="language-cpp">int myarray[6];
-int myarray[6] = {4,8,15,16,23,42};
-int myarray[] = {4,8,15,16,23,42};
-</code></pre>
-<p>We can also print all the elements of an array with a for loop:</p>
-<pre><code class="language-cpp">for (auto items : myarray) {
-    cout &lt;&lt; items &lt;&lt; endl;
-}
-</code></pre>
-<h2 id="pointers">Pointers</h2>
-<pre><code class="language-cpp">int myvariable = 42;
-</code></pre>
-<p>We have already seen how to obtain the address of a variable using <code>&amp;</code>. The type of variable that can store this address of another variable is called a <strong>pointer</strong>. Pointers can be declared with the operator <code>*</code> , specifying the type of variable they will be pointing to:</p>
-<pre><code class="language-cpp">int * mypointer;
-</code></pre>
-<p>If we want this pointer to store the address of our previous variable <code>myvariable</code>, we just need to give it the value of its address:</p>
-<pre><code class="language-cpp">mypointer = &amp;myvariable;
-cout &lt;&lt; mypointer &lt;&lt; endl;
-</code></pre>
-<p>This expression will print the previous address of <code>myvariable</code> we’ve seen in the first section:</p>
-<pre><code class="language-text-plain">&gt; 177687
-</code></pre>
-<p>Now that the relationship between <code>myvariable</code> and <code>mypointer</code> is established, we can access the original value of <code>myvariable</code> just using its pointer:</p>
-<pre><code class="language-cpp">cout &lt;&lt; *mypointer &lt;&lt; endl;
-</code></pre>
-<p>This will print the value stored in the memory with the address 177687:</p>
-<pre><code class="language-text-plain">&gt; 42
-</code></pre>
-<p>We call this operation <strong>dereferencing</strong>, using the symbol <code>*</code>, and it is always followed by a name of a variable. Do not confuse the asterisk of declaring a pointer, which follows a data type, with this dereferencing operator!</p>
-<ul>
-<li>Why this is useful?<ul>
-<li>We can first declare a variable, then assign a pointer to its address, and just manipulate this pointer to make changes.</li>
-<li>Also, we cannot change the type of <code>myvariable</code> during a program, but a pointer can be assigned to another variable later in the same program.</li>
+<li><a href="https://github.com/ROS-Mobile/ROS-Mobile-Android">ROS-Mobile-Android</a>, Visualization and controlling application for Android</li>
+<li><a href="https://github.com/frankjoshua/PocketBot">Pocket Bot</a> (<a href="http://pocketbot.io/">http://pocketbot.io/</a>), an Android app to control a ROS based robot</li>
+<li><a href="https://github.com/mirellameelo/ROS_2_ANDROID">ROS_2_ANDROID</a>, Publishing data from Android to PC via java.net.Socket</li>
 </ul>
 </li>
 </ul>
-<h4 id="constants">Constants</h4>
-<p>Pointers may also be used only to access values to read them, not to modify them. These will be pointers pointed to <strong>constant variables</strong>, which need to be specified when declaring the pointer.</p>
-<p>For example, for an integer variable:</p>
-<pre><code class="language-cpp">int variable = 10;
-</code></pre>
-<p>when declaring the pointer we need to specify that it points to a constant integer:</p>
-<pre><code class="language-cpp">const int* pointer = &amp;variable;
-</code></pre>
-<p>We can read the value of the variable it is pointing to by <strong>dereferencing</strong>:</p>
-<pre><code class="language-cpp">cout &lt;&lt; &quot;Value of variable: &quot; &lt;&lt; *pointer &lt;&lt; endl;
-</code></pre>
-<p>But we cannot change the value of the variable:</p>
-<pre><code class="language-cpp">*pointer = 20; // INCORRECT!!!!
-</code></pre>
-<p>We can also create <strong>constant pointers</strong>, independently of them pointing to a constant variable or not. This kind of pointers need to specify the constant character right before the pointer’s name:</p>
-<pre><code class="language-cpp">int* const pointer;
-</code></pre>
-<p>To make this even more trickier, here are all the possibilities we can have using constants:</p>
-<pre><code class="language-cpp">int* pointer;                   // non-constant pointer to non-constant integer
-const int* pointer;             // non-constant pointer to constant integer
-int* const pointer;             // constant pointer to non-constant integer
-const int* const pointer;       // constant pointer to constant integer
-</code></pre>
-<p>The final thing we need to learn is that in C++ functions CANNOT return arrays. It is just not possible. What they CAN do is return a pointer to an array. See how useful they are? Awesome.</p>
-<p>In this exercise first we are going to show you a small piece of code of the <strong>RosbotClass</strong> we’ve been using all along:</p>
-<pre><code class="language-cpp">float *RosbotClass::get_laser_full() {
-  float *laser_range_pointer = laser_range.data();
-  return laser_range_pointer;
-}
-</code></pre>
-<p>This function called <strong>get_laser_full()</strong> is a function that returns a pointer (see the operator asterisk before the name of the class <code>**RosbotClass**</code>). What it does is take the values of a ROS vector called <strong>laser_range</strong> and assign them a pointer, then return this pointer.</p>
+<p><strong>Smartphones</strong></p>
+<h2 id="hardware"><strong>Hardware</strong></h2>
+<ul>
+<li><a href="https://www.arducam.com/docs/usb-cameras/">Arducam USB Camera Shields</a></li>
+<li><a href="https://www.youtube.com/watch?v=8KILAVjM8lY&amp;t=175s&amp;ab_channel=Samsung">Dual Pixel Pro: Fast and accurate autofocus for ISOCELL Image Sensor | Samsung</a></li>
+</ul>
+<h2 id="interface">Interface</h2>
+<ul>
+<li><a href="https://www.electroschematics.com/mobile-phone-camera-interface/">Mobile Phone Camera Interface Primer – 1</a></li>
+<li><a href="https://github.com/RahulDevadiga/Send-image-Android-to-PC-via-bluetooth">Send-image-Android-to-PC-via-bluetooth</a></li>
+</ul>
+<h2 id="bookmarks">Bookmarks</h2>
+<ul>
+<li><a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1">Get user input in an app: Part 1  |  Android Developers</a></li>
+<li><a href="https://codelabs.developers.google.com/codelabs/camerax-getting-started#0">Getting Started with CameraX</a></li>
+<li><a href="https://source.android.com/devices/camera">Camera  |  Android Open Source Project</a></li>
+<li><a href="https://github.com/RuurdBijlsma/Camera">RuurdBijlsma/Camera: Android camera app to get manual control over focus, shuttertime, iso and white balance</a></li>
+<li><a href="https://github.com/awoisoak/Camera-Exposure-Calculator">awoisoak/Camera-Exposure-Calculator: Android app that helps you to calculate the desired exposure parameters from a based exposure (ND filter supported)</a></li>
+<li><a href="https://philipplies.medium.com/setting-up-latest-opencv-for-android-studio-and-kotlin-2021-edition-259be404b133">Setting up latest OpenCV for Android Studio and Kotlin — 2021 edition | by Philipp Lies | Medium</a></li>
+<li><a href="https://github.com/sdwwld/CameraX">sdwwld/CameraX: Android手机使用CameraX拍照，比Camera2更简洁，可以使用前置以及后置摄像头，自动对焦，以及证件照并实现剪切功能</a></li>
+<li><a href="https://opencamera.org.uk/">Open Camera - an Open Source App utilizes Camera 2 API</a></li>
+<li><a href="https://kivy.org/#home">Kivy: Cross-platform Python Framework for NUI Development</a></li>
+<li><a href="https://github.com/kivy/kivy">kivy/kivy: Open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS</a></li>
+<li><a href="https://github.com/kivy/python-for-android">kivy/python-for-android: Turn your Python application into an Android APK</a></li>
+<li><a href="https://python-for-android.readthedocs.io/en/latest/">python-for-android — python-for-android 0.1 documentation</a></li>
+<li><a href="https://github.com/kivy-garden/xcamera">kivy-garden/xcamera: Kivy widget for taking pictures with the camera, optimized for Android. It uses the native Android’s APIs to take the pictures, thus ensuring good quality, high resolution, auto-focus, etc. !!!!!!!!!!!!!!!</a></li>
+<li><a href="https://github.com/JensGe/KivyCamAR">JensGe/KivyCamAR: Prototypic Examples for Android AR Apps with Kivy</a></li>
+<li><a href="https://www.tequnique.com/camerapro.php">MobWheel.com - CameraPro: fast and easy to use camera app for mobile devices</a></li>
+</ul>
 
             ]]>
         </content>
     </entry>
     <entry>
-        <title>C++ Code Snippet</title>
+        <title>Setup Quick Source for VTK</title>
         <author>
             <name>Joshua Liu</name>
         </author>
-        <link href="https://liushuya7.github.io/wiki/c-code-snippet/"/>
-        <id>https://liushuya7.github.io/wiki/c-code-snippet/</id>
-            <category term="C++"/>
+        <link href="https://liushuya7.github.io/wiki/setup-quick-source-for-vtk/"/>
+        <id>https://liushuya7.github.io/wiki/setup-quick-source-for-vtk/</id>
+            <category term="VTK"/>
 
-        <updated>2022-12-13T13:42:39-05:00</updated>
+        <updated>2022-12-15T12:58:55-05:00</updated>
             <summary>
                 <![CDATA[
-                    Network Acquire Localhost IP Address #include &lt;arpa/inet.h&gt; #include &lt;sys/ioctl.h&gt; #include &lt;sys/types.h&gt; #include &lt;linux/if.h&gt; #include &lt;net/if_arp.h&gt; #include &lt;unistd.h&gt; #include &lt;linux/sockios.h&gt; #include &lt;linux/ethtool.h&gt; #include &lt;cstring&gt; #include &lt;cassert&gt;&hellip;
+                    Add the following lines to your .bashrc: # Setup VTK Enviroment export VTK_DIR=/home/$USER/VTK-9.1.0/build export PATH=/home/$USER/VTK-9.1.0/build/bin:$PATH LD_LIBRARY_PATH=/home/$USER/VTK-9.1.0/build/lib:${LD_LIBRARY_PATH} QML2_IMPORT_PATH=/home/$USER/VTK-9.1.0/build/lib/qml # (OPTIONAL) Override OpenGL version, only for older&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2 id="network">Network</h2>
-<h3 id="acquire-localhost-ip-address">Acquire Localhost IP Address</h3>
-<pre><code class="language-cpp">#include &lt;arpa/inet.h&gt;
-#include &lt;sys/ioctl.h&gt;
-#include &lt;sys/types.h&gt;
-#include &lt;linux/if.h&gt;
-#include &lt;net/if_arp.h&gt;
-#include &lt;unistd.h&gt;
-#include &lt;linux/sockios.h&gt;
-#include &lt;linux/ethtool.h&gt;
-#include &lt;cstring&gt;
-#include &lt;cassert&gt;
-#include &lt;cstdio&gt;
-#include &lt;fstream&gt;
-#include &lt;iostream&gt;
+                <p>Add the following lines to your <code>.bashrc</code>:</p>
+<pre><code class="language-bash"># Setup VTK Enviroment
+export VTK_DIR=/home/$USER/VTK-9.1.0/build
+export PATH=/home/$USER/VTK-9.1.0/build/bin:$PATH
+LD_LIBRARY_PATH=/home/$USER/VTK-9.1.0/build/lib:${LD_LIBRARY_PATH}
+QML2_IMPORT_PATH=/home/$USER/VTK-9.1.0/build/lib/qml
 
-std::string ipAddressToString(uint32_t ipAddress)
-{
-    char buffer[INET_ADDRSTRLEN] = {0};
-    uint32_t addr = htonl(ipAddress);
-    return std::string(inet_ntop(AF_INET, &amp;addr, buffer, sizeof(buffer)));
-}
-
-int main(int argc, char *argv[]) {
-
-    int fd = socket(AF_INET, SOCK_DGRAM, 0); 
-    assert(fd &gt; 0); 
-
-    struct ifconf ifc;
-    struct ifreq *pifr;
-
-    ifc.ifc_len = sizeof(struct ifreq) * 10; 
-    ifc.ifc_buf = (char*) malloc(ifc.ifc_len);
-
-    int err = ioctl(fd, SIOCGIFCONF, &amp;ifc);
-    assert(err &gt;= 0); 
-
-    int ifc_num = ifc.ifc_len / sizeof(struct ifreq);
-    printf(&quot;Interfaces: %d\r\n&quot;, ifc_num);
-
-    assert(ifc.ifc_buf != NULL);
-    pifr = ifc.ifc_req;
-    
-    // Iterate trought all ifreq and save interface type, ip and netmask
-    for (int i = 0;  i &lt; ifc_num; ++i)
-    {       
-        err = ioctl(fd, SIOCGIFADDR, &amp;pifr[i]);
-        assert(err == 0); 
-        uint32_t ipAddress = ntohl(reinterpret_cast&lt;struct sockaddr_in*&gt;(&amp;(pifr[i].ifr_addr))-&gt;sin_addr.s_addr);
-
-        err = ioctl(fd, SIOCGIFNETMASK, &amp;pifr[i]);
-        assert(err == 0); 
-        uint32_t netmaskAddress = ntohl(reinterpret_cast&lt;struct sockaddr_in*&gt;(&amp;(pifr[i].ifr_netmask))-&gt;sin_addr.s_addr);
-
-        err = ioctl(fd, SIOCGIFBRDADDR, &amp;pifr[i]);
-        assert(err == 0); 
-        uint32_t broadcastAddress = ntohl(reinterpret_cast&lt;struct sockaddr_in*&gt;(&amp;(pifr[i].ifr_broadaddr))-&gt;sin_addr.s_addr);
-
-        printf(&quot;Network Interface: %s, IP=%s, Netmask=%s, Broadcast=%s\r\n&quot;, 
-               pifr[i].ifr_name, 
-               ipAddressToString(ipAddress).c_str(), 
-               ipAddressToString(netmaskAddress).c_str(), 
-               ipAddressToString(broadcastAddress).c_str());
-    }   
-}
+# (OPTIONAL) Override OpenGL version, only for older PC
+export MESA_GL_VERSION_OVERRIDE=3.3
 </code></pre>
-<h2 id="uncategorized">Uncategorized</h2>
-<h3 id="22cpp二进制形式打开文件"><strong>22.cpp二进制形式打开文件</strong></h3>
-<pre><code class="language-cpp">int begin, end;
 
-  std::ifstream file(input_bmp_name, std::ios::in | std::ios::binary);
-  if (!file) {
-    LOG(FATAL) &lt;&lt; &quot;input file &quot; &lt;&lt; input_bmp_name &lt;&lt; &quot; not found&quot;;
-    exit(-1);
-  }
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>VTK</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/vtk/"/>
+        <id>https://liushuya7.github.io/wiki/vtk/</id>
+            <category term="VTK"/>
+            <category term="3D Graphics"/>
 
-  begin = file.tellg();
-  file.seekg(0, std::ios::end);
-  end = file.tellg();
-  size_t len = end - begin;
-
-  if (s-&gt;verbose) LOG(INFO) &lt;&lt; &quot;len: &quot; &lt;&lt; len;
-
-  std::vector&lt;uint8_t&gt; img_bytes(len);
-  file.seekg(0, std::ios::beg);
-  file.read(reinterpret_cast&lt;char*&gt;(img_bytes.data()), len);
-</code></pre>
-<h3 id="21split函数的实现"><strong>21.split函数的实现</strong></h3>
-<pre><code class="language-cpp">std::vector&lt;std::string&gt; split(const std::string &amp;str, const std::string &amp;sep)
-{
-    std::string::size_type pos;
-    std::vector&lt;std::string&gt; result;
-
-    std::string newstr =  str + sep;
-    size_t size=newstr.size();
-
-    for(size_t i=0; i&lt;size; ++i)
-    {
-        pos=newstr.find(sep,i);
-        if(pos&lt;size)
-        {
-            std::string s = newstr.substr(i,pos-i);
-            result.push_back(s);
-            i=pos+sep.size()-1;
-        }
-    }
-    return result;
-}
-</code></pre>
-<h3 id="20判断是否有宏定义"><strong>20.判断是否有宏定义</strong></h3>
-<pre><code class="language-cpp">#ifdef PLATFORM_QNX  
-  int platform = 1;
-#elif defined PLATFORM_ANDROID
-  int platform = 2;
-#else
-  int platform = 3;
-#endif
-</code></pre>
-<h3 id="19不支持模版别名的处理办法"><strong>19.不支持模版别名的处理办法</strong></h3>
-<p>__cpp_user_defined_literals测试，从gcc4.7版本开始支持模板别名，但是qnx的libc++的__config却检测到gcc就认为没有模板别名的特性</p>
-<p>所以这里有个bug，是libc++库对gcc编译的配置选项出现了问题</p>
-<p>参考标准库中libc++库中memory头文件中的一段代码</p>
-<pre><code class="language-cpp">#ifndef _LIBCPP_HAS_NO_TEMPLATE_ALIASES
-    template &lt;class _Tp&gt; using rebind_alloc =
-                  typename __allocator_traits_rebind&lt;allocator_type, _Tp&gt;::type;
-    template &lt;class _Tp&gt; using rebind_traits = allocator_traits&lt;rebind_alloc&lt;_Tp&gt;&gt;;
-#else  // _LIBCPP_HAS_NO_TEMPLATE_ALIASES
-    template &lt;class _Tp&gt; struct rebind_alloc
-        {typedef typename __allocator_traits_rebind&lt;allocator_type, _Tp&gt;::type other;};
-    template &lt;class _Tp&gt; struct rebind_traits
-        {typedef allocator_traits&lt;typename rebind_alloc&lt;_Tp&gt;::other&gt; other;};
-#endif  // _LIBCPP_HAS_NO_TEMPLATE_ALIASES
-</code></pre>
-<h3 id="18libstdclibc"><strong>18.libstdc++/libc++</strong></h3>
-<p>gcc配套的 <code>libstdc++</code>
-<code>llvm/clang++</code> 配套的 <code>libc++</code></p>
-<p><code>libstdc++</code>包含两个库: <code>libstdc++.so</code>(接口层) 和 <code>libsupc++.so</code>(实现层) 
-<code>libc++</code>包含两个库: <code>libc++.so</code>(接口层) <code>libc++abi.so</code>(实现层)</p>
-<p><code>libstdc++</code>的头文件位置 <code>/usr/include/c++/5.4/</code>  其中<code>5.4</code>位gcc编译器的版本号
-<code>libc++</code>头文件的位置 <code>/usr/include/c++/v1/</code></p>
-<p>配置编译选项:【注意】这个是配置选择头文件的
-<code>-stdlib=libc++  -stdlib=libstdc++</code></p>
-<p>通过cmake配置</p>
-<pre><code class="language-cmake">set(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++ -lc++abi&quot;)
-</code></pre>
-<h3 id="17虚析构的作用"><strong>17.虚析构的作用</strong></h3>
-<p>1.通过父类指针释放所指向的子类。</p>
-<pre><code class="language-cpp">class Animal {
-  vitual ~Animal() {
-    std::cout &lt;&lt; &quot;delete animal..&quot; &lt;&lt; std::endl;
-  }
-}
-
-class Dog : public Animal {
-  ~Dog() {
-    std::cout &lt;&lt; &quot;delete dog...&quot; &lt;&lt; std::endl;
-  };
-};
-
-Animal* animal = new Dog();
-
-delete animal;
-</code></pre>
-<p>如上执行会输出</p>
-<pre><code class="language-text-plain">delete dog...
-delete animal..
-</code></pre>
-<p>如果去掉了vitual修饰~Animal()，则会只输出如下</p>
-<pre><code class="language-text-plain">delete animal..
-</code></pre>
-<p>因为父类的构造函数和析构函数不能被子类继承，但是会形成多态，</p>
-<p>所以当父类定义成虚析构函数的时候，会先动态调用子类的析构函数，</p>
-<p>然后由于delete的机制，会接着调用父类的析构函数</p>
-<h3 id="16待查。。。"><strong>16.待查。。。</strong></h3>
-<pre><code class="language-cpp">std::atomic_bool                             shutdownFlag_;
-while (!shutdownFlag_.load(std::memory_order_acquire)) {
-
-}
-</code></pre>
-<h3 id="15同名的头文件"><strong>15.同名的头文件</strong></h3>
-<p>如果搜索路径中包含两个同名的头文件，这时候只会包含第一个搜索到的头文件。示例如下</p>
-<pre><code class="language-text-plain">目录结构
-
-cpptest
-|
-|---build
-|
-|---include_1
-|   |
-|   |---same_name.hpp
-|
-|---include_2
-|   |
-|   |---same_name.hpp
-|
-|---main.cpp
-|
-|---CMakeLists.txt
-</code></pre>
-<p><code>include_1/same_name.hpp</code> 中内容如下</p>
-<pre><code class="language-cpp">struct cat{
-  int age;
-};
-</code></pre>
-<p><code>include_2/same_name.hpp</code> 中内容如下</p>
-<pre><code class="language-cpp">struct dog{
-  int age;
-};
-</code></pre>
-<p><code>CMakeLists.txt</code>内容如下</p>
-<pre><code class="language-cmake">project(demo)
-set(CMAKE_CXX_STANDARD 11)
-
-add_executable(
-  ${PROJECT_NAME}
-  main.cpp)
-
-target_include_directories(
-  ${PROJECT_NAME}
-  PUBLIC
-  include_2
-  include_1
-)
-</code></pre>
-<p><code>main.cpp</code>内容如下</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-#include &quot;same_name.hpp&quot;
-
-int main(int argc, char* argv[]) {
-  cat c;
-  c.age = 1;
-  dog d;
-  d.age = 2;
-  cout &lt;&lt; d.age &lt;&lt; endl;
-}
-</code></pre>
-<p>这时候编译会报错如下</p>
-<pre><code class="language-bash">/Users/liushichao/Exercise/cpp/test_cpp/main.cpp:6:3: error: unknown type name &#39;cat&#39;
-</code></pre>
-<p>调整<code>CMakeLists.txt</code>内容如下</p>
-<pre><code class="language-cmake">project(demo)
-set(CMAKE_CXX_STANDARD 11)
-
-add_executable(
-  ${PROJECT_NAME}
-  main.cpp)
-
-target_include_directories(
-  ${PROJECT_NAME}
-  PUBLIC
-  include_1
-  include_2
-)
-</code></pre>
-<p>这时候编译会报错如下</p>
-<pre><code class="language-bash">/Users/liushichao/Exercise/cpp/test_cpp/main.cpp:8:3: error: unknown type name &#39;dog&#39;
-</code></pre>
-<p>调整<code>CMakeLists.txt</code>内容如下</p>
-<pre><code class="language-cmake">project(demo)
-set(CMAKE_CXX_STANDARD 11)
-
-add_executable(
-  ${PROJECT_NAME}
-  main.cpp)
-
-target_include_directories(
-  ${PROJECT_NAME}
-  PUBLIC
-)
-</code></pre>
-<p><code>main.cpp</code>内容如下</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-#include &quot;include_1/same_name.hpp&quot;
-#include &quot;include_2/same_name.hpp&quot;
-
-int main(int argc, char* argv[]) {
-  cat c;
-  c.age = 1;
-  dog d;
-  d.age = 2;
-  cout &lt;&lt; d.age &lt;&lt; endl;
-
-}
-</code></pre>
-<p>这样就可以运行成功了。</p>
-<h3 id="14可变参数数模板"><strong>14.可变参数数模板</strong></h3>
-<p>1.递归展开参数包</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-std::string operator&quot;&quot;_s (const char* orign) {
-
-  return  orign;
-}
-
-template &lt;typename T&gt;
-T sum(T head) {
-  return head;
-}
-
-template &lt;typename T, typename... Types&gt; 
-T sum(T head, Types... args) {
-  cout &lt;&lt; sizeof...(args) &lt;&lt; endl;
-  return head + sum&lt;T&gt;(args...);
-}
-
-int main(int argc, char* argv[]) {
-  cout &lt;&lt; sum(1, 2, 3, 4, 5) &lt;&lt; endl;
-}
-</code></pre>
-<h3 id="13c操作符--operators"><strong>13.c++操作符 / operators</strong></h3>
-<p>c++ 11 引入了新的操作夫，用户定义字面量操作符，<a href="https://en.cppreference.com/w/cpp/language/user_literal">https://en.cppreference.com/w/cpp/language/user_literal</a></p>
-<p>C++ divides the operators into the following groups:</p>
-<ul>
-<li>Arithmetic operators</li>
-<li>Assignment operators</li>
-<li>Comparison operators</li>
-<li>Logical operators</li>
-<li>Bitwise operators</li>
+        <updated>2022-12-15T13:07:23-05:00</updated>
+            <summary>
+                <![CDATA[
+                    VTK Book VTK.js is a JavaScript library available for scientific visualization in your browser. Issue: vtkOpenGLRenderWindow OpenGL version When you run vtk, you may encounter&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="https://kitware.github.io/vtk-examples/site/VTKBook/">VTK Book</a></li>
+<li><a href="https://kitware.github.io/vtk-js/">VTK.js</a> is a JavaScript library available for scientific visualization in your browser.</li>
 </ul>
-<h3 id="12cpp文件中编写模板的定义"><strong>12.cpp文件中编写模板的定义</strong></h3>
-<p>参考：</p>
-<p><a href="https://stackoverflow.com/a/115735">https://stackoverflow.com/a/115735</a></p>
-<p><a href="https://www.codeproject.com/Articles/48575/How-to-Define-a-Template-Class-in-a-h-File-and-Imp">https://www.codeproject.com/Articles/48575/How-to-Define-a-Template-Class-in-a-h-File-and-Imp</a></p>
-<pre><code class="language-cpp">//mstack.hpp
-template&lt;typename T&gt;
-class mstack{
- void push(const T&amp; e);
-};
+<h2 id="issue-vtkopenglrenderwindow-opengl-version">Issue: vtkOpenGLRenderWindow OpenGL version</h2>
+<p>When you run vtk, you may encounter such error:</p>
+<pre><code class="language-bash">6FFD700\]vtkOpenGLRenderWindow.c:499
+ERR| vtkGenericOpenGLRenderWindow (0x116bf50): Unable to find a valid OpenGL 3.2 or later implementation.
+Please update your video card driver to the latest version.
+If you are using Mesa please make sure you have version 11.2 or later and make sure your driver in Mesa supports OpenGL 3.2 such as llvmpipe or openswr.
+If you are on windows and using Microsoft remote desktop note that it only supports OpenGL 3.2 with nvidia quadro cards.
+You can use other remoting software such as nomachine to avoid this issue.  
 </code></pre>
-<pre><code class="language-cpp">//mstack.cpp
-template&lt;typename T&gt;
-void mstack&lt;T&gt;::push(const T&amp; e) {
- data_.push_back(e);
-}
+<p>Check your OpenGL version:</p>
+<pre><code class="language-bash">glxinfo | grep &quot;OpenGL version&quot;
+</code></pre>
+<p>You may get:</p>
+<pre><code class="language-bash">OpenGL version string: 3.0 Mesa 21.3.3 - kisak-mesa PPA
+</code></pre>
+<p>Now, if you do: (see solution <a href="https://stackoverflow.com/a/49878999/3547352">https://stackoverflow.com/a/49878999/3547352</a>)</p>
+<pre><code class="language-bash">export MESA_GL_VERSION_OVERRIDE=3.3
+</code></pre>
+<p>You’ll now get:</p>
+<pre><code class="language-bash">OpenGL version string: 3.3 (Compatibility Profile) Mesa 21.3.3 - kisak-mesa PPA
+</code></pre>
+<p>When you run the vtk window, the red error should disappear</p>
 
-//important!!!
-// this func is no need to be call.
-void testxxx() {
- mstack&lt;int&gt; ms;
- ms.push(1);
-}
-</code></pre>
-<pre><code class="language-cpp">//client.cpp
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>3D Graphics</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/3d-graphics/"/>
+        <id>https://liushuya7.github.io/wiki/3d-graphics/</id>
+            <category term="3D Graphics"/>
 
-void main() {
- mstack&lt;int&gt; m_c_s;
- m_c_s.push(2334);
-}
-</code></pre>
-<h3 id="11类中的const成员函数"><strong>11.类中的const成员函数</strong></h3>
-<p>参考： c++ primer 5 中文版 p231</p>
-<p>成员函数的参数列表后面紧跟的const关键字是修饰隐式的this指针的。是顶层指针（参考下边的10顶层const的介绍），表明this是指向常量对象的，const成员函数中的 this 指向的值不能修改。const 的对象上不能调用非const成员函数，所以定义成const的成员函数调用起来更灵活。</p>
-<h3 id="10顶层const与底层const"><strong>10.顶层const与底层const</strong></h3>
-<p>参考：c++ primer 5 中文版 p57</p>
-<p>这个是针对指针的，因为指针本身也是对象，所以const修饰指针的变量的时候可能产生歧义，一个是指针变量是常量不可变，另一种情况是指针指向的是常量，这样指针变量本身是可以修改的。</p>
-<p>为了区分这两种情况，引入了顶层const和底层const两种类型，</p>
-<pre><code class="language-text-plain"> p  &lt;--- p是指向i的指针，如果p是const的话，就叫顶层const，顶层const的写法   int* const p = i; ,const 直接修饰的p，
- 
- |
- v
+        <updated>2022-12-15T12:43:34-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Graphic Engine &amp; Game Engine open source list Learn OpenGL in Python Learn OpenGL, extensive tutorial resource for learning Modern OpenGL Coin3D Free and open-source&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="https://github.com/Gforcex/OpenGraphic">Graphic Engine &amp; Game Engine open source list</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL1P11yPQAo7opIg8r-4BMfh1Z_dCOfI0y">Learn OpenGL in Python</a></li>
+<li><ul>
+<li><a href="https://learnopengl.com/">Learn OpenGL</a>, extensive tutorial resource for learning Modern OpenGL</li>
+</ul>
+</li>
+</ul>
+<h2 id="coin3d">Coin3D</h2>
+<p>Free and open-source implementation of the Open Inventor API.
+<a href="https://coin3d.github.io/">https://coin3d.github.io/</a></p>
+<h2 id="mevislab">MeVisLab</h2>
+<p><a href="https://www.mevislab.de/">MeVisLab</a> is a framework for the development of image processing algorithms and visualization and interaction methods, with a focus on medical imaging.</p>
+<h2 id="vcglibmeshlab">Vcglib/Meshlab</h2>
+<p>The <a href="http://vcg.isti.cnr.it/vcglib/"><strong>Visualization and Computer Graphics Library</strong></a> (VCGlib for short) is a open source, portable, C++, templated, no dependency, library for manipulation, processing, cleaning, simplifying triangle meshes.</p>
+<p><a href="https://github.com/cnr-isti-vclab/vcglib">https://github.com/cnr-isti-vclab/vcglib</a></p>
+<ul>
+<li><a href="https://github.com/Nitta-K-git/vcglib_samples">vcglib_samples</a>, sample codes of vcglib and MeshLab function.</li>
+<li>几个经典的数学库之一学习—VCGlib<ul>
+<li><a href="https://www.cnblogs.com/icmzn/p/6640752.html">Lesson 1</a></li>
+<li><a href="https://www.cnblogs.com/icmzn/p/6655775.html">Lesson 2</a></li>
+</ul>
+</li>
+<li><a href="http://vcg.isti.cnr.it/nexus/">Nexus</a>, a collection of tools for streaming visualization of large 3D models in OpenGL (C++ and Javascript)</li>
+</ul>
+<h3 id="create-water-tight-surfaces-from-3d-scanning">Create water tight surfaces from 3D Scanning</h3>
+<p><figure class="post__image"><img loading="lazy" src="https://liushuya7.github.io/wiki/media/posts/27/meshlab-surface-reconstruction-screened-poisson.png" alt="Image description" width="1123" height="735"  sizes="(max-width: 768px) 100vw, 768px" srcset="https://liushuya7.github.io/wiki/media/posts/27/responsive/meshlab-surface-reconstruction-screened-poisson-xs.png 300w ,https://liushuya7.github.io/wiki/media/posts/27/responsive/meshlab-surface-reconstruction-screened-poisson-sm.png 480w ,https://liushuya7.github.io/wiki/media/posts/27/responsive/meshlab-surface-reconstruction-screened-poisson-md.png 768w"></figure></p>
+<p>This filter can be used to merge multiple 3D scanned mesh layers and fill holes.</p>
+<h2 id="geometric-mesh-processing">Geometric Mesh Processing</h2>
+<ul>
+<li>Software: <strong>Materialise Medical</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=23WZPl11HvE&amp;ab_channel=MaterialiseMedical">How to Design a Patient-Specific Cranial Plate</a></li>
+</ul>
+</li>
+<li><a href="http://meshlabstuff.blogspot.com/"><strong>Meshlab</strong> Stuff</a><ul>
+<li><a href="https://github.com/cnr-isti-vclab/PyMeshLab">PyMeshLab</a></li>
+<li><a href="https://stackoverflow.com/questions/46089463/comparing-models-somebody-can-give-me-an-exmple">MeshLab compares two 3D models by calculating the Hausdorff distance</a></li>
+</ul>
+</li>
+<li>Line Drawings from 3D Models, by Pierre Bénard and Aaron Hertzmann<ul>
+<li>Paper/Tutorial: <a href="https://arxiv.org/abs/1810.01175">https://arxiv.org/abs/1810.01175</a></li>
+<li>Github: <a href="https://github.com/benardp/contours_viewer">https://github.com/benardp/contours_viewer</a></li>
+</ul>
+</li>
+<li>2D and 3D Active contours using BSplines<ul>
+<li><a href="https://en.wikipedia.org/wiki/Active_contour_model">Active Contour Model (Wikipedia)</a></li>
+<li>Related code:<ul>
+<li><a href="https://github.com/ghif/ActiveContourModel">https://github.com/ghif/ActiveContourModel</a></li>
+<li><a href="https://github.com/Christophe-Foyer/BSpline_Active_Contour">https://github.com/Christophe-Foyer/BSpline_Active_Contour</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mesh Segmentation Topic<ul>
+<li><a href="https://github.com/QiujieDong/Mesh_Segmentation">https://github.com/QiujieDong/Mesh_Segmentation</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/nmwsharp">Nicholas Sharp’s</a><ul>
+<li><a href="https://github.com/nmwsharp">Polyscope and geometry-central - 3D Mesh Processing/Visulization</a></li>
+</ul>
+</li>
+</ul>
 
- i  &lt;--- 如果i 是const的话，就是底层const， 底层const的写法 ： const int * p = i; ,const 直接修饰的是int，代表指向的是常量的int类型
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Network | Data Communication</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/network-or-data-communication/"/>
+        <id>https://liushuya7.github.io/wiki/network-or-data-communication/</id>
+            <category term="Network"/>
 
+        <updated>2022-12-15T10:37:25-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Serial Communication Add current user to the “dialout” groups: $ sudo usermod -aG dialout &lt;account name&gt; Python pySerial, serial communication api in Python SSH Cerbot,&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="serial-communication">Serial Communication</h2>
+<p>Add current user to the “dialout” groups:</p>
+<pre><code class="language-bash">$ sudo usermod -aG dialout &lt;account name&gt;
 </code></pre>
-<h3 id="9stdunordered_map-查找指定key是否存在"><strong>9.std::unordered_map 查找指定key是否存在</strong></h3>
-<p>使用<code>count(key)</code>方法，如果key存在，返回1，如果不存在，返回0</p>
-<h3 id="8stdmap有序"><strong>8.std::map有序</strong></h3>
-<p>std::map是有序的，但是不是插入的顺序，而是按照key的值进行排序的，默认是从小到大排序，可以通过模版参数的第三个参数指定排序类型</p>
-<h3 id="7c计时"><strong>7.c++计时</strong></h3>
-<pre><code class="language-cpp">1.包含头文件
-#include &lt;chrono&gt;
+<h3 id="python">Python</h3>
+<ul>
+<li><a href="https://pyserial.readthedocs.io/en/latest/index.html">pySerial</a>, serial communication api in Python</li>
+</ul>
+<h2 id="ssh">SSH</h2>
+<ul>
+<li><a href="https://certbot.eff.org/">Cerbot</a>, switch an existing HTTP site to work in HTTPS</li>
+</ul>
+<h2 id="tcp-vs-udp">TCP vs UDP</h2>
+<p><strong>TCP</strong> is a connection-oriented protocol, whereas <strong>UDP</strong> is a connectionless protocol. A key difference between TCP and UDP is speed, as TCP is comparatively slower than UDP. Overall, UDP is a much faster, simpler, and efficient protocol, however, retransmission of lost data packets is only possible with TCP.</p>
+<h3 id="what-is-tcp">What is TCP?</h3>
+<p><strong>Transmission Control Protocol (TCP)</strong> is connection-oriented, meaning once a connection has been established, data can be transmitted in two directions. TCP has built-in systems to check for errors and to guarantee data will be delivered in the order it was sent, making it the perfect protocol for transferring information like still images, data files, and web pages.</p>
+<p>But while TCP is instinctively reliable, its feedback mechanisms also result in a larger overhead, translating to greater use of the available bandwidth on your network. </p>
+<h3 id="what-is-udp">What is UDP?</h3>
+<p><strong>User Datagram Protocol (UDP)</strong> is a simpler, connectionless Internet protocol wherein error-checking and recovery services are not required. With UDP, there is no overhead for opening a connection, maintaining a connection, or terminating a connection; data is continuously sent to the recipient, whether or not they receive it. </p>
+<p>Although UDP isn’t ideal for sending an email, viewing a webpage, or downloading a file, it is largely preferred for real-time communications like broadcast or multitask network transmission.</p>
 
-2.计时开始位置添加
-std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt; time_begin = std::chrono::high_resolution_clock::now();
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Setup Quick Source for Qt</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/setup-quick-source-for-qt/"/>
+        <id>https://liushuya7.github.io/wiki/setup-quick-source-for-qt/</id>
+            <category term="Qt"/>
 
-3.计时结束位置添加
-long long eclipse_time = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::high_resolution_clock::now() - time_begin).count();
-          
-4.eclipse_time即为统计的时间，单位是ms
-</code></pre>
-<h3 id="6各种类型的最大最小值宏定义"><strong>6.各种类型的最大最小值宏定义</strong></h3>
-<p>包含头文件</p>
-<pre><code class="language-cpp">#include &lt;float.h&gt;  //double float 需要用到这个
-#include &lt;limits.h&gt; //int longlong long 需要用这个
-</code></pre>
-<p>下边是具体的最大最小值的宏定义</p>
-<pre><code class="language-cpp">int   n1　=　INT_MIN;
-int   n2　=　INT_MAX;
-float　f1　=　FLT_MIN;
-float　f2　=　FLT_MAX;
-double　d1　=　DBL_MIN;
-double　d2　=　DBL_MAX;
-long ln1 =  LONG_MAX;
-long ln2 =  LONG_MIN;
-long long lln1 = LONG_LONG_MAX;
-long long lln1 = LONG_LONG_MIN;
-</code></pre>
-<h3 id="5condition_variable"><strong>5.condition_variable</strong></h3>
-<p>wait_for可以指定等待时间，用来实现定时器效果</p>
-<p>下边的代码，可以通过condition.signal()来唤醒阻塞的线程，其他时候会到一秒钟自动唤醒，但是这种可能会有假唤醒的时候，如果要避免假唤醒，可以再传递一个函数，返回bool类型。</p>
-<pre><code class="language-cpp">std::unique_lock&lt;std::mutex&gt; sleep_lock(mutex_);
-condition.wait_for(sleep_lock, std::chrono::milliseconds(1000));
-</code></pre>
-<h3 id="4运算符优先级"><strong>4.运算符优先级</strong></h3>
-<pre><code class="language-text-plain">
-*乘 /除
+        <updated>2022-12-15T10:31:15-05:00</updated>
+            <summary>
+                <![CDATA[
+                    You may add the following line to your .bashrc #!/bin/sh # Set the version to match what is installed on your system export QT_VERSION=6.x.x #&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>You may add the following line to your <code>.bashrc</code></p>
+<pre><code class="language-bash">#!/bin/sh
 
-+加 -减
+# Set the version to match what is installed on your system
+export QT_VERSION=6.x.x
 
-&gt;大于 &lt;小于
+# Add Cmake, Ninja, QtCreator, QtDesignStudio to PATH
+export PATH=/home/$USER/Qt/Tools/CMake/bin:/home/josh/Qt/Tools/Ninja:/home/$USER/Qt/Tools/QtCreator/bin:/home/$USER/Qt/Tools/QtDesignStudio/bin:$PATH
 
-==等于 !=不等于
-
-&amp;&amp;与 
-
-||或
-</code></pre>
-<h3 id="3stdunique_lock-与-stdlock_guard的区别"><strong>3.std::unique_lock 与 std::lock_guard的区别</strong></h3>
-<p>unique_lock可以随时释放锁，调用unlock()</p>
-<p>lock_guard需要等到生命周期结束后，才能自动释放锁。</p>
-<pre><code class="language-cpp">用法示例：
-    {
-        std::unique_lock&lt;std::mutex&gt; lock_get_lane_data(mutex_lan_date_msg_);
-        //lock_get_lane_data.unlock();
-    }
-</code></pre>
-<h3 id="将double转换成string时保留15位小数"><strong>将double转换成string时保留15位小数</strong></h3>
-<pre><code class="language-cpp">#include &lt;iomanip&gt;
-#include &lt;sstream&gt;
-
-double ceshi = std::stod(&quot;3.123456789&quot;);
-stringstream ss;
-ss &lt;&lt; std::setprecision(15) &lt;&lt; ceshi;
-std::string ceshi_str = ss.str();
-cout &lt;&lt; ceshi_str &lt;&lt;endl;
-</code></pre>
-<p>java中</p>
-<pre><code class="language-text-plain">其中String s=String.format(&quot;%.2f&quot;,d)表示小数点后任意两位小数，其中2为表示两位小数，若需要三位小数，把2改为3即可，其他同理。
-</code></pre>
-<p>c++ primer 5th p600</p>
-<h3 id="使用ms后缀"><strong>使用ms后缀</strong></h3>
-<pre><code class="language-cpp">#include &lt;chrono&gt;
-using namespace std::chrono_literals;
-</code></pre>
-<h3 id="使用sstream输出-unsigned-char存储的数字"><strong>使用sstream输出 unsigned char存储的数字</strong></h3>
-<p>为了节省存储空间，经常会用usigned char来存储一些数值范围比较小的数字，当用ostringstream转换成string时会出现问题，举例如下</p>
-<pre><code class="language-cpp">unsinged char a = 10;
-std::ostringstream oss;
-oss &lt;&lt; a;
-cout &lt;&lt; oss.str(); //输出换行
-</code></pre>
-<p>这里标准输出打印的并不是“10”，而是会换行，因为a的类型是char，所以会把a的值作为ascii码的值，转换成string，要想输出“10”，需要强转a成int类型</p>
-<pre><code class="language-cpp">unsinged char a = 10;
-std::ostringstream oss;
-oss &lt;&lt; (int)a;
-cout &lt;&lt; oss.str(); //输出10
-</code></pre>
-<h2 id="opencv">OpenCV</h2>
-<h3 id="3本地cmake加入opencv库"><strong>3.本地cmake加入opencv库</strong></h3>
-<pre><code class="language-cmake">find_package(OpenCV REQUIRED)  #注意大小写
-target_include_directories(
-  ${PROJECT_NAME}
-  PUBLIC
-  ${OpenCV_INCLUDE_DIRS}
-)
-
-target_link_libraries(
-  ${PROJECT_NAME}
-  ${OpenCV_LIBS}
-)
-</code></pre>
-<h3 id="2编译安卓ndk库"><strong>2.编译安卓ndk库</strong></h3>
-<p>从github下载源码，进入到源码跟目录，创建build文件夹，进入build文件夹，执行下边的编译指令</p>
-<pre><code class="language-sh">export ANDROID_NDK=/Users/liushichao/Library/Android/sdk/ndk/21.0.6113669
-export ANDROID_ABI=armeabi-v7a
-export ANDROID_NATIVE_API_LEVEL=android-28
-export ANDROID_TOOLCHAIN_NAME=arm-linux-androideabi-clang
-
-cmake			       \
-  -DANDROID_NDK=${ANDROID_NDK} \
-  -DANDROID_ABI=${ANDROID_ABI} \
-  -DANDROID_STL=c++_shared  \
-  -DANDROID_NATIVE_API_LEVEL=${ANDROID_NATIVE_API_LEVEL} \
-  -DBUILD_SHARED_LIBS=1 \
-  -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
-  -DANDROID_TOOLCHAIN_NAME=${ANDROID_TOOLCHAIN_NAME} \
-  -D BUILD_opencv_java=ON \
-  -D BUILD_ANDROID_PROJECTS=ON \
-        -D WITH_CUDA=OFF \
-        -D WITH_MATLAB=OFF \
-        -D BUILD_ANDROID_EXAMPLES=OFF \
-        -D BUILD_DOCS=OFF \
-        -D CMAKE_BUILD_TYPE=Release \
-        -D BUILD_PERF_TESTS=OFF \
-        -D BUILD_TESTS=OFF \
-        -DCMAKE_INSTALL_PREFIX=&quot;/Users/liushichao/source/opencv/install_ndk&quot; \
-  ..
-
-make -j8
-make install
-</code></pre>
-<h3 id="1注意cvmat的宽高参数"><strong>1.注意cv::Mat()的宽高参数</strong></h3>
-<p>前边是高，后边是宽，不要弄反了</p>
-<pre><code class="language-cpp">Mat (int rows, int cols, int type);
+# Add Qt to the PATH enviroment, and LD_LIBRARY_PATH
+export PATH=/home/$USER/Qt/$QT_VERSION/gcc_64/bin:$PATH
+export LD_LIBRARY_PATH=/home/$USER/Qt/$QT_VERSION/gcc_64/lib/:$LD_LIBRARY_PATH
 </code></pre>
 
             ]]>
