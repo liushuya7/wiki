@@ -3,12 +3,136 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2022-12-15T15:55:45-05:00</updated>
+    <updated>2022-12-26T22:17:15-05:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
     <id>https://liushuya7.github.io/wiki</id>
 
+    <entry>
+        <title>Universal Robot</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/universal-robot/"/>
+        <id>https://liushuya7.github.io/wiki/universal-robot/</id>
+            <category term="Robotics"/>
+
+        <updated>2022-12-26T22:17:15-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Unity Unity3D UR3
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h3 id="unity">Unity</h3>
+<ul>
+<li><a href="https://github.com/rparak/Unity3D_Robotics_UR">Unity3D UR3</a></li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Doxygen</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/doxygen/"/>
+        <id>https://liushuya7.github.io/wiki/doxygen/</id>
+            <category term="C++"/>
+
+        <updated>2022-12-26T21:16:13-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Doxygen Official Documentation Tutorial for a C++ Doxygen CMake Sphinx Breathe Pipeline C/C++ Documentation Using Doxygen VSCode Doxygen Documentation Generator
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="https://doxygen.nl/manual/docblocks.html">Doxygen Official Documentation</a></li>
+<li><a href="https://github.com/smrfeld/cpp_doxygen_sphinx">Tutorial for a C++ Doxygen CMake Sphinx Breathe Pipeline</a></li>
+<li><a href="https://leimao.github.io/blog/CPP-Documentation-Using-Doxygen/">C/C++ Documentation Using Doxygen</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=cschlosser.doxdocgen">VSCode Doxygen Documentation Generator</a></li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Robotiq</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/robotiq/"/>
+        <id>https://liushuya7.github.io/wiki/robotiq/</id>
+            <category term="Robotics"/>
+
+        <updated>2022-12-26T21:10:21-05:00</updated>
+            <summary>
+                <![CDATA[
+                    C++ interface for robotiq epick gripper robotiq_epick_Rviz_visualization
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="https://github.com/ValerioMa/robotiq_tcp">C++ interface for robotiq epick gripper</a></li>
+<li><a href="https://github.com/JureHudoklin/rl_grasp_path_optimization/tree/08e4848c75ff371fdd46af1ad07053513094bf94/panda_arm_epick">robotiq_epick_Rviz_visualization</a></li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Robotics</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/robotics/"/>
+        <id>https://liushuya7.github.io/wiki/robotics/</id>
+            <category term="Robotics"/>
+
+        <updated>2022-12-26T21:04:01-05:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Static Site</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/static-site/"/>
+        <id>https://liushuya7.github.io/wiki/static-site/</id>
+            <category term="Website"/>
+
+        <updated>2022-12-26T21:11:32-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Wiki Theme Examples lab-wiki: internal documentation for the lab Hugo Template Hugo Book Theme Jekyll Template Just the Docs
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="wiki-theme">Wiki Theme</h2>
+<h3 id="examples">Examples</h3>
+<ul>
+<li><a href="https://github.com/xinhe-lab/lab-wiki">lab-wiki: internal documentation for the lab</a></li>
+</ul>
+<h3 id="hugo-template">Hugo Template</h3>
+<ul>
+<li><a href="https://github.com/alex-shpak/hugo-book">Hugo Book Theme</a></li>
+</ul>
+<h3 id="jekyll-template">Jekyll Template</h3>
+<ul>
+<li><a href="https://just-the-docs.github.io/just-the-docs/">Just the Docs</a></li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Software</title>
         <author>
@@ -325,216 +449,6 @@ plt.cla()
 <p>All machine learning models are categorized as either <strong>supervised</strong> or <strong>unsupervised</strong>. If the model is supervised, it’s then sub-categorized as either a <strong>regression</strong> or <strong>classification</strong> model.</p>
 <h3 id="understanding-the-mean-squared-error"><a href="https://medium.com/nothingaholic/understanding-the-mean-squared-error-df41e2c87958">Understanding the <strong>Mean Squared Error</strong></a></h3>
 <h3 id="minimizing-the-cost-function-gradient-descent"><a href="https://towardsdatascience.com/minimizing-the-cost-function-gradient-descent-a5dd6b5350e1">Minimizing the cost function: Gradient descent</a></h3>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Data Analysis</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/data-analysis/"/>
-        <id>https://liushuya7.github.io/wiki/data-analysis/</id>
-            <category term="Data"/>
-
-        <updated>2022-12-15T14:12:16-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Knowledge Base Concordance Correlation Coefficient See What is the Concordance Correlation Coefficient? Least Squares Sphere Fit 3D Data Point Set Registration Methods — Discussion and&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="knowledge-base">Knowledge Base</h2>
-<ul>
-<li><strong>Concordance Correlation Coefficient</strong><ul>
-<li>See <a href="https://www.statisticshowto.com/concordance-correlation-coefficient/">What is the Concordance Correlation Coefficient?</a></li>
-</ul>
-</li>
-<li><a href="https://jekel.me/2015/Least-Squares-Sphere-Fit/">Least Squares Sphere Fit</a></li>
-</ul>
-<h2 id="3d-data">3D Data</h2>
-<p><a href="https://medium.com/swlh/point-set-registration-methods-discussion-and-implementation-58efa98d0b68">Point Set Registration Methods — Discussion and Implementation</a></p>
-<h2 id="plotting">Plotting</h2>
-<ul>
-<li><a href="https://jekel.me/2020/Better-error-bars-with-tolerance-intervals/">Better error bars with tolerance intervals</a></li>
-</ul>
-<h3 id="tools">Tools</h3>
-<ul>
-<li><a href="https://plotjuggler.io/">PlotJuggler</a> – Fast, intuitive and extensible time series visualization tool with ROS2 integration.</li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>3D Reconstruction</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/3d-reconstruction/"/>
-        <id>https://liushuya7.github.io/wiki/3d-reconstruction/</id>
-            <category term="3D Reconstruction"/>
-
-        <updated>2022-12-15T13:43:09-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Commercial Software RealityCapture, photogrammetry software R3DS Wrap 3, parametric model fitting COLMAP, a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="commercial-software">Commercial Software</h2>
-<ul>
-<li><a href="https://www.capturingreality.com/">RealityCapture</a>, photogrammetry software</li>
-<li><a href="https://www.russian3dscanner.com/">R3DS Wrap 3</a>, parametric model fitting</li>
-<li><a href="https://colmap.github.io/index.html#">COLMAP</a>, a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and command-line interface</li>
-<li><a href="http://www.matthewtancik.com/nerf">NeRF</a> (Neural Radiance Fields), a method that achieves state-of-the-art results for synthesizing novel views of complex scenes<ul>
-<li><a href="https://github.com/yenchenlin/nerf-pytorch">NeRF-pytorch</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/darglein/ADOP">ADOP</a>: Approximate Differentiable One-Pixel Point Rendering</li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Deep Learning</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/deep-learning/"/>
-        <id>https://liushuya7.github.io/wiki/deep-learning/</id>
-            <category term="Deep Learning"/>
-
-        <updated>2022-12-15T13:41:03-05:00</updated>
-            <summary>
-                <![CDATA[
-                    MONAI, Medical Open Network for Artificial Intelligence
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <ul>
-<li><a href="https://monai.io/index.html">MONAI</a>, Medical Open Network for Artificial Intelligence</li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Android</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/android/"/>
-        <id>https://liushuya7.github.io/wiki/android/</id>
-            <category term="Android"/>
-
-        <updated>2022-12-15T13:37:44-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Android Development Android Developers Android OpenCV Kotlin Get Started Developing Android apps with Kotlin Kotlin for Python Developers, by Paul Everitt Kotlin for Python Developers,&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="android-development">Android Development</h2>
-<ul>
-<li><a href="https://github.com/android">Android Developers</a></li>
-<li><a href="https://opencv.org/android/">Android OpenCV</a></li>
-<li><a href="https://kotlinlang.org/">Kotlin</a><ul>
-<li><a href="https://developer.android.com/kotlin">Get Started Developing Android apps with Kotlin</a></li>
-<li><a href="https://kotlin-for-python.readthedocs.io/en/latest/">Kotlin for Python Developers</a>, by <a href="https://pauleveritt.wordpress.com/">Paul Everitt</a></li>
-</ul>
-</li>
-</ul>
-<p><a href="https://khan.github.io/kotlin-for-python-developers/">Kotlin for Python Developers</a>, by <a href="https://eldhuset.net/">Aasmund Eldhuset</a></p>
-<p><a href="https://chaquo.com/chaquopy/">Chaquopy</a>, Python SDK for Android</p>
-<h2 id="camera-development">Camera Development</h2>
-<ul>
-<li><a href="https://github.com/android/camera-samples">Camera Samples Repository</a></li>
-<li><a href="https://github.com/arindamxd/android-camerax">CameraX APIs written in Kotlin</a></li>
-</ul>
-<p> </p>
-<h2 id="packages">Packages</h2>
-<ul>
-<li><a href="https://github.com/owahltinez/camerax-tflite">CameraX + Tensorflow Lite</a></li>
-<li>ROS2<ul>
-<li><a href="https://github.com/winter3030/Ros2_Android_Camera_Stream">Ros2 Android Camera Stream</a></li>
-<li><a href="https://github.com/ros2-java">ros2_java</a>, Java and Android bindings for ROS2<ul>
-<li><a href="https://github.com/jayhou/ros2-android-demos">ros2-android-demos</a></li>
-<li><a href="https://github.com/songshan0321/ros2-android-tutorial">ros2-android-tutorial</a>, based on <a href="https://github.com/esteve/ros2_java.git">ros2_java</a> and <a href="https://github.com/esteve/ros2_android_examples.git">ros2_android_examples</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/ROS-Mobile/ROS-Mobile-Android">ROS-Mobile-Android</a>, Visualization and controlling application for Android</li>
-<li><a href="https://github.com/frankjoshua/PocketBot">Pocket Bot</a> (<a href="http://pocketbot.io/">http://pocketbot.io/</a>), an Android app to control a ROS based robot</li>
-<li><a href="https://github.com/mirellameelo/ROS_2_ANDROID">ROS_2_ANDROID</a>, Publishing data from Android to PC via java.net.Socket</li>
-</ul>
-</li>
-</ul>
-<p><strong>Smartphones</strong></p>
-<h2 id="hardware"><strong>Hardware</strong></h2>
-<ul>
-<li><a href="https://www.arducam.com/docs/usb-cameras/">Arducam USB Camera Shields</a></li>
-<li><a href="https://www.youtube.com/watch?v=8KILAVjM8lY&amp;t=175s&amp;ab_channel=Samsung">Dual Pixel Pro: Fast and accurate autofocus for ISOCELL Image Sensor | Samsung</a></li>
-</ul>
-<h2 id="interface">Interface</h2>
-<ul>
-<li><a href="https://www.electroschematics.com/mobile-phone-camera-interface/">Mobile Phone Camera Interface Primer – 1</a></li>
-<li><a href="https://github.com/RahulDevadiga/Send-image-Android-to-PC-via-bluetooth">Send-image-Android-to-PC-via-bluetooth</a></li>
-</ul>
-<h2 id="bookmarks">Bookmarks</h2>
-<ul>
-<li><a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1">Get user input in an app: Part 1  |  Android Developers</a></li>
-<li><a href="https://codelabs.developers.google.com/codelabs/camerax-getting-started#0">Getting Started with CameraX</a></li>
-<li><a href="https://source.android.com/devices/camera">Camera  |  Android Open Source Project</a></li>
-<li><a href="https://github.com/RuurdBijlsma/Camera">RuurdBijlsma/Camera: Android camera app to get manual control over focus, shuttertime, iso and white balance</a></li>
-<li><a href="https://github.com/awoisoak/Camera-Exposure-Calculator">awoisoak/Camera-Exposure-Calculator: Android app that helps you to calculate the desired exposure parameters from a based exposure (ND filter supported)</a></li>
-<li><a href="https://philipplies.medium.com/setting-up-latest-opencv-for-android-studio-and-kotlin-2021-edition-259be404b133">Setting up latest OpenCV for Android Studio and Kotlin — 2021 edition | by Philipp Lies | Medium</a></li>
-<li><a href="https://github.com/sdwwld/CameraX">sdwwld/CameraX: Android手机使用CameraX拍照，比Camera2更简洁，可以使用前置以及后置摄像头，自动对焦，以及证件照并实现剪切功能</a></li>
-<li><a href="https://opencamera.org.uk/">Open Camera - an Open Source App utilizes Camera 2 API</a></li>
-<li><a href="https://kivy.org/#home">Kivy: Cross-platform Python Framework for NUI Development</a></li>
-<li><a href="https://github.com/kivy/kivy">kivy/kivy: Open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS</a></li>
-<li><a href="https://github.com/kivy/python-for-android">kivy/python-for-android: Turn your Python application into an Android APK</a></li>
-<li><a href="https://python-for-android.readthedocs.io/en/latest/">python-for-android — python-for-android 0.1 documentation</a></li>
-<li><a href="https://github.com/kivy-garden/xcamera">kivy-garden/xcamera: Kivy widget for taking pictures with the camera, optimized for Android. It uses the native Android’s APIs to take the pictures, thus ensuring good quality, high resolution, auto-focus, etc. !!!!!!!!!!!!!!!</a></li>
-<li><a href="https://github.com/JensGe/KivyCamAR">JensGe/KivyCamAR: Prototypic Examples for Android AR Apps with Kivy</a></li>
-<li><a href="https://www.tequnique.com/camerapro.php">MobWheel.com - CameraPro: fast and easy to use camera app for mobile devices</a></li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Setup Quick Source for VTK</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/setup-quick-source-for-vtk/"/>
-        <id>https://liushuya7.github.io/wiki/setup-quick-source-for-vtk/</id>
-            <category term="VTK"/>
-
-        <updated>2022-12-15T12:58:55-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Add the following lines to your .bashrc: # Setup VTK Enviroment export VTK_DIR=/home/$USER/VTK-9.1.0/build export PATH=/home/$USER/VTK-9.1.0/build/bin:$PATH LD_LIBRARY_PATH=/home/$USER/VTK-9.1.0/build/lib:${LD_LIBRARY_PATH} QML2_IMPORT_PATH=/home/$USER/VTK-9.1.0/build/lib/qml # (OPTIONAL) Override OpenGL version, only for older&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>Add the following lines to your <code>.bashrc</code>:</p>
-<pre><code class="language-bash"># Setup VTK Enviroment
-export VTK_DIR=/home/$USER/VTK-9.1.0/build
-export PATH=/home/$USER/VTK-9.1.0/build/bin:$PATH
-LD_LIBRARY_PATH=/home/$USER/VTK-9.1.0/build/lib:${LD_LIBRARY_PATH}
-QML2_IMPORT_PATH=/home/$USER/VTK-9.1.0/build/lib/qml
-
-# (OPTIONAL) Override OpenGL version, only for older PC
-export MESA_GL_VERSION_OVERRIDE=3.3
-</code></pre>
 
             ]]>
         </content>
