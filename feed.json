@@ -10,11 +10,54 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/3d-slicer/",
+            "url": "https://liushuya7.github.io/wiki/3d-slicer/",
+            "title": "3D Slicer",
+            "summary": "Tutorials DeLeon Lab Videos",
+            "content_html": "<h2 id=\"tutorials\">Tutorials</h2>\n<ul>\n<li><a href=\"https://www.youtube.com/@deleonlab/videos\">DeLeon Lab Videos</a></li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "3D Graphics"
+            ],
+            "date_published": "2023-01-02T11:58:10-05:00",
+            "date_modified": "2023-01-02T11:58:10-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/kuka/",
+            "url": "https://liushuya7.github.io/wiki/kuka/",
+            "title": "KUKA",
+            "summary": "KUKA iiwa LBR R800 Learn Kuka LBR iiwa collaborative robotic programming | UNSW Making Courses KCL-BMEIS/lbr_fri_ros2_stack ICube-Robotics/iiwa_ros2: ROS2 stack for KUKA iiwa collaborative robots Tutorials&hellip;",
+            "content_html": "<h2 id=\"kuka-iiwa-lbr-r800\">KUKA iiwa LBR R800</h2>\n<ul>\n<li><p><a href=\"https://www.making.unsw.edu.au/learn/\">Learn Kuka LBR iiwa collaborative robotic programming | UNSW Making Courses</a></p>\n</li>\n<li><p><a href=\"https://github.com/KCL-BMEIS/lbr_fri_ros2_stack\">KCL-BMEIS/lbr_fri_ros2_stack</a></p>\n</li>\n<li><p><a href=\"https://github.com/ICube-Robotics/iiwa_ros2\">ICube-Robotics/iiwa_ros2: ROS2 stack for KUKA iiwa collaborative robots</a></p>\n</li>\n<li><p><a href=\"https://www.youtube.com/@discoveringrobotics723/videos\">Tutorials on Discovering Robotics Youtube Channel</a></p>\n</li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "Robotics"
+            ],
+            "date_published": "2023-01-02T11:34:07-05:00",
+            "date_modified": "2023-01-02T11:34:07-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/plc/",
+            "url": "https://liushuya7.github.io/wiki/plc/",
+            "title": "PLC",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "PLC"
+            ],
+            "date_published": "2023-01-02T11:01:55-05:00",
+            "date_modified": "2023-01-02T15:43:49-05:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/universal-robot/",
             "url": "https://liushuya7.github.io/wiki/universal-robot/",
             "title": "Universal Robot",
-            "summary": "Unity Unity3D UR3",
-            "content_html": "<h3 id=\"unity\">Unity</h3>\n<ul>\n<li><a href=\"https://github.com/rparak/Unity3D_Robotics_UR\">Unity3D UR3</a></li>\n</ul>\n",
+            "summary": "CB2 Series Related URScript Programming Language Manual ServiceManual_UR5_en_2.0.8.pdf UR10 with CB2 User Manual Product Alert: End-of-Support CB2 Recommend to migrate to CB3 or e-Series Real-time&hellip;",
+            "content_html": "<h3 id=\"cb2-series-related\">CB2 Series Related</h3>\n<ul>\n<li><a href=\"https://s3-eu-west-1.amazonaws.com/ur-support-site/17224/scriptmanual_en.pdf\">URScript Programming Language Manual</a></li>\n<li><a href=\"https://s3-eu-west-1.amazonaws.com/ur-support-site/17236/ServiceManual_UR5_en_2.0.8.pdf\">ServiceManual_UR5_en_2.0.8.pdf</a></li>\n<li><a href=\"https://s3-eu-west-1.amazonaws.com/ur-support-site/18011/manual_en_UR10_CB2_1.6.pdf\">UR10 with CB2 User Manual</a></li>\n<li><a href=\"https://www.universal-robots.com/articles/ur/documentation/product-alert-end-of-support-cb2/\">Product Alert: End-of-Support CB2</a><ul>\n<li>Recommend to migrate to CB3 or e-Series</li>\n</ul>\n</li>\n<li><a href=\"https://www.universal-robots.com/articles/ur/interface-communication/real-time-data-exchange-rtde-guide/\">Real-time Data Exchange (RTDE) Guide</a><ul>\n<li>doesn’t support CB2, see <a href=\"https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/issues/199#issuecomment-939432844\">issue</a></li>\n<li>only supports CB3 3.4 forward and e-Series</li>\n</ul>\n</li>\n<li>Polyscope Software Update<ul>\n<li><a href=\"https://www.universal-robots.com/download/software-cb-series/update/cb2cb1/polyscope-software-update-cb2-sw-1825319/\">CB2 - SW 1.8.25319</a></li>\n</ul>\n</li>\n<li>Universal Robots ROS2 Driver (eSeries)<ul>\n<li><a href=\"https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver\">Github</a></li>\n</ul>\n</li>\n</ul>\n<h3 id=\"ros2\">ROS2</h3>\n<ul>\n<li><a href=\"http://www.ritsumei.ac.jp/~kawamura/doc/ros2_ur.pdf\">How to control Universal Robot e-Series by using ROS2</a></li>\n</ul>\n<h3 id=\"ros1\">ROS1</h3>\n<ul>\n<li><a href=\"https://blog.csdn.net/weixin_43731206/article/details/115005562\"><strong>Ubuntu20.04下moveit+ROS noetic控制UR5机械臂 环境配置</strong></a></li>\n</ul>\n<h4 id=\"ros1-driver\">ROS1 Driver</h4>\n<ul>\n<li><a href=\"https://github.com/ros-industrial/ur_modern_driver/tree/kinetic-devel\"><strong>ur_modern_driver</strong></a></li>\n<li><a href=\"https://github.com/ros-industrial/universal_robot/tree/melodic-devel\"><strong>universal_robot</strong></a></li>\n</ul>\n<h4 id=\"ursim-18\">URSim 1.8</h4>\n<ul>\n<li><a href=\"https://www.universal-robots.com/download/software-cb-series/simulator-non-linux/offline-simulator-cb-series-non-linux-ursim-1814035/\">OFFLINE SIMULATOR - CB-SERIES - NON LINUX - URSIM 1.8.14035</a></li>\n<li><a href=\"https://www.universal-robots.com/download/software-cb-series/simulator-linux/offline-simulator-cb-series-linux-ursim-1816941tarqz/\">OFFLINE SIMULATOR - CB-SERIES - LINUX - URSIM-1.8.16941.TAR.QZ</a></li>\n</ul>\n<h3 id=\"other\">Other</h3>\n<ul>\n<li><a href=\"https://forum.universal-robots.com/t/difference-between-ur-ros-driver-and-ros-industrial/16875\">Difference between UR ROS driver and ROS Industrial</a> describes how to build ROS ur driver for CB3 robots</li>\n</ul>\n<h3 id=\"unity\">Unity</h3>\n<ul>\n<li><a href=\"https://github.com/rparak/Unity3D_Robotics_UR\">Unity3D UR3</a></li>\n</ul>\n",
             "author": {
                 "name": "Joshua Liu"
             },
@@ -22,7 +65,7 @@
                    "Robotics"
             ],
             "date_published": "2022-12-26T22:17:04-05:00",
-            "date_modified": "2022-12-26T22:17:15-05:00"
+            "date_modified": "2023-01-02T11:37:49-05:00"
         },
         {
             "id": "https://liushuya7.github.io/wiki/doxygen/",
@@ -112,53 +155,6 @@
             ],
             "date_published": "2022-12-15T15:44:37-05:00",
             "date_modified": "2022-12-15T15:47:43-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/learning-c/",
-            "url": "https://liushuya7.github.io/wiki/learning-c/",
-            "title": "Learning C++",
-            "summary": "Hacking C++ https://hackingcpp.com/index.html Website: https://www.cppindetail.com/ Book (on Amazon): https://www.amazon.com/17-Detail-Exciting-Features-Standard/dp/1798834065 Code: https://www.cppindetail.com/data/cpp17indetail.zip Book: https://learning.oreilly.com/library/view/modern-cmake-for/9781801070058/ Code: https://github.com/PacktPublishing/Modern-CMake-for-Cpp Youtube Channel: https://www.youtube.com/playlist?list=PLO6785UZapFVtesm7HROV2bwrzFaVwVH8",
-            "content_html": "<h2 id=\"hacking-c\">Hacking C++</h2>\n<p><a href=\"https://hackingcpp.com/index.html\">https://hackingcpp.com/index.html</a></p>\n<h2 id=\"book-c-17-in-detail\">[Book] C++ 17 in Detail</h2>\n<p>Website: <a href=\"https://www.cppindetail.com/\">https://www.cppindetail.com/</a></p>\n<p>Book (on Amazon): <a href=\"https://www.amazon.com/17-Detail-Exciting-Features-Standard/dp/1798834065\">https://www.amazon.com/17-Detail-Exciting-Features-Standard/dp/1798834065</a> </p>\n<p>Code: <a href=\"https://www.cppindetail.com/data/cpp17indetail.zip\">https://www.cppindetail.com/data/cpp17indetail.zip</a></p>\n<h2 id=\"book-modern-cmake-for-c\">[Book] Modern CMake for C++</h2>\n<p>Book: <a href=\"https://learning.oreilly.com/library/view/modern-cmake-for/9781801070058/\">https://learning.oreilly.com/library/view/modern-cmake-for/9781801070058/</a></p>\n<p>Code: <a href=\"https://github.com/PacktPublishing/Modern-CMake-for-Cpp\">https://github.com/PacktPublishing/Modern-CMake-for-Cpp</a></p>\n<p>Youtube Channel: <a href=\"https://www.youtube.com/playlist?list=PLO6785UZapFVtesm7HROV2bwrzFaVwVH8\">https://www.youtube.com/playlist?list=PLO6785UZapFVtesm7HROV2bwrzFaVwVH8</a></p>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Course/Book",
-                   "CMake",
-                   "C++"
-            ],
-            "date_published": "2022-12-15T15:30:22-05:00",
-            "date_modified": "2022-12-15T15:30:22-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/courses-and-books/",
-            "url": "https://liushuya7.github.io/wiki/courses-and-books/",
-            "title": "Courses &amp; Books",
-            "summary": "runestone.academy Books A First Course in Linear Algebra Problem Solving with Algorithms and Data Structures using C++ Learn Computer Graphics using WebGL JavaScript for Python&hellip;",
-            "content_html": "<h2 id=\"runestoneacademy-books\"><a href=\"https://runestone.academy/runestone/books/index\">runestone.academy</a> Books</h2>\n<ul>\n<li><a href=\"https://runestone.academy/runestone/books/published/fcla/front-matter.html\">A First Course in Linear Algebra</a></li>\n<li><a href=\"https://runestone.academy/runestone/books/published/cppds/index.html\">Problem Solving with Algorithms and Data Structures using C++</a></li>\n<li><a href=\"https://runestone.academy/runestone/books/published/learnwebgl2/index.html\">Learn Computer Graphics using WebGL</a></li>\n<li><a href=\"https://runestone.academy/runestone/books/published/JS4Python/index.html\">JavaScript for Python Programmers¶</a></li>\n</ul>\n<h2 id=\"computer-science\">Computer Science</h2>\n<ul>\n<li><a href=\"https://ciis.lcsr.jhu.edu/doku.php?id=courses:445:short:home\">Computer Integrated Surgery</a> (JHU-CIS I)</li>\n<li><a href=\"https://mphy0026.readthedocs.io/en/latest/index.html\">Computer Assisted Surgery and Therapy</a><ul>\n<li><a href=\"https://github.com/UCL/scikit-surgery\">https://github.com/UCL/scikit-surgery</a></li>\n</ul>\n</li>\n<li><a href=\"https://courses.cs.washington.edu/courses/cse577/11au/notes.html\">CSE/EE 577 Medical Image Analysis</a> (Washington University)</li>\n<li><a href=\"https://www.youtube.com/channel/UCm5mt-A4w61lknZ9lCsZtBw\">Control &amp; Mathmatics</a>, <a href=\"http://databookuw.com/page-16/page-18/\">Prof. Steve Brunton</a><ul>\n<li><a href=\"http://databookuw.com/\">&lt;&lt;Data Driven Science &amp; Engineering&gt;&gt;</a></li>\n</ul>\n</li>\n<li><a href=\"https://szeliski.org/Book/\">Computer Vision: Algorithms and Applications, 2nd ed</a></li>\n<li><a href=\"https://www.jianshu.com/p/4d2899d43016\"><strong>传统计算机视觉学习笔记</strong></a></li>\n<li><a href=\"https://www.jianshu.com/p/3b24a497715b\"><strong>传统3D视觉学习笔记</strong></a></li>\n<li><a href=\"https://prosperocoder.com/\">Coding and CG Tutorials</a>, by Prospero Coder</li>\n</ul>\n<h2 id=\"robotics\">Robotics</h2>\n<ul>\n<li><a href=\"https://github.com/mikeroyal/Robotics-guide\">Robotics Guide</a></li>\n<li><a href=\"https://project-awesome.org/Kiloreux/awesome-robotics\">Awesome Robotics</a></li>\n<li><a href=\"https://github.com/krishauser/RoboticSystemsBook\">RoboticSystemsBook</a></li>\n</ul>\n<h2 id=\"arvr\">AR/VR</h2>\n<ul>\n<li><a href=\"https://github.com/mikeroyal/AR-VR-Guide\">AR/VR Guide</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/List_of_augmented_reality_software\">List of augmented reality software</a> (Wikipedia)</li>\n<li><a href=\"https://sites.google.com/view/brown-vr-sw-review-2018\">VR Software Wiki</a></li>\n<li><a href=\"https://www.worldviz.com\">WorldViz - Virtual Reality for Training and Research</a><ul>\n<li><a href=\"https://forum.worldviz.com\">WorldViz User Forum</a></li>\n</ul>\n</li>\n<li><a href=\"https://github.com/qian256/HoloLensCamCalib\">HoloLens Camera Calibration</a>, by Long Qian</li>\n<li><a href=\"https://github.com/qian256/HoloLensARToolKit\">HoloLens with ARToolKit v0.3</a>, by Long Qian</li>\n<li><a href=\"https://github.com/IntelligentRoboticsLabs/ARViz\">ARViz</a>, an RViz implementation for AR runs on Microsoft Hololens</li>\n<li><a href=\"https://github.com/theseankelly/hololens-ros2\">ROS2 for HoloLens</a>, a UWP component library to interact with ROS2</li>\n<li><a href=\"https://github.com/mafda/augmented_reality_101\">Augmented Reality 101</a></li>\n</ul>\n<h2 id=\"algorithms\">Algorithms</h2>\n<h3 id=\"mit-6006-introduction-to-algorithms\"><a href=\"https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/index.htm\">MIT 6.006 Introduction to Algorithms</a></h3>\n<ul>\n<li><a href=\"https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY\">YouTube Playlist</a><ol>\n<li>Algorithms and Computation</li>\n<li>Data Structures and Dynamic Arrays</li>\n<li>Sets and Sorting</li>\n<li>Hashing</li>\n<li>Linear Sorting</li>\n<li>Binary Trees, Part 1</li>\n<li>Binary Trees, Part 2: AVL</li>\n<li>Binary Heaps</li>\n<li>Breadth-First Search</li>\n<li>Depth-First Search</li>\n<li>Weighted Shortest Paths</li>\n<li>Bellman-Ford</li>\n<li>Dijkstra</li>\n<li>APSP and Johnson</li>\n<li>Dynamic Programming, Part 1: SRTBOT, Fib, DAGs, Bowling</li>\n<li>Dynamic Programming, Part 2: LCS, LIS, Coins</li>\n<li>Dynamic Programming, Part 3: APSP, Parens, Piano</li>\n<li>Dynamic Programming, Part 4: Rods, Subset Sum, Pseudopolynomial</li>\n<li>Complexity</li>\n<li>Course Review</li>\n<li>Algorithms — Next Steps</li>\n</ol>\n</li>\n<li><a href=\"https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/lecture-notes/\">Lecture Notes</a></li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Course/Book"
-            ],
-            "date_published": "2022-12-15T15:18:21-05:00",
-            "date_modified": "2022-12-15T15:18:21-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/machine-learning/",
-            "url": "https://liushuya7.github.io/wiki/machine-learning/",
-            "title": "Machine Learning",
-            "summary": "Resources Model Representation All machine learning models are categorized as either supervised or unsupervised. If the model is supervised, it’s then sub-categorized as either a&hellip;",
-            "content_html": "<h2 id=\"resources\">Resources</h2>\n<h3 id=\"model-representation\"><a href=\"https://medium.com/nothingaholic/machine-learning-model-representation-and-hypothesis-f9f1dfa9570f\">Model Representation</a></h3>\n<p><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://miro.medium.com/max/4800/1*LaJ_vrJ9lq3TqEFWK_rdrg.webp\" alt=\"Fundamental Segmentation of Machine Learning Models\"  data-is-external-image=\"true\"></figure></p>\n<p>All machine learning models are categorized as either <strong>supervised</strong> or <strong>unsupervised</strong>. If the model is supervised, it’s then sub-categorized as either a <strong>regression</strong> or <strong>classification</strong> model.</p>\n<h3 id=\"understanding-the-mean-squared-error\"><a href=\"https://medium.com/nothingaholic/understanding-the-mean-squared-error-df41e2c87958\">Understanding the <strong>Mean Squared Error</strong></a></h3>\n<h3 id=\"minimizing-the-cost-function-gradient-descent\"><a href=\"https://towardsdatascience.com/minimizing-the-cost-function-gradient-descent-a5dd6b5350e1\">Minimizing the cost function: Gradient descent</a></h3>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Machine Learning"
-            ],
-            "date_published": "2022-12-15T13:57:23-05:00",
-            "date_modified": "2022-12-15T13:57:23-05:00"
         }
     ]
 }
