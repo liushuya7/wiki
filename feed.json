@@ -10,6 +10,21 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/siemens-plc/",
+            "url": "https://liushuya7.github.io/wiki/siemens-plc/",
+            "title": "Siemens PLC",
+            "summary": "Siemens S7 Communication Snap7, Step7 Open Source Ethernet Communication Suite python-snap7, A Python wrapper Examples with ROS: siemens_plc_controller.py com.py Open Source Siemens Open Source Siemens&hellip;",
+            "content_html": "<h2 id=\"siemens-s7-communication\">Siemens S7 Communication</h2>\n<ul>\n<li><a href=\"https://snap7.sourceforge.net/\">Snap7</a>, Step7 Open Source Ethernet Communication Suite<ul>\n<li><a href=\"https://github.com/gijzelaerr/python-snap7\">python-snap7</a>, A Python wrapper<ul>\n<li>Examples with ROS:<ul>\n<li><a href=\"https://github.com/mowito/mw_seimens_s7_plc_interface/blob/cb41500e3e717e74268aff3264f97e085a459fb9/scripts/siemens_plc_controller.py\">siemens_plc_controller.py</a></li>\n<li><a href=\"https://github.com/KrupaliRanaGit/master-thesis_prj/blob/f95db31e81ac7de9e4558555630958340e1b9acb/plc_com/src/com.py\">com.py</a></li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"open-source\">Open Source</h2>\n<ul>\n<li><a href=\"https://github.com/siemens\">Siemens Open Source</a></li>\n<li><a href=\"https://github.com/industrial-edge\">Siemens Industrial Edge</a></li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "PLC"
+            ],
+            "date_published": "2023-01-02T17:22:53-05:00",
+            "date_modified": "2023-01-02T17:22:53-05:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/3d-slicer/",
             "url": "https://liushuya7.github.io/wiki/3d-slicer/",
             "title": "3D Slicer",
@@ -43,6 +58,8 @@
             "id": "https://liushuya7.github.io/wiki/plc/",
             "url": "https://liushuya7.github.io/wiki/plc/",
             "title": "PLC",
+            "summary": "Libraries OpenPLC, the first open source, multi-hardware Programmable Logic Controller Suite Github Repo Siemens Open Library Communication Protocols OPC UA SIMATIC S7-1200 and OPC UA:&hellip;",
+            "content_html": "<h2 id=\"libraries\">Libraries</h2>\n<ul>\n<li><a href=\"https://openplcproject.com/\">OpenPLC</a>, the first open source, multi-hardware Programmable Logic Controller Suite<ul>\n<li><a href=\"https://github.com/thiagoralves\">Github Repo</a></li>\n</ul>\n</li>\n<li><a href=\"https://openplclibrary.com/#latest-versions\">Siemens Open Library</a></li>\n</ul>\n<h2 id=\"communication-protocols\">Communication Protocols</h2>\n<h3 id=\"opc-ua\">OPC UA</h3>\n<ul>\n<li><a href=\"https://ingenuity.siemens.com/2022/02/simatic-s7-1200-and-opc-ua-the-top-5-features-you-should-know-about/\">SIMATIC S7-1200 and OPC UA: The top 5 features you should know about</a></li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio\">opcua-asyncio</a>, OPC UA library for Python.</li>\n</ul>\n<h3 id=\"siemens-s7\">Siemens S7</h3>\n<ul>\n<li><a href=\"https://github.com/gijzelaerr/python-snap7\">python-snap7</a>, A Python wrapper for the snap7 PLC communication library</li>\n</ul>\n<h3 id=\"profinet\">PROFINET</h3>\n<ul>\n<li><a href=\"https://profinetuniversity.com/category/industrial-automation-ethernet/\">Industrial Automation &amp; Ethernet (PROFINET) Baiscs</a></li>\n</ul>\n<h2 id=\"scadahmidashbord\">SCADA/HMI/Dashbord</h2>\n<ul>\n<li><a href=\"https://github.com/frangoteam/FUXA\">FUXA</a>, a Web-based Process Visualization software for real-time data display</li>\n</ul>\n<h2 id=\"simulation\">Simulation</h2>\n<h3 id=\"factory-io\">Factory I/O</h3>\n<ul>\n<li><a href=\"https://factoryio.com/\">Factory I/O</a>, Next-Gen PLC Training 3D Factory Simulation</li>\n</ul>\n<h3 id=\"tecnomatix\">Tecnomatix</h3>\n<ul>\n<li><a href=\"https://blogs.sw.siemens.com/tecnomatix/whats-new-in-tecnomatix-august-2021/\">What’s new in Tecnomatix? </a></li>\n</ul>\n<h3 id=\"unity\">Unity</h3>\n<ul>\n<li><a href=\"https://github.com/kholodilinivan\">kholodilinivan’s Github</a></li>\n<li><a href=\"https://www.youtube.com/@ivankholodilin9410\">kholodilinivan’s Youtube Channel</a></li>\n</ul>\n<h2 id=\"robot-interface\">Robot Interface</h2>\n<h3 id=\"universal-robot\">Universal Robot</h3>\n<ul>\n<li><a href=\"https://www.universal-robots.com/articles/ur/interface-communication/profinet-how-to-guide-e-series/\">How to connect to UR e-series using PROFINET</a><ul>\n<li><a href=\"https://www.youtube.com/watch?v=jao1G9JN0ug\">[Video] Connect Siemens S7-1500 PLC with Universal Robot using PROFINET Communication Protocol</a></li>\n</ul>\n</li>\n<li><a href=\"https://www.universal-robots.com/articles/ur/interface-communication/profisafe-technical-guide-for-e-series/\">How to connect to UR e-series using PROFIsafe</a></li>\n<li><a href=\"https://www.universal-robots.com/plus/products/rocketfarm/opc-ua-clientserver/\">OPC UA CLIENT/SERVER</a>, the OPC UA Client/Server URCap.</li>\n<li><a href=\"https://www.universal-robots.com/plus/products/robot27/robot27-fieldbus-connect/\">ROBOT27 FIELDBUS CONNECT</a>, a robust interface to allow PLCs to control the robot while programs are running.</li>\n</ul>\n",
             "author": {
                 "name": "Joshua Liu"
             },
@@ -50,7 +67,7 @@
                    "PLC"
             ],
             "date_published": "2023-01-02T11:01:55-05:00",
-            "date_modified": "2023-01-02T15:43:49-05:00"
+            "date_modified": "2023-01-02T17:17:48-05:00"
         },
         {
             "id": "https://liushuya7.github.io/wiki/universal-robot/",
@@ -139,22 +156,6 @@
             ],
             "date_published": "2022-12-15T15:55:45-05:00",
             "date_modified": "2022-12-15T15:55:45-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/modeling-engineered-systems-northwestern-robotics/",
-            "url": "https://liushuya7.github.io/wiki/modeling-engineered-systems-northwestern-robotics/",
-            "title": "Modeling Engineered Systems - Northwestern Robotics",
-            "summary": "Lectures Youtube playlist import numpy as np import matplotlib.pyplot as plt &quot;&quot;&quot; This program simulates a spring-damper system with the following ODE x&#39; + k/b*x&hellip;",
-            "content_html": "<h2 id=\"lectures\">Lectures</h2>\n<!---  Add the following script to support Latex --->\n<script\n  src=\"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"\n  type=\"text/javascript\">\n</script>\n\n<p><a href=\"https://www.youtube.com/playlist?list=PLggLP4f-rq03WvTf9hxuMzDWJl4hHHy8f\">Youtube playlist</a></p>\n<ul>\n<li>Lecture 1: Everything Is The Same</li>\n<li>Lecture 2: Modeling Components</li>\n<li>Lecture 3: Newton’s Laws</li>\n<li>Lecture 4: Euler Integration</li>\n<li>Lecture 5: Exponential Solutions</li>\n<li>Lecture 6: Superposition</li>\n<li>Lecture 7: Newton’s Laws with Mass</li>\n<li>Lecture 8: Newton’s Laws with Several Masses</li>\n<li>Lecture 9: Imaginary Numbers &amp; Euler’s Formula<ul>\n<li>\\(e^{j \\omega t}=\\cos(\\omega t) + j \\sin(\\omega t)\\)</li>\n</ul>\n</li>\n<li>Lecture 10: Imaginary Numbers Continued</li>\n<li>Lecture 11: Vector and Matrix Representation</li>\n<li>Lecture 12: Vector Solutions to ODEs</li>\n</ul>\n<hr>\n<ul>\n<li>Lecture 18: Modeling Electrical Components</li>\n<li>Lecture 19: Kirchhoff’s Laws</li>\n<li>Lecture 20: Kirchhoff’s Laws with Inductors</li>\n<li>Lecture 21: Vector and Matrix Representation in Kirchhoff’s Laws</li>\n<li>Lecture 22: Mechanical/Electrical Analogies</li>\n<li>Lecture 23: Interpreting Mathematical Expressions as Physical Systems</li>\n<li>Lecture 24: Everything Is The Same - Almost</li>\n</ul>\n<h2 id=\"code\">Code</h2>\n<h3 id=\"simulate-spring-damper-system-using-euler-integration\">Simulate Spring-damper System using Euler Integration</h3>\n<pre><code class=\"language-py\">import numpy as np\nimport matplotlib.pyplot as plt\n\n&quot;&quot;&quot;\nThis program simulates a spring-damper system with the following ODE\nx&#39; + k/b*x = 0\n&quot;&quot;&quot;\n\n# define all govering system parameters:\nt0 = 0.0\ntf = 10.0\ndt = 0.1\nk = 1.0 # N/m\nb = 1.0 # Ns/m\nx0 = 0.5 # m\n\n# create arrays for x and time:\ntvec = np.arange(t0, tf+dt, dt)\nxvec = np.zeros(len(tvec))\nxvec[0] = x0\n\n# run the euler integration\nfor i in range(len(xvec)-1):\n    xvec[i+1] = xvec[i] + -k/b*dt*xvec[i]\n    \n# plot the results\nplt.plot(tvec, xvec, lw=2)\nplt.xlabel(&#39;time [sec]&#39;)\nplt.ylabel(&#39;x [m]&#39;)\nplt.grid(True)\nplt.show()\nplt.close()\nplt.clf()\nplt.cla()\n</code></pre>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Modeling",
-                   "Course/Book"
-            ],
-            "date_published": "2022-12-15T15:44:37-05:00",
-            "date_modified": "2022-12-15T15:47:43-05:00"
         }
     ]
 }
