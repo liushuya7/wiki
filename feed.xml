@@ -3,12 +3,65 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2023-01-02T17:22:53-05:00</updated>
+    <updated>2023-01-04T22:32:31-05:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
     <id>https://liushuya7.github.io/wiki</id>
 
+    <entry>
+        <title>Unity Simulation</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/unity-simulation/"/>
+        <id>https://liushuya7.github.io/wiki/unity-simulation/</id>
+            <category term="ROS2"/>
+
+        <updated>2023-01-04T22:23:30-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Robotics Simulation
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://unity.com/solutions/automotive-transportation-manufacturing/robotics">Robotics Simulation</a></p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Node.js</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/nodejs/"/>
+        <id>https://liushuya7.github.io/wiki/nodejs/</id>
+            <category term="Node"/>
+
+        <updated>2023-01-04T22:32:31-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="installation">Installation</h2>
+<h3 id="windows">Windows</h3>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/">How to Download and Install NVM in Windows</a></li>
+</ul>
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+<ul>
+<li><a href="https://cybertooth.io/blog/2017/07/13/nvm-cheat-sheet.html">nvm cheat sheet</a></li>
+<li><a href="https://devhints.io/npm">npm cheat sheet</a></li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Siemens PLC</title>
         <author>
@@ -312,110 +365,5 @@
         <updated>2022-12-26T21:04:01-05:00</updated>
             <summary></summary>
         <content></content>
-    </entry>
-    <entry>
-        <title>Static Site</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/static-site/"/>
-        <id>https://liushuya7.github.io/wiki/static-site/</id>
-            <category term="Website"/>
-
-        <updated>2022-12-26T21:11:32-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Wiki Theme Examples lab-wiki: internal documentation for the lab Hugo Template Hugo Book Theme Jekyll Template Just the Docs
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="wiki-theme">Wiki Theme</h2>
-<h3 id="examples">Examples</h3>
-<ul>
-<li><a href="https://github.com/xinhe-lab/lab-wiki">lab-wiki: internal documentation for the lab</a></li>
-</ul>
-<h3 id="hugo-template">Hugo Template</h3>
-<ul>
-<li><a href="https://github.com/alex-shpak/hugo-book">Hugo Book Theme</a></li>
-</ul>
-<h3 id="jekyll-template">Jekyll Template</h3>
-<ul>
-<li><a href="https://just-the-docs.github.io/just-the-docs/">Just the Docs</a></li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Software</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/software/"/>
-        <id>https://liushuya7.github.io/wiki/software/</id>
-            <category term="Software"/>
-
-        <updated>2022-12-15T15:55:45-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Productive Tools Trilium Notes TreeSheets Screenshots &amp; Video Editing ScreenToGif OpenShot Video Editor Shotcut Video Editor Kdenlive Image Editor Gimp Inkscape CAD Solidworks LibreCAD Mesh&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="productive-tools">Productive Tools</h2>
-<ul>
-<li><a href="https://github.com/zadam/trilium">Trilium Notes</a></li>
-<li><a href="https://strlen.com/treesheets/">TreeSheets</a></li>
-</ul>
-<h2 id="screenshots--video-editing">Screenshots &amp; Video Editing</h2>
-<ul>
-<li><a href="https://www.screentogif.com/">ScreenToGif</a></li>
-<li><a href="https://www.openshot.org/">OpenShot Video Editor</a></li>
-<li><a href="https://www.shotcut.org/">Shotcut Video Editor</a></li>
-<li><a href="https://kdenlive.org/en/">Kdenlive</a></li>
-</ul>
-<h2 id="image-editor">Image Editor</h2>
-<ul>
-<li>Gimp</li>
-<li>Inkscape</li>
-</ul>
-<h2 id="cad">CAD</h2>
-<ul>
-<li>Solidworks</li>
-<li><del>LibreCAD</del></li>
-</ul>
-<h2 id="mesh-processing">Mesh Processing</h2>
-<ul>
-<li>Meshlab</li>
-<li>Meshmixer</li>
-</ul>
-<h2 id="pcb-design">PCB Design</h2>
-<ul>
-<li><a href="https://www.kicad.org/">KiCad</a></li>
-<li>Altium Designer</li>
-</ul>
-<h2 id="video-recording--live-streaming">Video Recording &amp; Live Streaming</h2>
-<ul>
-<li><a href="https://obsproject.com/">OBS Studio</a></li>
-<li><a href="https://streamlabs.com/">Streamlabs</a></li>
-</ul>
-<h2 id="remote-access">Remote Access</h2>
-<ul>
-<li>AnyDesk</li>
-<li>Parsec</li>
-<li>NoMachine</li>
-</ul>
-<h2 id="virtual-machine">Virtual Machine</h2>
-<ul>
-<li>VMware<ul>
-<li><a href="https://gist.github.com/williamgh2019/cc2ad94cc18cb930a0aab42ed8d39e6f">VMware Workstation Pro 16 full license keys</a></li>
-</ul>
-</li>
-</ul>
-
-            ]]>
-        </content>
     </entry>
 </feed>

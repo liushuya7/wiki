@@ -10,6 +10,36 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/unity-simulation/",
+            "url": "https://liushuya7.github.io/wiki/unity-simulation/",
+            "title": "Unity Simulation",
+            "summary": "Robotics Simulation",
+            "content_html": "<p><a href=\"https://unity.com/solutions/automotive-transportation-manufacturing/robotics\">Robotics Simulation</a></p>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "ROS2"
+            ],
+            "date_published": "2023-01-04T22:23:30-05:00",
+            "date_modified": "2023-01-04T22:23:30-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/nodejs/",
+            "url": "https://liushuya7.github.io/wiki/nodejs/",
+            "title": "Node.js",
+            "summary": "Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet",
+            "content_html": "<h2 id=\"installation\">Installation</h2>\n<h3 id=\"windows\">Windows</h3>\n<ul>\n<li><a href=\"https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/\">How to Download and Install NVM in Windows</a></li>\n</ul>\n<h2 id=\"cheat-sheet\">Cheat Sheet</h2>\n<ul>\n<li><a href=\"https://cybertooth.io/blog/2017/07/13/nvm-cheat-sheet.html\">nvm cheat sheet</a></li>\n<li><a href=\"https://devhints.io/npm\">npm cheat sheet</a></li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "Node"
+            ],
+            "date_published": "2023-01-04T22:21:41-05:00",
+            "date_modified": "2023-01-04T22:32:31-05:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/siemens-plc/",
             "url": "https://liushuya7.github.io/wiki/siemens-plc/",
             "title": "Siemens PLC",
@@ -126,36 +156,6 @@
             ],
             "date_published": "2022-12-26T21:04:01-05:00",
             "date_modified": "2022-12-26T21:04:01-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/static-site/",
-            "url": "https://liushuya7.github.io/wiki/static-site/",
-            "title": "Static Site",
-            "summary": "Wiki Theme Examples lab-wiki: internal documentation for the lab Hugo Template Hugo Book Theme Jekyll Template Just the Docs",
-            "content_html": "<h2 id=\"wiki-theme\">Wiki Theme</h2>\n<h3 id=\"examples\">Examples</h3>\n<ul>\n<li><a href=\"https://github.com/xinhe-lab/lab-wiki\">lab-wiki: internal documentation for the lab</a></li>\n</ul>\n<h3 id=\"hugo-template\">Hugo Template</h3>\n<ul>\n<li><a href=\"https://github.com/alex-shpak/hugo-book\">Hugo Book Theme</a></li>\n</ul>\n<h3 id=\"jekyll-template\">Jekyll Template</h3>\n<ul>\n<li><a href=\"https://just-the-docs.github.io/just-the-docs/\">Just the Docs</a></li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Website"
-            ],
-            "date_published": "2022-12-26T16:51:03-05:00",
-            "date_modified": "2022-12-26T21:11:32-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/software/",
-            "url": "https://liushuya7.github.io/wiki/software/",
-            "title": "Software",
-            "summary": "Productive Tools Trilium Notes TreeSheets Screenshots &amp; Video Editing ScreenToGif OpenShot Video Editor Shotcut Video Editor Kdenlive Image Editor Gimp Inkscape CAD Solidworks LibreCAD Mesh&hellip;",
-            "content_html": "<h2 id=\"productive-tools\">Productive Tools</h2>\n<ul>\n<li><a href=\"https://github.com/zadam/trilium\">Trilium Notes</a></li>\n<li><a href=\"https://strlen.com/treesheets/\">TreeSheets</a></li>\n</ul>\n<h2 id=\"screenshots--video-editing\">Screenshots &amp; Video Editing</h2>\n<ul>\n<li><a href=\"https://www.screentogif.com/\">ScreenToGif</a></li>\n<li><a href=\"https://www.openshot.org/\">OpenShot Video Editor</a></li>\n<li><a href=\"https://www.shotcut.org/\">Shotcut Video Editor</a></li>\n<li><a href=\"https://kdenlive.org/en/\">Kdenlive</a></li>\n</ul>\n<h2 id=\"image-editor\">Image Editor</h2>\n<ul>\n<li>Gimp</li>\n<li>Inkscape</li>\n</ul>\n<h2 id=\"cad\">CAD</h2>\n<ul>\n<li>Solidworks</li>\n<li><del>LibreCAD</del></li>\n</ul>\n<h2 id=\"mesh-processing\">Mesh Processing</h2>\n<ul>\n<li>Meshlab</li>\n<li>Meshmixer</li>\n</ul>\n<h2 id=\"pcb-design\">PCB Design</h2>\n<ul>\n<li><a href=\"https://www.kicad.org/\">KiCad</a></li>\n<li>Altium Designer</li>\n</ul>\n<h2 id=\"video-recording--live-streaming\">Video Recording &amp; Live Streaming</h2>\n<ul>\n<li><a href=\"https://obsproject.com/\">OBS Studio</a></li>\n<li><a href=\"https://streamlabs.com/\">Streamlabs</a></li>\n</ul>\n<h2 id=\"remote-access\">Remote Access</h2>\n<ul>\n<li>AnyDesk</li>\n<li>Parsec</li>\n<li>NoMachine</li>\n</ul>\n<h2 id=\"virtual-machine\">Virtual Machine</h2>\n<ul>\n<li>VMware<ul>\n<li><a href=\"https://gist.github.com/williamgh2019/cc2ad94cc18cb930a0aab42ed8d39e6f\">VMware Workstation Pro 16 full license keys</a></li>\n</ul>\n</li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Software"
-            ],
-            "date_published": "2022-12-15T15:55:45-05:00",
-            "date_modified": "2022-12-15T15:55:45-05:00"
         }
     ]
 }
