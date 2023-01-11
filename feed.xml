@@ -3,12 +3,37 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2023-01-04T22:32:31-05:00</updated>
+    <updated>2023-01-10T22:35:19-05:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
     <id>https://liushuya7.github.io/wiki</id>
 
+    <entry>
+        <title>Remote Desktop</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/remote-desktop/"/>
+        <id>https://liushuya7.github.io/wiki/remote-desktop/</id>
+            <category term="Software"/>
+
+        <updated>2023-01-10T22:12:10-05:00</updated>
+            <summary>
+                <![CDATA[
+                    NoVNC Keyboard Lock “Escape” key for the browser
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="novnc">NoVNC</h2>
+<ul>
+<li><a href="https://github.com/novnc/noVNC/issues/923#issuecomment-1107071683">Keyboard Lock “Escape” key for the browser</a></li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Unity Simulation</title>
         <author>
@@ -40,10 +65,10 @@
         <id>https://liushuya7.github.io/wiki/nodejs/</id>
             <category term="Node"/>
 
-        <updated>2023-01-04T22:32:31-05:00</updated>
+        <updated>2023-01-10T22:35:19-05:00</updated>
             <summary>
                 <![CDATA[
-                    Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet
+                    Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet Useful Packages RobotJS, Node.js Desktop Automation
                 ]]>
             </summary>
         <content type="html">
@@ -57,6 +82,10 @@
 <ul>
 <li><a href="https://cybertooth.io/blog/2017/07/13/nvm-cheat-sheet.html">nvm cheat sheet</a></li>
 <li><a href="https://devhints.io/npm">npm cheat sheet</a></li>
+</ul>
+<h2 id="useful-packages">Useful Packages</h2>
+<ul>
+<li><a href="https://robotjs.io/">RobotJS</a>, Node.js Desktop Automation</li>
 </ul>
 
             ]]>
@@ -352,18 +381,5 @@
 
             ]]>
         </content>
-    </entry>
-    <entry>
-        <title>Robotics</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/robotics/"/>
-        <id>https://liushuya7.github.io/wiki/robotics/</id>
-            <category term="Robotics"/>
-
-        <updated>2022-12-26T21:04:01-05:00</updated>
-            <summary></summary>
-        <content></content>
     </entry>
 </feed>
