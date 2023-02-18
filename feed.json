@@ -10,6 +10,66 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/arvr/",
+            "url": "https://liushuya7.github.io/wiki/arvr/",
+            "title": "AR/VR",
+            "summary": "Overview AR/VR Guide List of augmented reality software (Wikipedia) VR Software Wiki WorldViz - Virtual Reality for Training and Research WorldViz User Forum Augmented Reality&hellip;",
+            "content_html": "<h2 id=\"overview\">Overview</h2>\n<ul>\n<li><a href=\"https://github.com/mikeroyal/AR-VR-Guide\">AR/VR Guide</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/List_of_augmented_reality_software\">List of augmented reality software</a> (Wikipedia)</li>\n<li><a href=\"https://sites.google.com/view/brown-vr-sw-review-2018\">VR Software Wiki</a></li>\n<li><a href=\"https://www.worldviz.com\">WorldViz - Virtual Reality for Training and Research</a><ul>\n<li><a href=\"https://forum.worldviz.com\">WorldViz User Forum</a></li>\n</ul>\n</li>\n<li><a href=\"https://github.com/mafda/augmented_reality_101\">Augmented Reality 101</a></li>\n</ul>\n<h2 id=\"tools\">Tools</h2>\n<ul>\n<li><a href=\"https://github.com/qian256/HoloLensCamCalib\">HoloLens Camera Calibration</a>, by Long Qian</li>\n<li><a href=\"https://github.com/qian256/HoloLensARToolKit\">HoloLens with ARToolKit v0.3</a>, by Long Qian</li>\n<li><a href=\"https://github.com/IntelligentRoboticsLabs/ARViz\">ARViz</a>, an RViz implementation for AR runs on Microsoft Hololens</li>\n<li><a href=\"https://github.com/theseankelly/hololens-ros2\">ROS2 for HoloLens</a>, a UWP component library to interact with ROS2</li>\n</ul>\n<h2 id=\"examples\">Examples</h2>\n<ul>\n<li><a href=\"https://ieeexplore.ieee.org/document/10021890\">STTAR: Surgical Tool Tracking using Off-the-Shelf Augmented Reality Head-Mounted Displays</a><ul>\n<li>Code: <a href=\"https://github.com/lihaowei1999/IRToolTrackingWithHololens2\">IRToolTrackingWithHololens2</a></li>\n</ul>\n</li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "AR/VR"
+            ],
+            "date_published": "2023-02-17T23:55:58-05:00",
+            "date_modified": "2023-02-17T23:58:26-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/optimization/",
+            "url": "https://liushuya7.github.io/wiki/optimization/",
+            "title": "Optimization",
+            "summary": "ifopt, An Eigen-based, light-weight C++ Interface to Nonlinear Programming Solvers (Ipopt, Snopt) Eigen3ToPython, Eigen3 to numpy conversion",
+            "content_html": "<ul>\n<li><a href=\"https://github.com/ethz-adrl/ifopt\">ifopt</a>, An Eigen-based, light-weight C++ Interface to Nonlinear Programming Solvers (Ipopt, Snopt)</li>\n<li><a href=\"https://github.com/jrl-umi3218/Eigen3ToPython\">Eigen3ToPython</a>, Eigen3 to numpy conversion</li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "C++"
+            ],
+            "date_published": "2023-02-17T23:36:14-05:00",
+            "date_modified": "2023-02-17T23:45:51-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/hmiscadadashboard/",
+            "url": "https://liushuya7.github.io/wiki/hmiscadadashboard/",
+            "title": "HMI/SCADA/Dashboard",
+            "summary": "WebIQ, web-based HMI system Documentation Download FUXA, open-source web-based Process Visualization software",
+            "content_html": "<ul>\n<li><a href=\"https://www.smart-hmi.com/\">WebIQ</a>, web-based HMI system<ul>\n<li><a href=\"https://www.smart-hmi.com/user/docs\">Documentation</a></li>\n<li><a href=\"https://www.smart-hmi.com/user/download\">Download</a></li>\n</ul>\n</li>\n<li><a href=\"https://github.com/frangoteam/FUXA\">FUXA</a>, open-source web-based Process Visualization software</li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "PLC"
+            ],
+            "date_published": "2023-02-17T21:56:17-05:00",
+            "date_modified": "2023-02-17T21:56:23-05:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/opc-ua/",
+            "url": "https://liushuya7.github.io/wiki/opc-ua/",
+            "title": "OPC UA",
+            "summary": "Overview OPC Unified Architecture UaExpert, a full-featured OPC UA Client opcua-asyncio, OPC UA / IEC 62541 Client and Server for Python Gateway RTI OPC UA/DDS&hellip;",
+            "content_html": "<h2 id=\"overview\">Overview</h2>\n<ul>\n<li><a href=\"https://www.unified-automation.com/\">OPC Unified Architecture</a><ul>\n<li><a href=\"https://www.unified-automation.com/downloads/opc-ua-clients/uaexpert.html\">UaExpert</a>, a full-featured OPC UA Client</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio\">opcua-asyncio</a>, OPC UA / IEC 62541 Client and Server for Python</li>\n</ul>\n<h2 id=\"gateway\">Gateway</h2>\n<ul>\n<li><a href=\"https://www.rti.com/developers/rti-labs/opcua-gateway\">RTI OPC UA/DDS Bridge</a></li>\n</ul>\n<h2 id=\"ros\">ROS</h2>\n<ul>\n<li><a href=\"https://github.com/xander-m2k/ros_opcua_communication/tree/foxy\">ros_opcua_communication</a> (foxy)</li>\n<li><a href=\"https://github.com/SysDesignSrl/ros_opcua_communication/tree/master\">ros_opcua_communication</a> (noetic)</li>\n</ul>\n<h2 id=\"other-communication-protocols\">Other Communication Protocols</h2>\n<ul>\n<li><a href=\"https://profinetuniversity.com/industrial-automation-ethernet/opc-ua-profinet/\">PROFINET</a> - How does it work with OPC UA?</li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+                   "PLC"
+            ],
+            "date_published": "2023-02-17T21:52:35-05:00",
+            "date_modified": "2023-02-18T00:00:42-05:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/remote-desktop/",
             "url": "https://liushuya7.github.io/wiki/remote-desktop/",
             "title": "Remote Desktop",
@@ -73,8 +133,8 @@
             "id": "https://liushuya7.github.io/wiki/3d-slicer/",
             "url": "https://liushuya7.github.io/wiki/3d-slicer/",
             "title": "3D Slicer",
-            "summary": "Tutorials DeLeon Lab Videos",
-            "content_html": "<h2 id=\"tutorials\">Tutorials</h2>\n<ul>\n<li><a href=\"https://www.youtube.com/@deleonlab/videos\">DeLeon Lab Videos</a></li>\n</ul>\n",
+            "summary": "Plugins SlicerIGT, toolkit for navigated interventions Tutorials DeLeon Lab Videos",
+            "content_html": "<h2 id=\"plugins\">Plugins</h2>\n<ul>\n<li><a href=\"https://www.slicerigt.org/wp/\">SlicerIGT</a>, toolkit for navigated interventions</li>\n</ul>\n<h2 id=\"tutorials\">Tutorials</h2>\n<ul>\n<li><a href=\"https://www.youtube.com/@deleonlab/videos\">DeLeon Lab Videos</a></li>\n</ul>\n",
             "author": {
                 "name": "Joshua Liu"
             },
@@ -82,7 +142,7 @@
                    "3D Graphics"
             ],
             "date_published": "2023-01-02T11:58:10-05:00",
-            "date_modified": "2023-01-02T11:58:10-05:00"
+            "date_modified": "2023-02-17T23:51:56-05:00"
         },
         {
             "id": "https://liushuya7.github.io/wiki/kuka/",
@@ -97,67 +157,7 @@
                    "Robotics"
             ],
             "date_published": "2023-01-02T11:34:07-05:00",
-            "date_modified": "2023-01-02T11:34:07-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/plc/",
-            "url": "https://liushuya7.github.io/wiki/plc/",
-            "title": "PLC",
-            "summary": "Libraries OpenPLC, the first open source, multi-hardware Programmable Logic Controller Suite Github Repo Siemens Open Library Communication Protocols OPC UA SIMATIC S7-1200 and OPC UA:&hellip;",
-            "content_html": "<h2 id=\"libraries\">Libraries</h2>\n<ul>\n<li><a href=\"https://openplcproject.com/\">OpenPLC</a>, the first open source, multi-hardware Programmable Logic Controller Suite<ul>\n<li><a href=\"https://github.com/thiagoralves\">Github Repo</a></li>\n</ul>\n</li>\n<li><a href=\"https://openplclibrary.com/#latest-versions\">Siemens Open Library</a></li>\n</ul>\n<h2 id=\"communication-protocols\">Communication Protocols</h2>\n<h3 id=\"opc-ua\">OPC UA</h3>\n<ul>\n<li><a href=\"https://ingenuity.siemens.com/2022/02/simatic-s7-1200-and-opc-ua-the-top-5-features-you-should-know-about/\">SIMATIC S7-1200 and OPC UA: The top 5 features you should know about</a></li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio\">opcua-asyncio</a>, OPC UA library for Python.</li>\n</ul>\n<h3 id=\"siemens-s7\">Siemens S7</h3>\n<ul>\n<li><a href=\"https://github.com/gijzelaerr/python-snap7\">python-snap7</a>, A Python wrapper for the snap7 PLC communication library</li>\n</ul>\n<h3 id=\"profinet\">PROFINET</h3>\n<ul>\n<li><a href=\"https://profinetuniversity.com/category/industrial-automation-ethernet/\">Industrial Automation &amp; Ethernet (PROFINET) Baiscs</a></li>\n</ul>\n<h2 id=\"scadahmidashbord\">SCADA/HMI/Dashbord</h2>\n<ul>\n<li><a href=\"https://github.com/frangoteam/FUXA\">FUXA</a>, a Web-based Process Visualization software for real-time data display</li>\n</ul>\n<h2 id=\"simulation\">Simulation</h2>\n<h3 id=\"factory-io\">Factory I/O</h3>\n<ul>\n<li><a href=\"https://factoryio.com/\">Factory I/O</a>, Next-Gen PLC Training 3D Factory Simulation</li>\n</ul>\n<h3 id=\"tecnomatix\">Tecnomatix</h3>\n<ul>\n<li><a href=\"https://blogs.sw.siemens.com/tecnomatix/whats-new-in-tecnomatix-august-2021/\">What’s new in Tecnomatix? </a></li>\n</ul>\n<h3 id=\"unity\">Unity</h3>\n<ul>\n<li><a href=\"https://github.com/kholodilinivan\">kholodilinivan’s Github</a></li>\n<li><a href=\"https://www.youtube.com/@ivankholodilin9410\">kholodilinivan’s Youtube Channel</a></li>\n</ul>\n<h2 id=\"robot-interface\">Robot Interface</h2>\n<h3 id=\"universal-robot\">Universal Robot</h3>\n<ul>\n<li><a href=\"https://www.universal-robots.com/articles/ur/interface-communication/profinet-how-to-guide-e-series/\">How to connect to UR e-series using PROFINET</a><ul>\n<li><a href=\"https://www.youtube.com/watch?v=jao1G9JN0ug\">[Video] Connect Siemens S7-1500 PLC with Universal Robot using PROFINET Communication Protocol</a></li>\n</ul>\n</li>\n<li><a href=\"https://www.universal-robots.com/articles/ur/interface-communication/profisafe-technical-guide-for-e-series/\">How to connect to UR e-series using PROFIsafe</a></li>\n<li><a href=\"https://www.universal-robots.com/plus/products/rocketfarm/opc-ua-clientserver/\">OPC UA CLIENT/SERVER</a>, the OPC UA Client/Server URCap.</li>\n<li><a href=\"https://www.universal-robots.com/plus/products/robot27/robot27-fieldbus-connect/\">ROBOT27 FIELDBUS CONNECT</a>, a robust interface to allow PLCs to control the robot while programs are running.</li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "PLC"
-            ],
-            "date_published": "2023-01-02T11:01:55-05:00",
-            "date_modified": "2023-01-02T17:17:48-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/universal-robot/",
-            "url": "https://liushuya7.github.io/wiki/universal-robot/",
-            "title": "Universal Robot",
-            "summary": "CB2 Series Related URScript Programming Language Manual ServiceManual_UR5_en_2.0.8.pdf UR10 with CB2 User Manual Product Alert: End-of-Support CB2 Recommend to migrate to CB3 or e-Series Real-time&hellip;",
-            "content_html": "<h3 id=\"cb2-series-related\">CB2 Series Related</h3>\n<ul>\n<li><a href=\"https://s3-eu-west-1.amazonaws.com/ur-support-site/17224/scriptmanual_en.pdf\">URScript Programming Language Manual</a></li>\n<li><a href=\"https://s3-eu-west-1.amazonaws.com/ur-support-site/17236/ServiceManual_UR5_en_2.0.8.pdf\">ServiceManual_UR5_en_2.0.8.pdf</a></li>\n<li><a href=\"https://s3-eu-west-1.amazonaws.com/ur-support-site/18011/manual_en_UR10_CB2_1.6.pdf\">UR10 with CB2 User Manual</a></li>\n<li><a href=\"https://www.universal-robots.com/articles/ur/documentation/product-alert-end-of-support-cb2/\">Product Alert: End-of-Support CB2</a><ul>\n<li>Recommend to migrate to CB3 or e-Series</li>\n</ul>\n</li>\n<li><a href=\"https://www.universal-robots.com/articles/ur/interface-communication/real-time-data-exchange-rtde-guide/\">Real-time Data Exchange (RTDE) Guide</a><ul>\n<li>doesn’t support CB2, see <a href=\"https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/issues/199#issuecomment-939432844\">issue</a></li>\n<li>only supports CB3 3.4 forward and e-Series</li>\n</ul>\n</li>\n<li>Polyscope Software Update<ul>\n<li><a href=\"https://www.universal-robots.com/download/software-cb-series/update/cb2cb1/polyscope-software-update-cb2-sw-1825319/\">CB2 - SW 1.8.25319</a></li>\n</ul>\n</li>\n<li>Universal Robots ROS2 Driver (eSeries)<ul>\n<li><a href=\"https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver\">Github</a></li>\n</ul>\n</li>\n</ul>\n<h3 id=\"ros2\">ROS2</h3>\n<ul>\n<li><a href=\"http://www.ritsumei.ac.jp/~kawamura/doc/ros2_ur.pdf\">How to control Universal Robot e-Series by using ROS2</a></li>\n</ul>\n<h3 id=\"ros1\">ROS1</h3>\n<ul>\n<li><a href=\"https://blog.csdn.net/weixin_43731206/article/details/115005562\"><strong>Ubuntu20.04下moveit+ROS noetic控制UR5机械臂 环境配置</strong></a></li>\n</ul>\n<h4 id=\"ros1-driver\">ROS1 Driver</h4>\n<ul>\n<li><a href=\"https://github.com/ros-industrial/ur_modern_driver/tree/kinetic-devel\"><strong>ur_modern_driver</strong></a></li>\n<li><a href=\"https://github.com/ros-industrial/universal_robot/tree/melodic-devel\"><strong>universal_robot</strong></a></li>\n</ul>\n<h4 id=\"ursim-18\">URSim 1.8</h4>\n<ul>\n<li><a href=\"https://www.universal-robots.com/download/software-cb-series/simulator-non-linux/offline-simulator-cb-series-non-linux-ursim-1814035/\">OFFLINE SIMULATOR - CB-SERIES - NON LINUX - URSIM 1.8.14035</a></li>\n<li><a href=\"https://www.universal-robots.com/download/software-cb-series/simulator-linux/offline-simulator-cb-series-linux-ursim-1816941tarqz/\">OFFLINE SIMULATOR - CB-SERIES - LINUX - URSIM-1.8.16941.TAR.QZ</a></li>\n</ul>\n<h3 id=\"other\">Other</h3>\n<ul>\n<li><a href=\"https://forum.universal-robots.com/t/difference-between-ur-ros-driver-and-ros-industrial/16875\">Difference between UR ROS driver and ROS Industrial</a> describes how to build ROS ur driver for CB3 robots</li>\n</ul>\n<h3 id=\"unity\">Unity</h3>\n<ul>\n<li><a href=\"https://github.com/rparak/Unity3D_Robotics_UR\">Unity3D UR3</a></li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Robotics"
-            ],
-            "date_published": "2022-12-26T22:17:04-05:00",
-            "date_modified": "2023-01-02T11:37:49-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/doxygen/",
-            "url": "https://liushuya7.github.io/wiki/doxygen/",
-            "title": "Doxygen",
-            "summary": "Doxygen Official Documentation Tutorial for a C++ Doxygen CMake Sphinx Breathe Pipeline C/C++ Documentation Using Doxygen VSCode Doxygen Documentation Generator",
-            "content_html": "<ul>\n<li><a href=\"https://doxygen.nl/manual/docblocks.html\">Doxygen Official Documentation</a></li>\n<li><a href=\"https://github.com/smrfeld/cpp_doxygen_sphinx\">Tutorial for a C++ Doxygen CMake Sphinx Breathe Pipeline</a></li>\n<li><a href=\"https://leimao.github.io/blog/CPP-Documentation-Using-Doxygen/\">C/C++ Documentation Using Doxygen</a></li>\n<li><a href=\"https://marketplace.visualstudio.com/items?itemName=cschlosser.doxdocgen\">VSCode Doxygen Documentation Generator</a></li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "C++"
-            ],
-            "date_published": "2022-12-26T21:13:28-05:00",
-            "date_modified": "2022-12-26T21:16:13-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/robotiq/",
-            "url": "https://liushuya7.github.io/wiki/robotiq/",
-            "title": "Robotiq",
-            "summary": "C++ interface for robotiq epick gripper robotiq_epick_Rviz_visualization",
-            "content_html": "<ul>\n<li><a href=\"https://github.com/ValerioMa/robotiq_tcp\">C++ interface for robotiq epick gripper</a></li>\n<li><a href=\"https://github.com/JureHudoklin/rl_grasp_path_optimization/tree/08e4848c75ff371fdd46af1ad07053513094bf94/panda_arm_epick\">robotiq_epick_Rviz_visualization</a></li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Robotics"
-            ],
-            "date_published": "2022-12-26T21:04:53-05:00",
-            "date_modified": "2022-12-26T21:10:21-05:00"
+            "date_modified": "2023-02-17T22:08:49-05:00"
         }
     ]
 }
