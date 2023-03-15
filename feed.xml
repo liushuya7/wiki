@@ -3,7 +3,7 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2023-02-18T00:00:42-05:00</updated>
+    <updated>2023-03-14T13:21:02-04:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
@@ -118,7 +118,7 @@
         <id>https://liushuya7.github.io/wiki/opc-ua/</id>
             <category term="PLC"/>
 
-        <updated>2023-02-18T00:00:42-05:00</updated>
+        <updated>2023-03-14T13:21:02-04:00</updated>
             <summary>
                 <![CDATA[
                     Overview OPC Unified Architecture UaExpert, a full-featured OPC UA Client opcua-asyncio, OPC UA / IEC 62541 Client and Server for Python Gateway RTI OPC UA/DDS&hellip;
@@ -137,11 +137,6 @@
 <h2 id="gateway">Gateway</h2>
 <ul>
 <li><a href="https://www.rti.com/developers/rti-labs/opcua-gateway">RTI OPC UA/DDS Bridge</a></li>
-</ul>
-<h2 id="ros">ROS</h2>
-<ul>
-<li><a href="https://github.com/xander-m2k/ros_opcua_communication/tree/foxy">ros_opcua_communication</a> (foxy)</li>
-<li><a href="https://github.com/SysDesignSrl/ros_opcua_communication/tree/master">ros_opcua_communication</a> (noetic)</li>
 </ul>
 <h2 id="other-communication-protocols">Other Communication Protocols</h2>
 <ul>
