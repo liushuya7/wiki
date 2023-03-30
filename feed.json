@@ -10,6 +10,20 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/python-opcua-asyncua/",
+            "url": "https://liushuya7.github.io/wiki/python-opcua-asyncua/",
+            "title": "Python OPCUA - asyncua",
+            "summary": "Examples Server Examples server-minimal.py A bare minimal server code to start with server-example.py A longer version server code to start with server-methods.py Examples of method&hellip;",
+            "content_html": "<h2 id=\"examples\"><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/tree/master/examples\">Examples</a></h2>\n<h3 id=\"server-examples\">Server Examples</h3>\n<ul>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-minimal.py\">server-minimal.py</a><ul>\n<li>A bare minimal server code to start with</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-example.py\">server-example.py</a><ul>\n<li>A longer version server code to start with</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-methods.py\">server-methods.py</a><ul>\n<li>Examples of method calls</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-custom-structures-and-enums.py\">server-custom-structures-and-enums.py</a><ul>\n<li>Creating customized structures and enums</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-custom-object.py\">server-custom-object.py</a><ul>\n<li>Creatubg customized objects</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-callback.py\">server-callback.py</a><ul>\n<li>Creating callback for item event</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-events.py\">server-events.py</a><ul>\n<li>Creating a custom event</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-instantiate-object.py\">server-instantiate-object.py</a><ul>\n<li>Instantiating new object type</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-limits.py\">server-limits.py</a><ul>\n<li>Setting data size limits</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/statemachine-example.py\">statemachine-example.py</a><ul>\n<li>A simple statemachine example using the <code>asyncua.common.statemachine</code> module.</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-with-encryption.py\">server-with-encryption.py</a><ul>\n<li>A minial server example with encryption security</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-extension-object-as-method-argument.py\">server-extension-object-as-method-argument.py</a><ul>\n<li>pass a variable of type AxisInformation to a method</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-xmlexporter.py\">server-xmlexporter.py</a><ul>\n<li>Export server node list and write it to an xml file.</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-virtual-network.py\">server-virtual-network.py</a><ul>\n<li>This example shows how to host the server in an environment, where the expected endpoint addresses does not match the address the server listens to. For example, in a Docker container.</li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-robotics.py\">server-robotics.py</a></li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-ua-python-mirror.py\">server-ua-python-mirror.py</a></li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-datavalue-history.py\">server-datavalue-history.py</a></li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-events-history.py\">server-events-history.py</a></li>\n</ul>\n<pre><code class=\"language-python\">import asyncio\n\nfrom asyncua import Server, ua\nfrom asyncua.common.methods import uamethod\n\nasync def main():\n        server = Server()\n        await server.init()\n        server.set_endpoint(&quot;opc.tcp://0.0.0.0:4840/freeopcua/server/&quot;)\n        server.set_server_name(&quot;FreeOpcUa Example Server&quot;)\n\n        uri = &quot;http://examples.freeopcua.github.io&quot;\n        idx = await server.register_namespace(uri)\n\n        # get Objects node, this is where we should put our custom stuff\n        objects = server.nodes.objects\n\nif __name__ == &quot;__main__&quot;:\n    asyncio.run(main(), debug=True)\n</code></pre>\n<h3 id=\"client-examples\">Client Examples</h3>\n<h2 id=\"issues\">Issues</h2>\n<p>If you encounter <code>error while attempting to bind on address (&#39;0.0.0.0&#39;, 4840): address already in use</code>, do:</p>\n<pre><code class=\"language-bash\">fuser -k (port_number_you_are _trying_to_access)/TCP\n</code></pre>\n<p>referenced from <a href=\"https://stackoverflow.com/a/60526309/3547352\">here</a>.</p>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+            ],
+            "date_published": "2023-03-30T12:15:21-04:00",
+            "date_modified": "2023-03-30T18:18:35-04:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/arvr/",
             "url": "https://liushuya7.github.io/wiki/arvr/",
             "title": "AR/VR",
@@ -143,21 +157,6 @@
             ],
             "date_published": "2023-01-02T11:58:10-05:00",
             "date_modified": "2023-02-17T23:51:56-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/kuka/",
-            "url": "https://liushuya7.github.io/wiki/kuka/",
-            "title": "KUKA",
-            "summary": "KUKA iiwa LBR R800 Learn Kuka LBR iiwa collaborative robotic programming | UNSW Making Courses KCL-BMEIS/lbr_fri_ros2_stack ICube-Robotics/iiwa_ros2: ROS2 stack for KUKA iiwa collaborative robots Tutorials&hellip;",
-            "content_html": "<h2 id=\"kuka-iiwa-lbr-r800\">KUKA iiwa LBR R800</h2>\n<ul>\n<li><p><a href=\"https://www.making.unsw.edu.au/learn/\">Learn Kuka LBR iiwa collaborative robotic programming | UNSW Making Courses</a></p>\n</li>\n<li><p><a href=\"https://github.com/KCL-BMEIS/lbr_fri_ros2_stack\">KCL-BMEIS/lbr_fri_ros2_stack</a></p>\n</li>\n<li><p><a href=\"https://github.com/ICube-Robotics/iiwa_ros2\">ICube-Robotics/iiwa_ros2: ROS2 stack for KUKA iiwa collaborative robots</a></p>\n</li>\n<li><p><a href=\"https://www.youtube.com/@discoveringrobotics723/videos\">Tutorials on Discovering Robotics Youtube Channel</a></p>\n</li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Robotics"
-            ],
-            "date_published": "2023-01-02T11:34:07-05:00",
-            "date_modified": "2023-02-17T22:08:49-05:00"
         }
     ]
 }
