@@ -3,7 +3,7 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2023-03-14T13:21:02-04:00</updated>
+    <updated>2023-03-30T11:27:54-04:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
@@ -202,10 +202,10 @@
         <id>https://liushuya7.github.io/wiki/nodejs/</id>
             <category term="Node"/>
 
-        <updated>2023-01-10T22:35:19-05:00</updated>
+        <updated>2023-03-30T11:27:54-04:00</updated>
             <summary>
                 <![CDATA[
-                    Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet Useful Packages RobotJS, Node.js Desktop Automation
+                    Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet Useful Packages RobotJS, Node.js Desktop Automation nodemon,&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -223,6 +223,7 @@
 <h2 id="useful-packages">Useful Packages</h2>
 <ul>
 <li><a href="https://robotjs.io/">RobotJS</a>, Node.js Desktop Automation</li>
+<li><a href="https://github.com/remy/nodemon">nodemon</a>, a tool for monitoring for any changes made in your application automatically</li>
 </ul>
 
             ]]>

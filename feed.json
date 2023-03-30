@@ -103,8 +103,8 @@
             "id": "https://liushuya7.github.io/wiki/nodejs/",
             "url": "https://liushuya7.github.io/wiki/nodejs/",
             "title": "Node.js",
-            "summary": "Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet Useful Packages RobotJS, Node.js Desktop Automation",
-            "content_html": "<h2 id=\"installation\">Installation</h2>\n<h3 id=\"windows\">Windows</h3>\n<ul>\n<li><a href=\"https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/\">How to Download and Install NVM in Windows</a></li>\n</ul>\n<h2 id=\"cheat-sheet\">Cheat Sheet</h2>\n<ul>\n<li><a href=\"https://cybertooth.io/blog/2017/07/13/nvm-cheat-sheet.html\">nvm cheat sheet</a></li>\n<li><a href=\"https://devhints.io/npm\">npm cheat sheet</a></li>\n</ul>\n<h2 id=\"useful-packages\">Useful Packages</h2>\n<ul>\n<li><a href=\"https://robotjs.io/\">RobotJS</a>, Node.js Desktop Automation</li>\n</ul>\n",
+            "summary": "Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet Useful Packages RobotJS, Node.js Desktop Automation nodemon,&hellip;",
+            "content_html": "<h2 id=\"installation\">Installation</h2>\n<h3 id=\"windows\">Windows</h3>\n<ul>\n<li><a href=\"https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/\">How to Download and Install NVM in Windows</a></li>\n</ul>\n<h2 id=\"cheat-sheet\">Cheat Sheet</h2>\n<ul>\n<li><a href=\"https://cybertooth.io/blog/2017/07/13/nvm-cheat-sheet.html\">nvm cheat sheet</a></li>\n<li><a href=\"https://devhints.io/npm\">npm cheat sheet</a></li>\n</ul>\n<h2 id=\"useful-packages\">Useful Packages</h2>\n<ul>\n<li><a href=\"https://robotjs.io/\">RobotJS</a>, Node.js Desktop Automation</li>\n<li><a href=\"https://github.com/remy/nodemon\">nodemon</a>, a tool for monitoring for any changes made in your application automatically</li>\n</ul>\n",
             "author": {
                 "name": "Joshua Liu"
             },
@@ -112,7 +112,7 @@
                    "Node"
             ],
             "date_published": "2023-01-04T22:21:41-05:00",
-            "date_modified": "2023-01-10T22:35:19-05:00"
+            "date_modified": "2023-03-30T11:27:54-04:00"
         },
         {
             "id": "https://liushuya7.github.io/wiki/siemens-plc/",
