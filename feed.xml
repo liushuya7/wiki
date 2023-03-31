@@ -3,7 +3,7 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2023-03-30T18:18:35-04:00</updated>
+    <updated>2023-03-30T22:17:41-04:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
@@ -17,10 +17,10 @@
         <link href="https://liushuya7.github.io/wiki/python-opcua-asyncua/"/>
         <id>https://liushuya7.github.io/wiki/python-opcua-asyncua/</id>
 
-        <updated>2023-03-30T18:18:35-04:00</updated>
+        <updated>2023-03-30T22:17:41-04:00</updated>
             <summary>
                 <![CDATA[
-                    Examples Server Examples server-minimal.py A bare minimal server code to start with server-example.py A longer version server code to start with server-methods.py Examples of method&hellip;
+                    Examples Server Examples server-minimal.py A bare minimal server example server-example.py A longer version server example server-methods.py Examples of method calls server-custom-structures-and-enums.py Creating customized structures and&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -29,11 +29,11 @@
 <h3 id="server-examples">Server Examples</h3>
 <ul>
 <li><a href="https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-minimal.py">server-minimal.py</a><ul>
-<li>A bare minimal server code to start with</li>
+<li>A bare minimal server example</li>
 </ul>
 </li>
 <li><a href="https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-example.py">server-example.py</a><ul>
-<li>A longer version server code to start with</li>
+<li>A longer version server example</li>
 </ul>
 </li>
 <li><a href="https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-methods.py">server-methods.py</a><ul>
@@ -89,27 +89,14 @@
 <li><a href="https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-datavalue-history.py">server-datavalue-history.py</a></li>
 <li><a href="https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/server-events-history.py">server-events-history.py</a></li>
 </ul>
-<pre><code class="language-python">import asyncio
-
-from asyncua import Server, ua
-from asyncua.common.methods import uamethod
-
-async def main():
-        server = Server()
-        await server.init()
-        server.set_endpoint(&quot;opc.tcp://0.0.0.0:4840/freeopcua/server/&quot;)
-        server.set_server_name(&quot;FreeOpcUa Example Server&quot;)
-
-        uri = &quot;http://examples.freeopcua.github.io&quot;
-        idx = await server.register_namespace(uri)
-
-        # get Objects node, this is where we should put our custom stuff
-        objects = server.nodes.objects
-
-if __name__ == &quot;__main__&quot;:
-    asyncio.run(main(), debug=True)
-</code></pre>
 <h3 id="client-examples">Client Examples</h3>
+<ul>
+<li><a href="https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/client-minimal.py">client-minimal.py</a><ul>
+<li>A bare minimal client example</li>
+</ul>
+</li>
+<li><a href="https://github.com/FreeOpcUa/opcua-asyncio/blob/master/examples/client-example.py">client-example.py</a></li>
+</ul>
 <h2 id="issues">Issues</h2>
 <p>If you encounter <code>error while attempting to bind on address (&#39;0.0.0.0&#39;, 4840): address already in use</code>, do:</p>
 <pre><code class="language-bash">fuser -k (port_number_you_are _trying_to_access)/TCP
