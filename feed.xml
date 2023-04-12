@@ -3,7 +3,7 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2023-03-30T22:17:41-04:00</updated>
+    <updated>2023-04-11T23:33:13-04:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
@@ -215,10 +215,10 @@
         <id>https://liushuya7.github.io/wiki/opc-ua/</id>
             <category term="PLC"/>
 
-        <updated>2023-03-14T13:21:02-04:00</updated>
+        <updated>2023-04-11T23:33:13-04:00</updated>
             <summary>
                 <![CDATA[
-                    Overview OPC Unified Architecture UaExpert, a full-featured OPC UA Client opcua-asyncio, OPC UA / IEC 62541 Client and Server for Python Gateway RTI OPC UA/DDS&hellip;
+                    Overview OPC Unified Architecture UaExpert, a full-featured OPC UA Client OPC UA Fundamentals opcua-asyncio, OPC UA / IEC 62541 Client and Server for Python Gateway&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -227,6 +227,7 @@
 <ul>
 <li><a href="https://www.unified-automation.com/">OPC Unified Architecture</a><ul>
 <li><a href="https://www.unified-automation.com/downloads/opc-ua-clients/uaexpert.html">UaExpert</a>, a full-featured OPC UA Client</li>
+<li><a href="https://documentation.unified-automation.com/uasdknet/2.5.7/html/L1OpcUaFundamentals.html">OPC UA Fundamentals</a></li>
 </ul>
 </li>
 <li><a href="https://github.com/FreeOpcUa/opcua-asyncio">opcua-asyncio</a>, OPC UA / IEC 62541 Client and Server for Python</li>
