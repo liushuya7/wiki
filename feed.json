@@ -10,6 +10,20 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/thorlabs/",
+            "url": "https://liushuya7.github.io/wiki/thorlabs/",
+            "title": "Thorlabs",
+            "summary": "Python API pyLabLib, Python package for device control and experiment automation (only tested on Windows) thorlabs-apt-device, Interface to ThorLabs devices based on the APT communications&hellip;",
+            "content_html": "<h2 id=\"python-api\">Python API</h2>\n<ul>\n<li><a href=\"https://github.com/AlexShkarin/pyLabLib\">pyLabLib</a>, Python package for device control and experiment automation (only tested on Windows)</li>\n<li><a href=\"https://gitlab.com/ptapping/thorlabs-apt-device\">thorlabs-apt-device</a>, Interface to ThorLabs devices based on the APT communications protocol (tested on Linux)</li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+            ],
+            "date_published": "2023-04-24T12:22:36-04:00",
+            "date_modified": "2023-04-24T12:22:36-04:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/python-opcua-asyncua/",
             "url": "https://liushuya7.github.io/wiki/python-opcua-asyncua/",
             "title": "Python OPCUA - asyncua",
@@ -72,8 +86,8 @@
             "id": "https://liushuya7.github.io/wiki/opc-ua/",
             "url": "https://liushuya7.github.io/wiki/opc-ua/",
             "title": "OPC UA",
-            "summary": "Overview OPC Unified Architecture UaExpert, a full-featured OPC UA Client OPC UA Fundamentals opcua-asyncio, OPC UA / IEC 62541 Client and Server for Python Gateway&hellip;",
-            "content_html": "<h2 id=\"overview\">Overview</h2>\n<ul>\n<li><a href=\"https://www.unified-automation.com/\">OPC Unified Architecture</a><ul>\n<li><a href=\"https://www.unified-automation.com/downloads/opc-ua-clients/uaexpert.html\">UaExpert</a>, a full-featured OPC UA Client</li>\n<li><a href=\"https://documentation.unified-automation.com/uasdknet/2.5.7/html/L1OpcUaFundamentals.html\">OPC UA Fundamentals</a></li>\n</ul>\n</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio\">opcua-asyncio</a>, OPC UA / IEC 62541 Client and Server for Python</li>\n</ul>\n<h2 id=\"gateway\">Gateway</h2>\n<ul>\n<li><a href=\"https://www.rti.com/developers/rti-labs/opcua-gateway\">RTI OPC UA/DDS Bridge</a></li>\n</ul>\n<h2 id=\"other-communication-protocols\">Other Communication Protocols</h2>\n<ul>\n<li><a href=\"https://profinetuniversity.com/industrial-automation-ethernet/opc-ua-profinet/\">PROFINET</a> - How does it work with OPC UA?</li>\n</ul>\n",
+            "summary": "Overview OPC Unified Architecture UaExpert, a full-featured OPC UA Client OPC UA Fundamentals open62541, open source and free implementation of OPC UA opcua-asyncio, OPC UA&hellip;",
+            "content_html": "<h2 id=\"overview\">Overview</h2>\n<ul>\n<li><a href=\"https://www.unified-automation.com/\">OPC Unified Architecture</a><ul>\n<li><a href=\"https://www.unified-automation.com/downloads/opc-ua-clients/uaexpert.html\">UaExpert</a>, a full-featured OPC UA Client</li>\n<li><a href=\"https://documentation.unified-automation.com/uasdknet/2.5.7/html/L1OpcUaFundamentals.html\">OPC UA Fundamentals</a></li>\n</ul>\n</li>\n<li><a href=\"https://www.open62541.org/doc/1.0/index.html\">open62541</a>, open source and free implementation of OPC UA</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio\">opcua-asyncio</a>, OPC UA / IEC 62541 Client and Server for Python</li>\n</ul>\n<h2 id=\"gateway\">Gateway</h2>\n<ul>\n<li><a href=\"https://www.rti.com/developers/rti-labs/opcua-gateway\">RTI OPC UA/DDS Bridge</a></li>\n</ul>\n<h2 id=\"other-communication-protocols\">Other Communication Protocols</h2>\n<ul>\n<li><a href=\"https://profinetuniversity.com/industrial-automation-ethernet/opc-ua-profinet/\">PROFINET</a> - How does it work with OPC UA?</li>\n</ul>\n<h2 id=\"interface-with-ros2\">Interface with ROS2</h2>\n<ul>\n<li><a href=\"https://github.com/tanjpg/opcua_ros2#client-timeout-issue\">opcua_ros2</a>, C++ implementation of a simple OPC UA server in ROS2, using <a href=\"https://github.com/FreeOpcUa/freeopcua\">freeopcua</a> as the underlying API</li>\n<li><a href=\"https://github.com/RTInd/ros-integration-toolkit\">ros-integration-toolkit</a>, Tool for integrating RTI Connext and ROS 2</li>\n</ul>\n",
             "author": {
                 "name": "Joshua Liu"
             },
@@ -81,7 +95,7 @@
                    "PLC"
             ],
             "date_published": "2023-02-17T21:52:35-05:00",
-            "date_modified": "2023-04-11T23:33:13-04:00"
+            "date_modified": "2023-04-24T12:34:38-04:00"
         },
         {
             "id": "https://liushuya7.github.io/wiki/remote-desktop/",
@@ -142,21 +156,6 @@
             ],
             "date_published": "2023-01-02T17:22:53-05:00",
             "date_modified": "2023-01-02T17:22:53-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/3d-slicer/",
-            "url": "https://liushuya7.github.io/wiki/3d-slicer/",
-            "title": "3D Slicer",
-            "summary": "Plugins SlicerIGT, toolkit for navigated interventions Tutorials DeLeon Lab Videos",
-            "content_html": "<h2 id=\"plugins\">Plugins</h2>\n<ul>\n<li><a href=\"https://www.slicerigt.org/wp/\">SlicerIGT</a>, toolkit for navigated interventions</li>\n</ul>\n<h2 id=\"tutorials\">Tutorials</h2>\n<ul>\n<li><a href=\"https://www.youtube.com/@deleonlab/videos\">DeLeon Lab Videos</a></li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "3D Graphics"
-            ],
-            "date_published": "2023-01-02T11:58:10-05:00",
-            "date_modified": "2023-02-17T23:51:56-05:00"
         }
     ]
 }
