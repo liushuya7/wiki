@@ -10,6 +10,20 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/plc-simulation/",
+            "url": "https://liushuya7.github.io/wiki/plc-simulation/",
+            "title": "PLC Simulation",
+            "summary": "Simumatik Simumatik Simumatik Academy Other Factory I/O Factory I/O, Next-Gen PLC Training 3D Factory Simulation Tecnomatix What’s new in Tecnomatix? Unity kholodilinivan’s Github kholodilinivan’s Youtube&hellip;",
+            "content_html": "<h2 id=\"simumatik\">Simumatik</h2>\n<ul>\n<li><a href=\"https://simumatik.com/\">Simumatik</a></li>\n<li><a href=\"https://newacademy.simumatik.com/\">Simumatik Academy</a></li>\n</ul>\n<h2 id=\"other\">Other</h2>\n<h3 id=\"factory-io\">Factory I/O</h3>\n<ul>\n<li><a href=\"https://factoryio.com/\">Factory I/O</a>, Next-Gen PLC Training 3D Factory Simulation</li>\n</ul>\n<h3 id=\"tecnomatix\">Tecnomatix</h3>\n<ul>\n<li><a href=\"https://blogs.sw.siemens.com/tecnomatix/whats-new-in-tecnomatix-august-2021/\">What’s new in Tecnomatix? </a></li>\n</ul>\n<h3 id=\"unity\">Unity</h3>\n<ul>\n<li><a href=\"https://github.com/kholodilinivan\">kholodilinivan’s Github</a></li>\n<li><a href=\"https://www.youtube.com/@ivankholodilin9410\">kholodilinivan’s Youtube Channel</a></li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+            ],
+            "date_published": "2023-05-09T10:07:55-04:00",
+            "date_modified": "2023-05-09T10:09:59-04:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/thorlabs/",
             "url": "https://liushuya7.github.io/wiki/thorlabs/",
             "title": "Thorlabs",
@@ -141,21 +155,6 @@
             ],
             "date_published": "2023-01-04T22:21:41-05:00",
             "date_modified": "2023-03-30T11:27:54-04:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/siemens-plc/",
-            "url": "https://liushuya7.github.io/wiki/siemens-plc/",
-            "title": "Siemens PLC",
-            "summary": "Siemens S7 Communication Snap7, Step7 Open Source Ethernet Communication Suite python-snap7, A Python wrapper Examples with ROS: siemens_plc_controller.py com.py Open Source Siemens Open Source Siemens&hellip;",
-            "content_html": "<h2 id=\"siemens-s7-communication\">Siemens S7 Communication</h2>\n<ul>\n<li><a href=\"https://snap7.sourceforge.net/\">Snap7</a>, Step7 Open Source Ethernet Communication Suite<ul>\n<li><a href=\"https://github.com/gijzelaerr/python-snap7\">python-snap7</a>, A Python wrapper<ul>\n<li>Examples with ROS:<ul>\n<li><a href=\"https://github.com/mowito/mw_seimens_s7_plc_interface/blob/cb41500e3e717e74268aff3264f97e085a459fb9/scripts/siemens_plc_controller.py\">siemens_plc_controller.py</a></li>\n<li><a href=\"https://github.com/KrupaliRanaGit/master-thesis_prj/blob/f95db31e81ac7de9e4558555630958340e1b9acb/plc_com/src/com.py\">com.py</a></li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"open-source\">Open Source</h2>\n<ul>\n<li><a href=\"https://github.com/siemens\">Siemens Open Source</a></li>\n<li><a href=\"https://github.com/industrial-edge\">Siemens Industrial Edge</a></li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "PLC"
-            ],
-            "date_published": "2023-01-02T17:22:53-05:00",
-            "date_modified": "2023-01-02T17:22:53-05:00"
         }
     ]
 }
