@@ -3,12 +3,48 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2023-05-09T10:09:59-04:00</updated>
+    <updated>2023-06-10T22:09:30-04:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
     <id>https://liushuya7.github.io/wiki</id>
 
+    <entry>
+        <title>Cameras</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/camera/"/>
+        <id>https://liushuya7.github.io/wiki/camera/</id>
+
+        <updated>2023-06-10T22:09:30-04:00</updated>
+            <summary>
+                <![CDATA[
+                    3D Cameras Zivid
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="3d-cameras">3D Cameras</h2>
+<ul>
+<li><a href="https://www.zivid.com/">Zivid</a></li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Hardware</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/hardware/"/>
+        <id>https://liushuya7.github.io/wiki/hardware/</id>
+
+        <updated>2023-06-10T22:01:51-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
     <entry>
         <title>PLC Simulation</title>
         <author>
@@ -334,64 +370,6 @@
                 <h2 id="novnc">NoVNC</h2>
 <ul>
 <li><a href="https://github.com/novnc/noVNC/issues/923#issuecomment-1107071683">Keyboard Lock “Escape” key for the browser</a></li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Unity Simulation</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/unity-simulation/"/>
-        <id>https://liushuya7.github.io/wiki/unity-simulation/</id>
-            <category term="ROS2"/>
-
-        <updated>2023-01-04T22:23:30-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Robotics Simulation
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://unity.com/solutions/automotive-transportation-manufacturing/robotics">Robotics Simulation</a></p>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Node.js</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/nodejs/"/>
-        <id>https://liushuya7.github.io/wiki/nodejs/</id>
-            <category term="Node"/>
-
-        <updated>2023-03-30T11:27:54-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet Useful Packages RobotJS, Node.js Desktop Automation nodemon,&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="installation">Installation</h2>
-<h3 id="windows">Windows</h3>
-<ul>
-<li><a href="https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/">How to Download and Install NVM in Windows</a></li>
-</ul>
-<h2 id="cheat-sheet">Cheat Sheet</h2>
-<ul>
-<li><a href="https://cybertooth.io/blog/2017/07/13/nvm-cheat-sheet.html">nvm cheat sheet</a></li>
-<li><a href="https://devhints.io/npm">npm cheat sheet</a></li>
-</ul>
-<h2 id="useful-packages">Useful Packages</h2>
-<ul>
-<li><a href="https://robotjs.io/">RobotJS</a>, Node.js Desktop Automation</li>
-<li><a href="https://github.com/remy/nodemon">nodemon</a>, a tool for monitoring for any changes made in your application automatically</li>
 </ul>
 
             ]]>

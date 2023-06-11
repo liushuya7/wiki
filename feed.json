@@ -10,6 +10,32 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/camera/",
+            "url": "https://liushuya7.github.io/wiki/camera/",
+            "title": "Cameras",
+            "summary": "3D Cameras Zivid",
+            "content_html": "<h2 id=\"3d-cameras\">3D Cameras</h2>\n<ul>\n<li><a href=\"https://www.zivid.com/\">Zivid</a></li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+            ],
+            "date_published": "2023-06-10T22:04:21-04:00",
+            "date_modified": "2023-06-10T22:09:30-04:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/hardware/",
+            "url": "https://liushuya7.github.io/wiki/hardware/",
+            "title": "Hardware",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+            ],
+            "date_published": "2023-06-10T22:01:51-04:00",
+            "date_modified": "2023-06-10T22:01:51-04:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/plc-simulation/",
             "url": "https://liushuya7.github.io/wiki/plc-simulation/",
             "title": "PLC Simulation",
@@ -125,36 +151,6 @@
             ],
             "date_published": "2023-01-10T22:12:10-05:00",
             "date_modified": "2023-01-10T22:12:10-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/unity-simulation/",
-            "url": "https://liushuya7.github.io/wiki/unity-simulation/",
-            "title": "Unity Simulation",
-            "summary": "Robotics Simulation",
-            "content_html": "<p><a href=\"https://unity.com/solutions/automotive-transportation-manufacturing/robotics\">Robotics Simulation</a></p>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "ROS2"
-            ],
-            "date_published": "2023-01-04T22:23:30-05:00",
-            "date_modified": "2023-01-04T22:23:30-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/nodejs/",
-            "url": "https://liushuya7.github.io/wiki/nodejs/",
-            "title": "Node.js",
-            "summary": "Installation Windows How to Download and Install NVM in Windows Cheat Sheet nvm cheat sheet npm cheat sheet Useful Packages RobotJS, Node.js Desktop Automation nodemon,&hellip;",
-            "content_html": "<h2 id=\"installation\">Installation</h2>\n<h3 id=\"windows\">Windows</h3>\n<ul>\n<li><a href=\"https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/\">How to Download and Install NVM in Windows</a></li>\n</ul>\n<h2 id=\"cheat-sheet\">Cheat Sheet</h2>\n<ul>\n<li><a href=\"https://cybertooth.io/blog/2017/07/13/nvm-cheat-sheet.html\">nvm cheat sheet</a></li>\n<li><a href=\"https://devhints.io/npm\">npm cheat sheet</a></li>\n</ul>\n<h2 id=\"useful-packages\">Useful Packages</h2>\n<ul>\n<li><a href=\"https://robotjs.io/\">RobotJS</a>, Node.js Desktop Automation</li>\n<li><a href=\"https://github.com/remy/nodemon\">nodemon</a>, a tool for monitoring for any changes made in your application automatically</li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Node"
-            ],
-            "date_published": "2023-01-04T22:21:41-05:00",
-            "date_modified": "2023-03-30T11:27:54-04:00"
         }
     ]
 }
