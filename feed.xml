@@ -3,7 +3,7 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2023-06-10T22:09:30-04:00</updated>
+    <updated>2023-07-11T18:31:42-04:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
@@ -215,7 +215,7 @@
         <id>https://liushuya7.github.io/wiki/arvr/</id>
             <category term="AR/VR"/>
 
-        <updated>2023-02-17T23:58:26-05:00</updated>
+        <updated>2023-07-11T18:31:42-04:00</updated>
             <summary>
                 <![CDATA[
                     Overview AR/VR Guide List of augmented reality software (Wikipedia) VR Software Wiki WorldViz - Virtual Reality for Training and Research WorldViz User Forum Augmented Reality&hellip;
@@ -248,6 +248,10 @@
 </ul>
 </li>
 </ul>
+<h2 id="optical-tracking">Optical Tracking</h2>
+<ul>
+<li><a href="https://github.com/andreaskeller96/HoloLens2-IRTracking">HoloLens2-IRTracking</a> for tracking passive IR sphere markers using only the HoloLens 2 sensors.</li>
+</ul>
 
             ]]>
         </content>
@@ -261,10 +265,10 @@
         <id>https://liushuya7.github.io/wiki/optimization/</id>
             <category term="C++"/>
 
-        <updated>2023-02-17T23:45:51-05:00</updated>
+        <updated>2023-07-11T18:24:47-04:00</updated>
             <summary>
                 <![CDATA[
-                    ifopt, An Eigen-based, light-weight C++ Interface to Nonlinear Programming Solvers (Ipopt, Snopt) Eigen3ToPython, Eigen3 to numpy conversion
+                    ifopt, An Eigen-based, light-weight C++ Interface to Nonlinear Programming Solvers (Ipopt, Snopt) Eigen3ToPython, Eigen3 to numpy conversion Optimal Control Optimal Control for Robotics: Part 1&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -272,6 +276,10 @@
                 <ul>
 <li><a href="https://github.com/ethz-adrl/ifopt">ifopt</a>, An Eigen-based, light-weight C++ Interface to Nonlinear Programming Solvers (Ipopt, Snopt)</li>
 <li><a href="https://github.com/jrl-umi3218/Eigen3ToPython">Eigen3ToPython</a>, Eigen3 to numpy conversion</li>
+</ul>
+<h2 id="optimal-control">Optimal Control</h2>
+<ul>
+<li><a href="https://towardsdatascience.com/optimal-control-for-robotics-part-1-4cc4ee5fb14d">Optimal Control for Robotics: Part 1 | by Guillaume Crabé</a></li>
 </ul>
 
             ]]>

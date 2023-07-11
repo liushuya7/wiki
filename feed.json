@@ -82,7 +82,7 @@
             "url": "https://liushuya7.github.io/wiki/arvr/",
             "title": "AR/VR",
             "summary": "Overview AR/VR Guide List of augmented reality software (Wikipedia) VR Software Wiki WorldViz - Virtual Reality for Training and Research WorldViz User Forum Augmented Reality&hellip;",
-            "content_html": "<h2 id=\"overview\">Overview</h2>\n<ul>\n<li><a href=\"https://github.com/mikeroyal/AR-VR-Guide\">AR/VR Guide</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/List_of_augmented_reality_software\">List of augmented reality software</a> (Wikipedia)</li>\n<li><a href=\"https://sites.google.com/view/brown-vr-sw-review-2018\">VR Software Wiki</a></li>\n<li><a href=\"https://www.worldviz.com\">WorldViz - Virtual Reality for Training and Research</a><ul>\n<li><a href=\"https://forum.worldviz.com\">WorldViz User Forum</a></li>\n</ul>\n</li>\n<li><a href=\"https://github.com/mafda/augmented_reality_101\">Augmented Reality 101</a></li>\n</ul>\n<h2 id=\"tools\">Tools</h2>\n<ul>\n<li><a href=\"https://github.com/qian256/HoloLensCamCalib\">HoloLens Camera Calibration</a>, by Long Qian</li>\n<li><a href=\"https://github.com/qian256/HoloLensARToolKit\">HoloLens with ARToolKit v0.3</a>, by Long Qian</li>\n<li><a href=\"https://github.com/IntelligentRoboticsLabs/ARViz\">ARViz</a>, an RViz implementation for AR runs on Microsoft Hololens</li>\n<li><a href=\"https://github.com/theseankelly/hololens-ros2\">ROS2 for HoloLens</a>, a UWP component library to interact with ROS2</li>\n</ul>\n<h2 id=\"examples\">Examples</h2>\n<ul>\n<li><a href=\"https://ieeexplore.ieee.org/document/10021890\">STTAR: Surgical Tool Tracking using Off-the-Shelf Augmented Reality Head-Mounted Displays</a><ul>\n<li>Code: <a href=\"https://github.com/lihaowei1999/IRToolTrackingWithHololens2\">IRToolTrackingWithHololens2</a></li>\n</ul>\n</li>\n</ul>\n",
+            "content_html": "<h2 id=\"overview\">Overview</h2>\n<ul>\n<li><a href=\"https://github.com/mikeroyal/AR-VR-Guide\">AR/VR Guide</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/List_of_augmented_reality_software\">List of augmented reality software</a> (Wikipedia)</li>\n<li><a href=\"https://sites.google.com/view/brown-vr-sw-review-2018\">VR Software Wiki</a></li>\n<li><a href=\"https://www.worldviz.com\">WorldViz - Virtual Reality for Training and Research</a><ul>\n<li><a href=\"https://forum.worldviz.com\">WorldViz User Forum</a></li>\n</ul>\n</li>\n<li><a href=\"https://github.com/mafda/augmented_reality_101\">Augmented Reality 101</a></li>\n</ul>\n<h2 id=\"tools\">Tools</h2>\n<ul>\n<li><a href=\"https://github.com/qian256/HoloLensCamCalib\">HoloLens Camera Calibration</a>, by Long Qian</li>\n<li><a href=\"https://github.com/qian256/HoloLensARToolKit\">HoloLens with ARToolKit v0.3</a>, by Long Qian</li>\n<li><a href=\"https://github.com/IntelligentRoboticsLabs/ARViz\">ARViz</a>, an RViz implementation for AR runs on Microsoft Hololens</li>\n<li><a href=\"https://github.com/theseankelly/hololens-ros2\">ROS2 for HoloLens</a>, a UWP component library to interact with ROS2</li>\n</ul>\n<h2 id=\"examples\">Examples</h2>\n<ul>\n<li><a href=\"https://ieeexplore.ieee.org/document/10021890\">STTAR: Surgical Tool Tracking using Off-the-Shelf Augmented Reality Head-Mounted Displays</a><ul>\n<li>Code: <a href=\"https://github.com/lihaowei1999/IRToolTrackingWithHololens2\">IRToolTrackingWithHololens2</a></li>\n</ul>\n</li>\n</ul>\n<h2 id=\"optical-tracking\">Optical Tracking</h2>\n<ul>\n<li><a href=\"https://github.com/andreaskeller96/HoloLens2-IRTracking\">HoloLens2-IRTracking</a> for tracking passive IR sphere markers using only the HoloLens 2 sensors.</li>\n</ul>\n",
             "author": {
                 "name": "Joshua Liu"
             },
@@ -90,14 +90,14 @@
                    "AR/VR"
             ],
             "date_published": "2023-02-17T23:55:58-05:00",
-            "date_modified": "2023-02-17T23:58:26-05:00"
+            "date_modified": "2023-07-11T18:31:42-04:00"
         },
         {
             "id": "https://liushuya7.github.io/wiki/optimization/",
             "url": "https://liushuya7.github.io/wiki/optimization/",
             "title": "Optimization",
-            "summary": "ifopt, An Eigen-based, light-weight C++ Interface to Nonlinear Programming Solvers (Ipopt, Snopt) Eigen3ToPython, Eigen3 to numpy conversion",
-            "content_html": "<ul>\n<li><a href=\"https://github.com/ethz-adrl/ifopt\">ifopt</a>, An Eigen-based, light-weight C++ Interface to Nonlinear Programming Solvers (Ipopt, Snopt)</li>\n<li><a href=\"https://github.com/jrl-umi3218/Eigen3ToPython\">Eigen3ToPython</a>, Eigen3 to numpy conversion</li>\n</ul>\n",
+            "summary": "ifopt, An Eigen-based, light-weight C++ Interface to Nonlinear Programming Solvers (Ipopt, Snopt) Eigen3ToPython, Eigen3 to numpy conversion Optimal Control Optimal Control for Robotics: Part 1&hellip;",
+            "content_html": "<ul>\n<li><a href=\"https://github.com/ethz-adrl/ifopt\">ifopt</a>, An Eigen-based, light-weight C++ Interface to Nonlinear Programming Solvers (Ipopt, Snopt)</li>\n<li><a href=\"https://github.com/jrl-umi3218/Eigen3ToPython\">Eigen3ToPython</a>, Eigen3 to numpy conversion</li>\n</ul>\n<h2 id=\"optimal-control\">Optimal Control</h2>\n<ul>\n<li><a href=\"https://towardsdatascience.com/optimal-control-for-robotics-part-1-4cc4ee5fb14d\">Optimal Control for Robotics: Part 1 | by Guillaume Crabé</a></li>\n</ul>\n",
             "author": {
                 "name": "Joshua Liu"
             },
@@ -105,7 +105,7 @@
                    "C++"
             ],
             "date_published": "2023-02-17T23:36:14-05:00",
-            "date_modified": "2023-02-17T23:45:51-05:00"
+            "date_modified": "2023-07-11T18:24:47-04:00"
         },
         {
             "id": "https://liushuya7.github.io/wiki/hmiscadadashboard/",
