@@ -10,6 +10,46 @@
     },
     "items": [
         {
+            "id": "https://liushuya7.github.io/wiki/phantom/",
+            "url": "https://liushuya7.github.io/wiki/phantom/",
+            "title": "Phantom",
+            "summary": "Realists phantoms for spine surgery",
+            "content_html": "<ul>\n<li><a href=\"https://www.realists.de/\">Realists</a> phantoms for spine surgery</li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+            ],
+            "date_published": "2023-09-20T14:49:57-04:00",
+            "date_modified": "2023-09-20T14:49:57-04:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/medical-robotics/",
+            "url": "https://liushuya7.github.io/wiki/medical-robotics/",
+            "title": "Medical Robotics",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+            ],
+            "date_published": "2023-09-20T14:34:03-04:00",
+            "date_modified": "2023-09-20T14:34:03-04:00"
+        },
+        {
+            "id": "https://liushuya7.github.io/wiki/gui/",
+            "url": "https://liushuya7.github.io/wiki/gui/",
+            "title": "GUI",
+            "summary": "NiceGUI, interactive web GUI with Python",
+            "content_html": "<ul>\n<li><a href=\"https://nicegui.io/\">NiceGUI</a>, interactive web GUI with Python</li>\n</ul>\n",
+            "author": {
+                "name": "Joshua Liu"
+            },
+            "tags": [
+            ],
+            "date_published": "2023-09-09T00:14:02-04:00",
+            "date_modified": "2023-09-09T00:14:02-04:00"
+        },
+        {
             "id": "https://liushuya7.github.io/wiki/camera/",
             "url": "https://liushuya7.github.io/wiki/camera/",
             "title": "Cameras",
@@ -106,51 +146,6 @@
             ],
             "date_published": "2023-02-17T23:36:14-05:00",
             "date_modified": "2023-07-11T18:24:47-04:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/hmiscadadashboard/",
-            "url": "https://liushuya7.github.io/wiki/hmiscadadashboard/",
-            "title": "HMI/SCADA/Dashboard",
-            "summary": "WebIQ, web-based HMI system Documentation Download FUXA, open-source web-based Process Visualization software",
-            "content_html": "<ul>\n<li><a href=\"https://www.smart-hmi.com/\">WebIQ</a>, web-based HMI system<ul>\n<li><a href=\"https://www.smart-hmi.com/user/docs\">Documentation</a></li>\n<li><a href=\"https://www.smart-hmi.com/user/download\">Download</a></li>\n</ul>\n</li>\n<li><a href=\"https://github.com/frangoteam/FUXA\">FUXA</a>, open-source web-based Process Visualization software</li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "PLC"
-            ],
-            "date_published": "2023-02-17T21:56:17-05:00",
-            "date_modified": "2023-02-17T21:56:23-05:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/opc-ua/",
-            "url": "https://liushuya7.github.io/wiki/opc-ua/",
-            "title": "OPC UA",
-            "summary": "Overview OPC Unified Architecture UaExpert, a full-featured OPC UA Client OPC UA Fundamentals open62541, open source and free implementation of OPC UA opcua-asyncio, OPC UA&hellip;",
-            "content_html": "<h2 id=\"overview\">Overview</h2>\n<ul>\n<li><a href=\"https://www.unified-automation.com/\">OPC Unified Architecture</a><ul>\n<li><a href=\"https://www.unified-automation.com/downloads/opc-ua-clients/uaexpert.html\">UaExpert</a>, a full-featured OPC UA Client</li>\n<li><a href=\"https://documentation.unified-automation.com/uasdknet/2.5.7/html/L1OpcUaFundamentals.html\">OPC UA Fundamentals</a></li>\n</ul>\n</li>\n<li><a href=\"https://www.open62541.org/doc/1.0/index.html\">open62541</a>, open source and free implementation of OPC UA</li>\n<li><a href=\"https://github.com/FreeOpcUa/opcua-asyncio\">opcua-asyncio</a>, OPC UA / IEC 62541 Client and Server for Python</li>\n</ul>\n<h2 id=\"gateway\">Gateway</h2>\n<ul>\n<li><a href=\"https://www.rti.com/developers/rti-labs/opcua-gateway\">RTI OPC UA/DDS Bridge</a></li>\n</ul>\n<h2 id=\"other-communication-protocols\">Other Communication Protocols</h2>\n<ul>\n<li><a href=\"https://profinetuniversity.com/industrial-automation-ethernet/opc-ua-profinet/\">PROFINET</a> - How does it work with OPC UA?</li>\n</ul>\n<h2 id=\"interface-with-ros2\">Interface with ROS2</h2>\n<ul>\n<li><a href=\"https://github.com/tanjpg/opcua_ros2#client-timeout-issue\">opcua_ros2</a>, C++ implementation of a simple OPC UA server in ROS2, using <a href=\"https://github.com/FreeOpcUa/freeopcua\">freeopcua</a> as the underlying API</li>\n<li><a href=\"https://github.com/RTInd/ros-integration-toolkit\">ros-integration-toolkit</a>, Tool for integrating RTI Connext and ROS 2</li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "PLC"
-            ],
-            "date_published": "2023-02-17T21:52:35-05:00",
-            "date_modified": "2023-04-24T12:34:38-04:00"
-        },
-        {
-            "id": "https://liushuya7.github.io/wiki/remote-desktop/",
-            "url": "https://liushuya7.github.io/wiki/remote-desktop/",
-            "title": "Remote Desktop",
-            "summary": "NoVNC Keyboard Lock “Escape” key for the browser",
-            "content_html": "<h2 id=\"novnc\">NoVNC</h2>\n<ul>\n<li><a href=\"https://github.com/novnc/noVNC/issues/923#issuecomment-1107071683\">Keyboard Lock “Escape” key for the browser</a></li>\n</ul>\n",
-            "author": {
-                "name": "Joshua Liu"
-            },
-            "tags": [
-                   "Software"
-            ],
-            "date_published": "2023-01-10T22:12:10-05:00",
-            "date_modified": "2023-01-10T22:12:10-05:00"
         }
     ]
 }

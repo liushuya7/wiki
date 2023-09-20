@@ -3,12 +3,70 @@
     <title>Joshua Personal Notes</title>
     <link href="https://liushuya7.github.io/wiki/feed.xml" rel="self" />
     <link href="https://liushuya7.github.io/wiki" />
-    <updated>2023-07-11T18:31:42-04:00</updated>
+    <updated>2023-09-20T14:49:57-04:00</updated>
     <author>
         <name>Joshua Liu</name>
     </author>
     <id>https://liushuya7.github.io/wiki</id>
 
+    <entry>
+        <title>Phantom</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/phantom/"/>
+        <id>https://liushuya7.github.io/wiki/phantom/</id>
+
+        <updated>2023-09-20T14:49:57-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Realists phantoms for spine surgery
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="https://www.realists.de/">Realists</a> phantoms for spine surgery</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Medical Robotics</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/medical-robotics/"/>
+        <id>https://liushuya7.github.io/wiki/medical-robotics/</id>
+
+        <updated>2023-09-20T14:34:03-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>GUI</title>
+        <author>
+            <name>Joshua Liu</name>
+        </author>
+        <link href="https://liushuya7.github.io/wiki/gui/"/>
+        <id>https://liushuya7.github.io/wiki/gui/</id>
+
+        <updated>2023-09-09T00:14:02-04:00</updated>
+            <summary>
+                <![CDATA[
+                    NiceGUI, interactive web GUI with Python
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li><a href="https://nicegui.io/">NiceGUI</a>, interactive web GUI with Python</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Cameras</title>
         <author>
@@ -280,104 +338,6 @@
 <h2 id="optimal-control">Optimal Control</h2>
 <ul>
 <li><a href="https://towardsdatascience.com/optimal-control-for-robotics-part-1-4cc4ee5fb14d">Optimal Control for Robotics: Part 1 | by Guillaume Crabé</a></li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>HMI/SCADA/Dashboard</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/hmiscadadashboard/"/>
-        <id>https://liushuya7.github.io/wiki/hmiscadadashboard/</id>
-            <category term="PLC"/>
-
-        <updated>2023-02-17T21:56:23-05:00</updated>
-            <summary>
-                <![CDATA[
-                    WebIQ, web-based HMI system Documentation Download FUXA, open-source web-based Process Visualization software
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <ul>
-<li><a href="https://www.smart-hmi.com/">WebIQ</a>, web-based HMI system<ul>
-<li><a href="https://www.smart-hmi.com/user/docs">Documentation</a></li>
-<li><a href="https://www.smart-hmi.com/user/download">Download</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/frangoteam/FUXA">FUXA</a>, open-source web-based Process Visualization software</li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>OPC UA</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/opc-ua/"/>
-        <id>https://liushuya7.github.io/wiki/opc-ua/</id>
-            <category term="PLC"/>
-
-        <updated>2023-04-24T12:34:38-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Overview OPC Unified Architecture UaExpert, a full-featured OPC UA Client OPC UA Fundamentals open62541, open source and free implementation of OPC UA opcua-asyncio, OPC UA&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="overview">Overview</h2>
-<ul>
-<li><a href="https://www.unified-automation.com/">OPC Unified Architecture</a><ul>
-<li><a href="https://www.unified-automation.com/downloads/opc-ua-clients/uaexpert.html">UaExpert</a>, a full-featured OPC UA Client</li>
-<li><a href="https://documentation.unified-automation.com/uasdknet/2.5.7/html/L1OpcUaFundamentals.html">OPC UA Fundamentals</a></li>
-</ul>
-</li>
-<li><a href="https://www.open62541.org/doc/1.0/index.html">open62541</a>, open source and free implementation of OPC UA</li>
-<li><a href="https://github.com/FreeOpcUa/opcua-asyncio">opcua-asyncio</a>, OPC UA / IEC 62541 Client and Server for Python</li>
-</ul>
-<h2 id="gateway">Gateway</h2>
-<ul>
-<li><a href="https://www.rti.com/developers/rti-labs/opcua-gateway">RTI OPC UA/DDS Bridge</a></li>
-</ul>
-<h2 id="other-communication-protocols">Other Communication Protocols</h2>
-<ul>
-<li><a href="https://profinetuniversity.com/industrial-automation-ethernet/opc-ua-profinet/">PROFINET</a> - How does it work with OPC UA?</li>
-</ul>
-<h2 id="interface-with-ros2">Interface with ROS2</h2>
-<ul>
-<li><a href="https://github.com/tanjpg/opcua_ros2#client-timeout-issue">opcua_ros2</a>, C++ implementation of a simple OPC UA server in ROS2, using <a href="https://github.com/FreeOpcUa/freeopcua">freeopcua</a> as the underlying API</li>
-<li><a href="https://github.com/RTInd/ros-integration-toolkit">ros-integration-toolkit</a>, Tool for integrating RTI Connext and ROS 2</li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Remote Desktop</title>
-        <author>
-            <name>Joshua Liu</name>
-        </author>
-        <link href="https://liushuya7.github.io/wiki/remote-desktop/"/>
-        <id>https://liushuya7.github.io/wiki/remote-desktop/</id>
-            <category term="Software"/>
-
-        <updated>2023-01-10T22:12:10-05:00</updated>
-            <summary>
-                <![CDATA[
-                    NoVNC Keyboard Lock “Escape” key for the browser
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="novnc">NoVNC</h2>
-<ul>
-<li><a href="https://github.com/novnc/noVNC/issues/923#issuecomment-1107071683">Keyboard Lock “Escape” key for the browser</a></li>
 </ul>
 
             ]]>
